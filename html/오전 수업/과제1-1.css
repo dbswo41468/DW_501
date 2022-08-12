@@ -1,0 +1,55 @@
+/* 과제1-1.css */ 
+#dbs{
+    text-align: left;
+    width: 820px;
+    height:10px;
+    font-size: 20px;
+    margin: auto;
+}
+#dbs tr th{
+    border: 1px solid black;
+    text-align: left;
+    width: 820px;
+    height: auto;
+    background-color:lawngreen;
+}
+#dbs tr td{
+    border: 1px solid black;
+    text-align: center;
+    width: 820px;
+    height: auto;
+}
+#wo{
+
+    text-align: center;
+    width: 820px;
+    height:20px;
+    margin: auto;
+    
+}
+#wo tr th{
+    border: 1px solid black;
+    text-align: center;
+    width: 130px;
+    height:20px;
+    margin: auto;
+    background-color: lawngreen
+}
+#wo tr td{
+    border: 1px solid black;
+    text-align: center;
+    width: 130px;
+    height:20px;
+    margin: auto;
+}
+h2{
+    text-align: center;
+    text-shadow: 3px 2px 2px grey;
+
+}
+
+
+
+
+
+
