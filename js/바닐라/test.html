@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body> 
+    <input id="name" type="text"value="오늘은 목요일">
+    <input id="hobby" type="text">
+    <button onclick="check()">확인</button>
+    <!-- onclick : 클릭 했을 때를 의미 -->
+</body>
+<script>
+    // function : 함수 : 메소드 //
+    function check(){
+// document (html) get(얻다) getElementById(id로 얻어오겠다 = id로 태그를 get 하겠다)
+// value : 값을 의미//
+        var name = document.getElementById("name"). value; 
+        var hobby = document.getElementById("hobby"). value; 
+        alert(name+', '+hobby); // alert : 알림창
+
+        
+    }
+
+
+</script>
+</html>

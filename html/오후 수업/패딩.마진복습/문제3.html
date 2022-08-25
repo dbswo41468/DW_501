@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 400px;
+            height: 480px;
+            background: grey;
+            padding: 10px;
+            margin-bottom: 20px;
+        }
+        h2{
+            text-align: center;
+            font-size: 30px;
+            padding-top: 50px;
+        }
+        select{
+            width: 350px;
+            height: 30px;
+
+        }
+        .hot{
+            padding-left: 20px;
+
+        }
+        
+        #수량{
+            width: 340px;
+            height: 20px;
+        }
+
+        button{
+            width: 350px;
+            background: blue;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="box">
+        <h2>빽다방 메뉴</h2>
+
+        <div id="menu">
+            <select>
+                <option>메뉴를 선택해주세요</option>
+                <option>히비스커스</option>
+            </select>
+
+        </div>
+
+        <div class="hot">
+            ICED : <input type="radio"name="HOT">
+            HOT : <input type="radio"name="HOT">
+        </div>
+        <div class="hot">
+            L size : <input type="radio"name="size">
+            M size : <input type="radio"name="size">
+        </div>
+        <div class="hot">
+            <input id="수량" type="text"placeholder="수량을 입력해주세요." >
+        </div>
+        <div class="hot">
+            <textarea cols="50" rows="10" placeholder="추가 사항이 있으면 적어주세요."></textarea>
+       </div>
+       <div class="hot">
+        <button>주문 하기</button>
+    </div>
+
+    </div>
+</body>
+</html>

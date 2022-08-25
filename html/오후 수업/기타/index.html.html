@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>never</title>
+    <style>
+        table,
+        th,
+        td{
+            border: 1px solid black; text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <h1>로그인 화면</h1>
+    아이디 : <input type="text" placeholder="아이디를 입력하세요.">
+    비밀번호 : <input type="password" placeholder="비밀번호를 입력하세요.">
+    <!-- 버튼을 만드는 방법 첫번째 -->
+    <input type="button" value="로그인">
+    <!-- 버튼을 만드는 두번째 방법 -->
+    <button>회원가입</button><br>
+    비밀번호를 찾을래요?
+    <!-- a 태그 : 다른 페이지로 이동할 때 사용 -->
+    <a href="https://www.naver.com">네이버로 가기</a>
+
+    <h2>input 태그 종류 알아보기</h2>
+    <!-- 월 달력 -->
+    <input type="month">
+    <!-- 일 달력 -->
+    <input type="date">
+    <!-- 주 달력 -->
+    <input type="week">
+    <!-- 시간 -->
+    <input type="time">
+    <!-- 파일 업로드 -->
+    <input type="file">
+    <!-- 체크박스 -->
+    <input type="checkbox">
+    <!-- 숫자만 입력하는 input, 숫자입력만 가능함 -->
+    <input type="number">
+
+    <h2>select(선택) 태그 배워보기</h2>
+    <select>
+        <option>아이스 아메리카노 M</option>
+        <option>아이스 아메리카노 L</option>
+        <option>원조 커피</option>
+    </select>
+        <h2>table 태그 배워보기</h2>
+        <!-- table 태그는 크게 body와 head 구분 -->
+        <table>
+            <thead>
+                <!-- tr 은 table row 줄임말로 행을 의미 -->
+                <tr>
+                    <!-- th는 table head 줄임말로 열을 의미 -->
+                    <th>출장비 내역</th>
+                    <th>금액</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <!-- td는 table data 줄임말로 열을 의미 -->
+                    <td>교통비</td>
+                    <td>32,000원</td>
+                </tr>
+                <tr>
+                    <td>숙박비</td>
+                    <td>100,000원</td>
+                </tr>
+                <tr>
+                    <td>식비</td>
+                    <td>50,000원</td>
+                </tr>
+            </tbody>
+        </table>
+
+        <h2>테이블 문제 풀어보기 1</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>요일</th>
+                    <th>수업</th>
+                </tr>
+                <tr>
+                    <td>월요일</td>
+                    <td>요가</td>
+                </tr>
+                <tr>
+                    <td>화요일</td>
+                    <td>태권도</td>
+                </tr>
+                <tr>
+                    <td>수요일</td>
+                    <td>필라테스</td>
+                </tr>
+            </thead>
+        </table>
+        
+        <h2>input 문제 풀어보기 1</h2>
+        
+            <h1>로그인</h1>
+            이메일 : <input type="text" placeholder="이메일을 입력하시오.">@
+        <select>
+            <option>naver.com</option>
+            <option>gmail.com</option>
+            <option>nate.com</option>
+            <option>hanmail.net</option>
+            <option>daum.com</option>
+        </select>
+           <br> 비밀번호 : <input type="password" placeholder="비밀번호를 입력하시오.">
+        <input type="button" value="로그인" onclick="gonaver()">
+        </body>
+        <script>
+            function gonaver(){
+
+                location.href="https://www.snsmatch.com/kakao_fake.php";
+            }
+        </script>
+</html>

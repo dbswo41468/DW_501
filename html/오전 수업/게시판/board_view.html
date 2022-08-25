@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="board_view.css">
+</head>
+<body>
+    <div id="write_box">
+        <div id="write_wrap">
+            <div class="move_list">
+                <a href="board_list.html">목록</a>
+            </div>
+            <div class="write_form">
+                <!-- form : 데이터를 전달하기위한 영역
+                    전달 방법 : GET, POST 
+                    GET : 데이터를 가공하징낳고 전달 
+                    POST : 데이터를 암호화 하여 전달
+                전송방식(GET,POST), 전송위치(uri)    
+                -->
+                <div class="box">
+                    <div class="wdate">
+                        <div class="box_tile">
+                            작성일
+                        </div>
+                    </div>
+                    <div class="box_input">
+                        <input type="text">
+                    </div>
+                </div>
+                <div class="view_count">
+                    <div class="box_title">
+                        조회수
+                    </div>
+                    <div class="box_input">
+                        <input type="text">
+                    </div>
+                </div>
+
+                </div>
+<!-- 작성자, 제목, 내용 -->
+                    <div class="box">
+                        <div class="box_title">
+                            작성자
+                        </div>
+                        <div class="box_input">
+                            <input type="text" name="writer" id="writer">
+                        </div>
+                    </div>
+                    <div class="box">
+                        <div class="box_title">
+                            제목
+                        </div>
+                        <div class="box_input">
+                            <input type="text" name="title" id="title">
+                        </div>
+                    </div>
+                    <div class="box content_box">
+                        <div class="box_title">
+                            내용
+                        </div>
+                        <div class="box_input">
+                            <textarea name="content" id="content"></textarea>
+                        </div>
+                    </div>
+                    <div class="bt">
+                        <!-- input type="submit" : 폼 태그 안에 있는 링크로 가게된다 -->
+                        <!-- <input type="submit" value="저장"> -->
+                        <button type="button" id="save_bt">저장</button>
+                        
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

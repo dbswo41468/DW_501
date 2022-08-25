@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input id="memo" type="text">
+    <input id="name" type="text">
+    <input id="apple" type="text">
+    <button onclick="text()">확인</button>
+
+    <h3>숫자 입력 받기</h3>
+    <input id="num" type="number">
+    <button onclick="test02()">확인</button>
+
+    <h3>주문 수량 받기</h3>
+    <input id="count" type="number">
+    <button onclick="joo()">주문</button>
+    <!-- 문제3 주문 수량을 20개 이상 입력하면,
+        "죄송합니다 1인당 20개 미만으로 주문 가능합니다
+        라는 alert창 띄우기
+    
+        * 함수 직접 생성하기-->
+        <h3>메뉴 선택 하기</h3>
+        <select id="menu">
+            <option value="앗! 메리카노">앗! 메리카노</option>
+            <option value="원조커피">원조커피</option>
+            <option value="빽스치노">빽스치노</option>
+            <option value="연유라떼">연유라떼</option>
+        </select>
+            <button onclick="test04()">선택 완료</button>
+
+
+
+</body>
+<!-- html부터 script를 해석해줘 -->
+<script>
+    // 함수 or 메소드
+    function text(){
+        // input에 입력한 값 출력하기!
+        // var : 데이터 타입
+        // document : html
+        // get : 얻다
+        // Element : 태그
+        // ById : ~로 아이디
+        // value : 값
+        var memo = document.getElementById("memo").value;
+        // alert : 알람창
+        alert(memo);
+        //문제 1. id 이름이 name인 input값을 alert()로 출력하시오
+        var name = document.getElementById("name").value
+        alert(name);
+        ///
+        var apple = document.getElementById("apple").value
+        alert(apple);
+    }   
+
+    function test02(){
+        var num = document.getElementById("num").value;
+        // if(만약에) 배우기
+        // a만약에 num이 10 이상이라면
+        if(num >= 10){ // if 시작
+            alert('10이상입니다!')
+        } // if 끝
+        else{ // if 반대
+            alert('10 미만입니다!')
+    }
+}   
+    function joo(){//시작
+        var count = document.getElementById("count").value
+        if(count >= 20){
+            alert('죄송합니다 1인당 20개 미만으로 주문 가능합니다.')
+        }
+
+    }//끝
+    
+
+ function test04(){ //시작
+           var menu = document.getElementById("menu").value;
+           // == 는 같다 의미
+           if(menu == '원조커피'){
+            alert('선택한 메뉴는 '+menu);
+        } //끝
+    
+
+           // == 는 같다 의미
+           if(menu == '빽스치노'){
+            alert('죄송합니다.'+menu+'품절입니다.');
+ }
+ }
+ //문제 4. 선택한 메뉴가 빽스치노 라면
+// "죄송합니다. 빽스치노는 품절입니다." alert 로 출력하기!
+
+
+</script>
+</html>

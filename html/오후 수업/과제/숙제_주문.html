@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {padding: 0; margin: 0; box-sizing: border-box;}
+        .container{ width: 300px; height: auto; margin: 200px auto; background-color: #efefef; padding: 2%;}
+        select {width: 100%; height: 30px;}
+        .input-box {margin-bottom: 10px;} 
+        h2 {text-align: center;}
+        button {width: 100%; height: 35px; cursor: pointer; height: 30px; appearance: none; background: #0d6efd; color: #fff;  border: none; border-radius: 5px;}
+        button:hover {background: #fff; color: #0d6efd; font-weight: bold; transition: 0.5s;}
+        input[type=number] {width: 97%; height: 25px;}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>빽다방 메뉴</h2>
+        <div class="input-box">
+            <select id="menu">
+                <option value="null">메뉴를 선택해주세요.</option>
+                <option value="아메리카노">앗!메리카노</option>
+                <option value="원조커피">원조커피</option>
+                <option value="달달연유라떼">달달연유라떼</option>
+                <option value="품절">금가루가뿌려진라떼</option>
+            </select>
+        </div>
+        <div class="input-box">
+            ICED : <input type="radio" name="type" value="ICED" checked>
+            HOT : <input type="radio" name="type" value="HOT">
+        </div>
+        <div class="input-box">
+            L size : <input type="radio" name="size" value="L" checked>
+            M size : <input type="radio" name="size" value="M">
+        </div>
+        <div class="input-box">
+            <input id="count" type="number" placeholder="수량을 입력해주세요">
+        </div>
+        <div class="input-box">
+            <textarea id="memo" cols="35" rows="10" placeholder="추가 사항이 있으면 적어주세요."></textarea>
+        </div>
+        <div class="input-box">
+            <button id="but" onclick="doOrder()">주문 완료</button>
+        </div>
+    </div>
+</body>
+<script>
+    /* 
+     빽다방 메뉴 사이트 
+
+     문제 1. 주문완료 버튼을 눌렀을 때, hello world를 출력할 수 있는
+     함수를 생성하시오.0
+
+     문제 2. select, input, textarea 태그에 id를 생성하시오.0
+
+     문제 3. 선택 혹은 입력된 값을 모두 출력하시오.0
+
+     문제 4. 주문완료 버튼을 눌렀을 때, 수량이 10개 초과면 
+     "죄송합니다. 1인 10잔 까지 주문 가능합니다." 출력하시오.0
+
+     문제 5. 주문완료 버튼을 눌렀을 때, 수량을 0개 입력했으면 
+     "수량을 입력해주세요!" 출력하시오.0
+    
+     문제 6. 주문완료 버튼을 눌렀을 때, 메뉴를 선택해주세요. 가 선택 되어 있으면
+     "메뉴를 선택해주세요." 출력하시오.0
+
+     문제 7. 주문완료 버튼을 눌렀을 때, 금가루가뿌려진라떼가 선택 되었으면
+     "죄송합니다. 해당 상품은 품절입니다." 출력하시오.0
+
+    */
+
+   // 문제. //
+   function doOrder(){
+       var but = document.getElementById('but').value
+       console.log('hello world')
+    
+    var selectedMenu = document.getElementById('menu').value;
+        console.log(selectedMenu);
+
+
+        if(selectedMenu =='품절'){
+            console.log("죄송합니다. 해당 상품은 품절입니다.");
+        }
+
+        if(selectedMenu == 'null'){
+            console.log('메뉴를 선택해주세요')
+        }
+
+        var type = document.querySelector('input[name=type]:checked').value;
+        console.log(type);
+
+        var size = document.querySelector('input[name=size]:checked').value;
+        console.log(size);
+
+        var count = document.getElementById('count').value
+            console.log(count);
+        if(count == 0){
+            console.log('수량을 입력해주세요!')
+        }
+        if(count > 10){
+            console.log('죄송합니다. 1인 10잔 까지 주문 가능합니다.')
+        }
+
+        var memo = document.getElementById('memo').value;
+        console.log(memo);
+
+
+    }
+
+</script>
+</html>

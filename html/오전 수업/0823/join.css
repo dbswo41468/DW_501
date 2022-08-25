@@ -1,0 +1,121 @@
+/* join.html */
+
+body{
+    padding: 0;
+    margin: 0;
+    font-size: 12pt;
+    font-family: '돋움';
+}
+
+#join_mask{
+    width: 100%;
+    height: auto;
+}
+
+#join_wrap{
+    width: 700px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+#join_wrap fieldset{
+    border-radius: 10px;
+    padding: 15px 20px 10px 20px;
+}
+
+.input_wrap{
+    width: 660px;
+    height: 35px;
+    line-height: 35px;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.title{
+    width: 150px;
+    font-size: 15pt;
+    font-weight: 700px;
+    text-align: right; /* 글씨 정렬 위치*/
+    padding-right: 10px;
+}
+.join_input input{
+    width: 300px;
+    height: 28px;
+    font-size: 13pt;
+    border: 2px solid #999;
+    border-radius: 10px;
+}
+.name{
+    width: 150px;
+}
+
+.join_input select{
+    width: 100px;
+    height: 28px;
+    border: 2px solid #999;
+    border-radius: 10px;
+}
+
+hr{
+    border: 2px solid #03c75a;
+    margin-top: 15px;
+    margin-bottom: 15px;
+}
+
+.add_wrap{
+    width: 660px;
+    height: auto;
+    display: flex;
+    margin-bottom: 10px;
+}
+
+.add_item input{
+    height: 28px;
+    width: 100px;
+    font-size: 12pt;
+    border: 2px solid #999;
+    border-radius: 10px;
+    margin-bottom: 5px;
+}
+
+#addr1 , #addr2{
+    width: 500px;
+}
+
+.interest_item{
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.item_list{
+    width: 33%;
+    font-size: 15pt;
+}
+
+.item-list input[type=checkbox]{
+        height: 20px;
+        width: 20px;
+    }
+
+#join_bt{
+    width: 150px;
+    height: 37px;
+    /* margin 0: 을 주고 다른 마진을 줘야 가운데로 온다 */
+    margin: 0 auto;
+    margin-bottom: 40px;
+}
+
+/* 밑줄을 지우는 태그 */
+#join_bt a{
+    text-decoration: none;
+    background: #03c75a;
+    display: block;
+    height: 37px;
+    /* 수직,수평 을 해줘야 가운데로 온다 */
+    line-height: 37px;
+    text-align: center;
+    color: white;
+    font-weight: 900px;
+    border-radius: 10px;
+}

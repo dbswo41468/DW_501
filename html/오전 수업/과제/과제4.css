@@ -1,0 +1,127 @@
+/* 과제4.css */
+
+#board-wrap{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+#box{
+    width: 1850px;
+    height: auto;
+}
+
+h3{
+    text-align: center;
+    
+}
+
+#text{
+    text-align: left;
+    margin-left: 500px;
+    margin-bottom: 40px;
+
+}
+
+.text_1{
+    font-size: 20pt;
+    font-weight: 100;
+}
+
+.text_2{
+    font-weight: 700;
+}
+
+.board_list_wrap{
+    width: 1200px;
+    height: 600px;
+}
+
+.write a{
+    text-decoration: none;
+    color: black;
+}
+
+.write{
+    height: 40px;
+    line-height:40px;   
+}
+
+#board_list{
+    list-style-type: none;;
+    padding: 0;
+    margin: 0;
+    width: 1200px;
+    height: 560px;
+}
+
+.bli{
+    display: flex;
+    width: 1200px;
+    height: auto;
+    line-height: 45px;
+    text-align: center;
+}
+
+/* 첫번째 li태그 스타일 */
+.board_title{
+    font-weight: 700;
+    font-size: 13pt;
+    text-align: center;
+}
+
+.board_title div{
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    height: 60px;
+}
+
+/* 게시판 각 항목별 스타일 */
+
+.bli{
+    display: flex;
+    line-height: 45px;
+    border-top:  1px solid #5CD1E5;
+    text-align: left;
+}
+
+.num{
+    width: 3%;
+    border-right:  1px solid #5CD1E5;
+    text-align: center;
+}
+
+.title{
+    width: 41%;
+    border-right:  1px solid #5CD1E5;
+}
+
+.writer{
+        width: 3%;
+}
+
+.write_date{
+    width: 50%;
+    border-left:  1px solid #5CD1E5;
+    border-right:  1px solid #5CD1E5;
+}
+
+.hit{
+    width: 3%;
+    height: 50px;
+}
+
+#co{
+    background:#B2EBF4;
+}
+
+#dp{
+    background:#B2EBF4;
+    width: 1200px;
+    border-bottom:  1px solid #5CD1E5;
+    border-left:  1px solid #5CD1E5;
+    text-align: left;
+}
+
+

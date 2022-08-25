@@ -1,0 +1,131 @@
+body, div, input, button{
+        margin: 0;
+        padding: 0;
+}
+
+#mask{
+    width: 100%;
+    height: auto;
+    font-size: 12pt;
+    color: black;
+}
+
+#search_wrap{
+    width: 1000px;
+    height: 80px;
+    margin: 0 auto;
+
+    
+}
+
+#menu_wrap{
+    width: 100%;
+    height: 50px;
+    margin-top: 20px;
+    border-top: 2px solid lightgray;
+    border-bottom: 2px solid lightgray;
+}
+
+#wrap{
+    width: 1000px;
+    height: auto;
+    margin: 0 auto;
+    margin-top: 20px;
+    /* flex 부모 태그에 입력해야한다  */
+    display: flex;
+
+}
+
+.search_form{
+    width: 100%;
+    height: 50px;
+    padding: 20px  0 10px 0;
+/* 여백 순서 : 위, 우, 아래, 좌 */ 
+/* display 화면에 보여지는것 */
+/* 가로로 나열 */
+    display: flex;
+
+}
+
+.logo{
+    width: 200px;
+    /*float:left;*/
+    font-size: 40px;
+    color:#CC3D3D;
+}
+
+#search_word{
+    height: 40px;
+    width: 400px;
+    font-size: 35px;
+
+}
+
+#tkwls{
+    width: 50px;
+    height: 50px;
+    margin-top: 10px;
+
+}
+
+
+
+
+.search_bt button{
+    height: 40px;
+    width: 100px;
+    font-size: 25px;
+    border: 0;
+    background: #CC3D3D;
+    color: white;
+}
+.search_bt>button:hover{
+    cursor:pointer;
+}
+.search{
+    display: flex;
+    border: 2px solid #CC3D3D;
+    margin-top: 6px;
+    height: 40px;
+}
+
+.menu_list{
+    width: 1000px;
+    height: 30px;
+    margin: 0 auto;
+    padding: 10px 0 10px 0;
+}
+
+#menu_ul{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+    width: 1000px;
+    height: 30px;
+    font-size: 15px;
+    font-weight: 800; 
+    /* 글씨 굵기  */
+}
+
+.menu_nav{ /* 간격을 주려면 너비값 x */
+    /* 글씨 정렬 */
+    float:left;
+    /* 글씨 크기만큼 */
+    display: inline;
+    /* 10% = 전체 넓이 퍼센트에서 10%를 부여하여 간격을 넓힘 */
+    /* width: calc( 1000 / 10 * 1px); */
+    /* calc (1000(ul 전체 넓이) 10(li갯수) * 1px  사칙연산 띄어쓰기 필수*/
+    height: 30px;
+    line-height: 30px;
+    color: #ff8868  ;
+    margin-right: 50px;
+}
+.menu_nav:hover{
+    cursor:pointer;
+    background:#ff8868;
+    color: white;
+}
+
+    
+
+

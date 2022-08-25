@@ -1,0 +1,109 @@
+/* board_list.css */
+
+#board_mask{
+    width: 100%;
+    height: auto;
+    margin-top: 50px;
+}
+
+#board-wrap{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+
+.btitle{
+    font-size: 25pt;
+    text-align: center;
+    width: 1200px;
+    height: 50px;
+    border-bottom: 2px solid #999;
+}
+
+.board_list_wrap{
+    width: 1200px;
+    height: 600px;
+}
+
+.write a{
+    text-decoration: none;
+    color: black;
+}
+
+.write{
+    height: 40px;
+    line-height:40px;   
+}
+
+#board_list{
+    list-style-type: none;;
+    padding: 0;
+    margin: 0;
+    width: 1200px;
+    height: 560px;
+}
+
+.bli{
+    display: flex;
+    width: 1200px;
+    height: 45px;
+    line-height: 45px;
+    border-bottom: 1px solid rgb(232,232,232);
+    text-align: center;
+}
+
+/* 첫번째 li태그 스타일 */
+.board_title{
+    font-weight: 700;
+    font-size: 13pt;
+}
+
+.board_title div{
+    height: 45px;
+    line-height: 45px;
+}
+
+/* 게시판 각 항목별 스타일 */
+
+.num{
+    width: 10%;}
+
+.title{
+    width: 45%;}
+
+.writer{
+        width: 20%;}
+
+.write_date{
+    width: 15%;}
+
+.hit{
+    width: 10%;}
+
+/* 게시판 글 목록 페이지 번호 */
+
+.board_page{
+    width: 430px;
+    height: 40px;
+    margin: 0 auto;
+}
+
+#page_num{
+    list-style-type: none;
+    width: 430px;
+    padding: 0;
+    margin: 0;
+}
+
+.pnum{
+    width: 60px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    float: left;
+}
+
+.pnum a{
+    color: black;
+    text-decoration: none;
+}

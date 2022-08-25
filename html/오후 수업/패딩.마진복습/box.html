@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 브라우저 마다 기본적ㅈ으로 제공하는 maring와 padding값 존재
+            그러므로 body 태그에 margin, padding 0을 입력한다*/
+            body{
+                margin: 0;
+                padding: 0;
+            }
+        input{
+            padding-left: 10px;
+            padding-top: 20px;
+            margin-right: 100px;
+        }
+        .box1{
+            width: 100px;
+            height: 150px;
+            background-color: mediumslateblue;
+            /* margin : 100px(위,아래) auto(오른쪽, 왼쪽)
+            padding 는 auto가 없다*/
+            margin: 200px auto;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" value="안녕하세요.">
+    <input type="text" value="안녕하세요.">
+    <h3>div 태그 margin 알아보기</h3>
+    <div class="box1">
+        <div class="box">
+            초코우유
+        </div>
+        <br>
+        <div class="test box">
+            바나나우유
+        </div>
+    </div>
+
+
+</body>
+</html>

@@ -1,0 +1,15 @@
+/* 0822-1.css */
+
+/* float: left; 태그를 사용해 정렬방향을 정하면
+                원치않는 것까지 정렬된다.
+.image{
+    float: left;
+}
+*/
+
+#box{
+    display: flex;
+    width: 600px;
+    /* flex-wrap: wrap;는 어떤 방향,형식으로 정하는 태그  */
+    flex-wrap: wrap;
+}

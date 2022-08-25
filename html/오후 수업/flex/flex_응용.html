@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 1000px;
+            height: 400px;
+            background-color: #ccc;
+            margin: 120px auto;
+            /* auto : 좌우 크기를 가운데로 맞춰준다 */
+            display: flex;
+        }
+
+        .col{
+            height: 100%;
+            /* color : 폰트 색깔 의미 */
+            color: #fff;
+            padding: 25px;
+            /* 부모의 크기로 동일하게 맞추려면 flex : 1  */
+            flex: 1;
+            /* 부모 태그는 relative 이다  */
+            position: relative;
+            transition: 0.7s;
+        }
+
+        .col:nth-child(1){
+            background-color: #283491;
+        }
+
+        .col:nth-child(2){
+            background-color: #f18684;
+        }
+
+        .col:nth-child(3){
+            background-color: #6ee2f1;
+        }
+
+        h2{
+            text-align: center;
+            font-size: 22px;
+            font-weight: 600;
+        }
+
+        .caption{
+            width: 230px;
+            font-size: 12px;
+            margin-top: 28px;
+            /* none : 는 강제로 안보이게 해줌 */
+            display: none;
+        }
+
+        .caption button{
+            border: 1px solid #fff;
+            border-radius: 30px;
+            outline : none;
+            padding: 8px 18px;
+            color: #fff;
+            background: transparent;
+            margin-top: 28px;
+            cursor: pointer;
+            font-size: 12px;
+        }
+
+        .col img{
+            width: 200px;
+            /* absolute는 부모 태그를 기준으로 위치를 변경함 */
+            position: absolute;
+            right: 0;
+            bottom: 0;
+        }
+
+        .col:hover{
+            flex-grow: 2.5;;
+        }
+
+        .col:hover h2{
+            text-align: left;
+        }
+
+        .col:hover .caption{
+            /* block는 none 반대 */
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="col">
+            <h2>크로스핏</h2>
+            <div class="caption">
+                <p>크로스핏은 정신과 체력 싸움이다</p>
+                <button>Know More</button>
+            </div>
+            <img src="img1.png">
+        </div>
+
+
+        <div class="col">
+            <h2>웨이트</h2>
+            <div class="caption">
+                <p>웨이트는 누구나 쉽게 접근할 수 있습니다?!</p>
+                <button>Know More</button>
+            </div>
+            <img src="img2.png">
+        </div>
+
+
+        <div class="col">
+            <h2>요가</h2>
+            <div class="caption">
+                <p>요가는 정신력과 유연성을 향상 시켜준다.</p>
+                <button>Know More</button>
+            </div>
+            <img src="img3.png">
+        </div>
+
+
+    </div>
+</body>
+</html>

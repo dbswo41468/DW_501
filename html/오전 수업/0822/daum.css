@@ -1,0 +1,122 @@
+/*  daum.css  */
+
+body, ul{
+    margin: 0;
+    padding: 0;
+}
+
+#mask{
+    width: 100%;
+    height: auto;
+    font-size: 12pt;
+    text-align: center;
+}
+#srh_wrap{
+    width: 1200px;
+    height: auto;
+    margin: 0 auto;
+}
+.start_home{
+    font-size: 10px;
+    text-align: left;
+}
+.logo_srh{
+    display: flex;
+    width: 1200px;
+    margin-top: 30px;
+}
+.logo{
+    font-size: 27pt;
+    width: 200px;
+}
+.srh_location{
+    width: 1000px;
+}
+
+.srh_box{
+    border: 1px solid blue;
+    display: flex;
+    width: 580px;
+}
+
+.srh_box input{
+    border: 0;
+    background:white;
+
+}
+
+#srh_word{
+    width: 500px;
+    height: 50px;
+    font-size: 15pt;
+    padding-left: 20px;
+}
+/* 반드시 id나 class를 주지 않아도 아래와 같이
+   걸 수 있다. */
+.srh_location input[type=button]{
+    width: 80px;
+    height: 50px;
+    font-size: 15pt;
+}
+
+#menu_wrap{
+    width: 100%;
+    height: auto;
+    border-top: 1px solid rgb(234,234,234);
+    border-bottom: 1px solid black;
+    margin-top: 20px; 
+}
+
+#menu_box{
+    width: 1200px;
+    margin: 0 auto;
+    height: 45px;
+}
+
+#menu_list{
+    list-style-type: none;
+    width: 1200px;
+    height: 45px;
+    padding: 0;
+    margin: 0;
+}
+/* 메뉴 만들때는 ul 태그로 */
+.menu_title{
+    font-weight: 800;
+    height: 45px;
+    line-height: 45px;
+    /* width: 7.69%; */
+    float: left;
+    display: inline; 
+    margin-right: 25px;
+}
+
+#content_warp{
+    width: 100%;
+    height: auto;
+    margin-top: 20px;
+}
+
+.content_box{
+    width: 1200px;
+    margin: 0 auto;
+    height: auto;
+    display: flex
+}
+
+.content{
+    width: 1000px;
+    height: 500px;
+    background: red;
+}
+.login{
+    width: 190px;
+    height: 300px;
+    margin-left: 10px;
+    background: yellow;
+}
+
+
+
+
+

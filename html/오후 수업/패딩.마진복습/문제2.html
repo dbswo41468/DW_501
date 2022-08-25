@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .wo{
+            text-align: center;
+            width: 300px;
+            height: 200px;
+            background-color: bisque;
+            margin: 100px auto;
+            padding: 10px
+            /* padding : 10px -> 상하좌우 전부 10px씩 준다는 뜻 */
+        }
+            .wo2{
+                margin:5px;
+                width: 250px;
+
+                }
+
+            #button{
+                width: 85%;
+                height: 19px;
+                /* cursor: pointer;는 마우스 올렸을 시 포인터 변경 */
+                cursor: pointer;
+                background-color: aqua;
+                color: aliceblue;
+                border: 0;
+                border-radius: 5px;
+                }
+            #button:hover{
+                background-color: yellowgreen;
+                /* color 폰트 색깔 */
+                color: green;
+                transition: 1s;
+            }
+            
+
+            
+
+    </style>
+</head>
+<body>
+    <div class="wo">
+        <h2>설문조사</h2> 
+
+        <input class="wo2" type="text" placeholder="이름 입력..."><br>
+        <input class="wo2" type="text" placeholder="취미 입력..."><br>
+        <input class="wo2" type="text" placeholder="거주 지역 입력..."><br>
+        <button id="button">작성완료</button>
+
+    </div>
+</body>
+</html>
