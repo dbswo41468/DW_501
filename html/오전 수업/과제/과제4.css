@@ -11,15 +11,16 @@
     height: auto;
 }
 
-h3{
+#boxx{
     text-align: center;
-    
+    width: 1750px;
+    font-size: 30pt;
 }
-
-#text{
+#text div{
     text-align: left;
     margin-left: 500px;
     margin-bottom: 40px;
+    width: 1200px;
 
 }
 
@@ -61,6 +62,9 @@ h3{
     height: auto;
     line-height: 45px;
     text-align: center;
+    align-items: center;
+    border-top:  1px solid #5CD1E5;
+    text-align: left;
 }
 
 /* 첫번째 li태그 스타일 */
@@ -68,23 +72,18 @@ h3{
     font-weight: 700;
     font-size: 13pt;
     text-align: center;
+    align-items: center;
+    
 }
 
 .board_title div{
     height: 45px;
     line-height: 45px;
     text-align: center;
-    height: 60px;
 }
 
 /* 게시판 각 항목별 스타일 */
 
-.bli{
-    display: flex;
-    line-height: 45px;
-    border-top:  1px solid #5CD1E5;
-    text-align: left;
-}
 
 .num{
     width: 3%;
@@ -112,7 +111,7 @@ h3{
     height: 50px;
 }
 
-#co{
+.co{
     background:#B2EBF4;
 }
 
@@ -124,4 +123,9 @@ h3{
     text-align: left;
 }
 
-
+#gr{
+    width: 1200px;
+    height: 60px;
+    background: grey;
+    border-bottom:  1px solid #5CD1E5;
+}

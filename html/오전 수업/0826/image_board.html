@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> image_board.html </title>
+    <link rel="stylesheet" type="text/css" href="image_board.css">
+</head>
+<body>
+    
+    <div id="image_mask">
+        <div id="image_wrap">
+            <div class="image_title">
+                <div class="title_wrap">
+                    <b>갤러리</b>
+                </div>
+            </div>
+            <div id="image_list">
+                <div class="line_wrap"> 
+                    <div class="cell cell_one">
+                        <div style="background: url(pz.jpg) no-repeat center center; background-size: cover" class="img_area">
+                            <a href="gview.html?name=pz&type=jpg&title=피자1번"></a>
+                        </div>
+                        <div class="title"><a href="gview.html">피자1번</a></div>
+                    </div>
+                    <div class="cell cell_too">
+                        <div style="background: url(pz2.jpg) no-repeat center center; background-size: cover" class="img_area">
+                            <a href="gview.html?name=pz2&type=jpg&title=피자2번"></a>
+                        </div>
+                        <div class="title"><a href="gview.html">피자2번</a></div>
+                    </div>
+                    <div class="cell cell_three">
+                        <div style="background: url(pz3.jpg) no-repeat center center; background-size: cover" class="img_area">
+                            <a href="gview.html?name=pz3&type=jpg&title=피자3번"></a>
+                        </div>
+                        <div class="title"><a href="gview.html">피자3번</a></div>
+                    </div>
+                </div>
+                <div class="line_wrap">  
+                    <div class="cell cell_one">
+                        <div style="background: url(pz4.jpg) no-repeat center center; background-size: cover" class="img_area">
+                            <a href="gview.html?name=pz4&type=jpg&title=피자4번"></a>
+                        </div>
+                        <div class="title"><a href="gview.html">피자4번</a></div>
+                    </div>
+                    <div class="cell cell_too">
+                        <div style="background: url(pz5.jpg) no-repeat center center; background-size: cover" class="img_area">
+                            <a href="gview.html?name=pz5&type=jpg&title=피자5번"></a>
+                        </div>
+                        <div class="title"><a href="gview.html">피자5번</a></div>
+                    </div>
+                    <div class="cell cell_three">
+                        <div style="background: url(pz6.jpg) no-repeat center center; background-size: cover" class="img_area">
+                            <a href="gview.html?name=pz6&type=jpg&title=피자6번"></a>
+                        </div>
+                        <div class="title"><a href="gview.html">피자6번</a></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <style>
+        .a{
+            width: 400px;
+            overflow: hidden;
+        }
+        .a img{
+            width: 400px;
+            transition: 0.5s;
+        }
+        .a:hover img{
+            transform: scale(1.4);
+        }
+    </style>
+    <div class="a">
+        <img src="pz.jpg">
+    </div>
+    
+</body>
+</html>

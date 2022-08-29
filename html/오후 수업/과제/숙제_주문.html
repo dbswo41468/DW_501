@@ -30,10 +30,10 @@
         </div>
         <div class="input-box">
             ICED : <input type="radio" name="type" value="ICED" checked>
-            HOT : <input type="radio" name="type" value="HOT">
+            HOT : <input id="in" type="radio" name="type" value="HOT">
         </div>
         <div class="input-box">
-            L size : <input type="radio" name="size" value="L" checked>
+            L size : <input id="si" type="radio" name="size" value="L" checked>
             M size : <input type="radio" name="size" value="M">
         </div>
         <div class="input-box">
@@ -89,10 +89,10 @@
             console.log('메뉴를 선택해주세요')
         }
 
-        var type = document.querySelector('input[name=type]:checked').value;
+        var type = document.querySelector('input[in]:checked').value;
         console.log(type);
 
-        var size = document.querySelector('input[name=size]:checked').value;
+        var size = document.querySelector('input[si]:checked').value;
         console.log(size);
 
         var count = document.getElementById('count').value

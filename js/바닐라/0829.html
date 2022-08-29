@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+</head>
+<body>
+    <input id="name" type="text">
+    
+</body>
+<script>
+    // for문 (뭔가를 반복해서 실행하는 것) 많이 사용함
+    // 10 : 데이터
+    // = : 대입 연산자
+    // x : 변수 이름
+    // var : 데이터 타입 (자바스크립트는 var로 데이터타입을 통일한다.)
+    var x = 10;
+    for(var i=0; i<6; i++){// for문 시작
+        console.log(i);
+    }// for문 끝
+    // 1. i=0; => 초기문
+    // 2. i<3; => 조건식
+    // 3. console.log => 작업문
+    // 4. i++ => 반복 후 작업
+    
+    var i = 2; // % = 나머지
+    if( i%2 == 0){
+        console.log('짝수 입니다');
+    }
+
+    for(var i=1; i<=5; i++){ // 문제 1. 짝수를 출력 하시오.
+        if( i%2 == 0){
+            console.log(i);
+        }
+    }
+        
+    for(var i=1; i<=5; i++){
+        // i가 4일 때 i는 4 입니다 출력
+        if( i == 4 )
+            console.log("i는" +i+ "입니다")
+        }
+
+    for(var i=0; i<=5; i++){//for문 시작
+        //문제 1. i가 2하고 4일 때 ' hello world' 출력하기!
+        // A||B : or 연산자 ( a 혹은 b)
+        if( i == 2 || i==4 ){
+            console.log("hello world")
+        }
+    }
+    
+    /* 
+    for(1. 초기식; 2.조건식; 4. 작업 후 실행;){
+        3. 작업문
+    }
+    */
+    // 1. 1번 문제 1부터 10까지 짝수 갯수를 구하시오
+    // ++ : 증강 연산자
+    for(var i=1; i<=10; i++){
+        if( i % 2 == 0 ){
+            console.log('짝수 갯수는' +count+"입니다");
+        }
+    }
+    console.log('짝수 갯수는' +count+"입니다");
+    //2. 1부터 10까지 합산을 구하시오 정답)55
+    var sum = 0;
+    for(var i=1; i<=10; i++){
+        sum = sum + i;       
+    }
+    console.log('1부터 10까지 합산' + sum);
+</script>
+</html>
