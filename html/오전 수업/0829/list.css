@@ -91,13 +91,21 @@
     margin-bottom: 5px;
 }
 
+.item_money{
+    font-size: 20px;
+    font-weight: 800;
+}
 
+/* 상품위에 마우스 오버시 */
 
+.item:hover{
+    border: 1px solid red;
+    cursor: pointer;
+}
 
-
-
-
-
+.item:hover .i{
+    text-decoration: underline;
+}
 
 
 

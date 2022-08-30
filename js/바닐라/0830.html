@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <div id="box" class="input-box">
+            <input type="text" placeholder="이름입력">
+            <input type="text" placeholder="연락처입력">
+            <input type="text" placeholder="이메일입력">
+            <input type="text" placeholder="주소입력">
+            <input type="text" placeholder="기타사항입력">
+        </div>
+        <button onclick="check()">제출</button>
+    </div>
+</body>
+<script>
+    //문제. 제출 버튼을 눌렀을 때 input에 모드 입력이 되어있어야 한다.
+    // 값을 입력하지 않고 누르면 ' 값을 입력해주세요!' alert창 보여주기!
+    function check(){
+        var box = document.getElementById('box').children;
+        for(var i=0; i<box.length; i++){
+            var inputvalue = box[i];
+            if(inputvalue.value == ''){
+                alert('값을 입력해주세요');
+                inputvalue.focus();
+                return false;
+            }
+        }
+    }
+s
+
+</script>
+</html>
