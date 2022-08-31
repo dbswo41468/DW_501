@@ -1,0 +1,173 @@
+/* 과제5.css */
+
+/* 상단 */
+#big{
+    width: 100%;
+    height: auto;
+}
+
+#top{
+    display: flex;
+    width: 1200px;
+    height: 120px;
+    background: white;
+    margin: 0 auto;
+    
+}
+
+#logo{
+    margin-top: 30px;
+    margin-left: 60px;
+}
+
+#logo1{
+    width: 200px;
+    height: auto;
+}
+
+
+.text1{
+    display: flex;
+    margin-top: 40px;
+    font-size: 20px;
+    font-weight: 1000;
+    }
+
+.text1 p{
+   margin-left: 100px;
+}
+
+/* 중단 */
+
+#mid{
+    border-bottom: 1px solid gray;
+    border-top: 1px solid gray;
+    height: 500px;
+    background-color:rgb(242,255,237);
+}
+
+#img{
+    width: 1200px;
+    margin: 0 auto;
+    
+}
+
+#img0{
+    display: flex;
+}
+
+#img00{
+    margin-left: 50px;
+}
+
+
+#img1{
+    margin-left: 0;
+}
+
+#img img{
+    width: 1000px;
+    height: 400px;
+    margin-top: 50px;
+}
+
+#img1 img{
+    width: 150px;
+    height: 150px;
+    border-radius:50%;
+    border: 1px solid none;
+    background:rgb(255,217,66);
+}
+
+#img2 img{
+    width: 150px;
+    height: 150px;
+    border-radius:50%;
+    border: 1px solid none;
+    background: rgb(255,161,104);
+}
+
+#img p{
+    font-size: 20pt;
+    font-weight: 900;
+}
+
+.gpf{
+    font-size: 25px;
+    font-weight: 800;
+    margin-top: 10px;
+}
+
+.gpf1{
+    font-size: 25px;
+    font-weight: 800;
+    margin: 10px 0 0 20px;
+}
+
+
+/* 하단 */
+#bottom{
+    width: 1200px;
+    margin: 0 auto;
+}
+
+#many_img_img{
+    display: flex;
+}
+
+.png{
+    border-radius:50%;
+    background: rgb(70,108,136);
+    width: 130px;
+    height: 130px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+p{
+    font-size: 15pt;
+    font-weight: bold;
+    text-align: center;
+}
+
+h3{
+    text-align: left;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
