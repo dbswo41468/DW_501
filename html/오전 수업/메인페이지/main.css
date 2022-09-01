@@ -61,12 +61,196 @@ body, div, ul{
 
 #logo{
     width: 200px;
+    height: 60px;
+    font-size: 19px;
+    color: white;
+    font-weight: 800;
+    padding-top: 20px;
+}
+
+#logo img{
+    width: 40px;
+    height: 40px;
 }
 
 #menu{
     width: 800px;
 }
 
+#menu_list{
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+    color: white;
+    font-size: 16px;
+    font-weight: 800;
+    width: 800px;
+    height: 80px;
+}
 
+#menu_list li{
+    float:left;
+    height: 80px;
+    line-height: 80px;
+    width: 133.3px;
+    text-align: center;
+    position: relative;
+}
+
+#menu_list li ul{
+    padding: 0;
+    margin: 0;
+    width: 0;
+    height: 0;
+    position: relative;
+    opacity: 0;
+    list-style: none;
+}
+
+#menu_list li ul li{
+    width: 0;
+    height: 0;
+    position: absolute;
+    line-height: 0;
+    top: -10;
+}
+
+#menu_list li:hover ul{
+    position: relative;
+    opacity: 1;
+    background: #223c6f;
+    width: 133.3px;
+    top: 10px;
+    z-index: 100;
+}
+
+#menu_list li:hover ul li{
+    position: relative;
+    width: 133.3px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #223c6f;
+}
+
+
+/* 메인 이미지 */
+
+#main_img{
+    width: 100%;
+    height: 350px;
+    background: rgb(192,229,224);
+}
+
+.m_image{
+    width: 1000px;
+    height: 350px;
+    margin: 0 auto;
+}
+
+.m_image img{
+    width: 1000px;
+    height: 350px;
+}
+
+/* 동물 공고 */
+
+#post_wrap{
+    width: 1000px;
+    margin: 0 auto;
+    height: 800px;
+}
+
+#contents{
+    position: relative;
+    width:100%;
+    height: 310px;
+}
+
+#contents h2{
+    font-weight:600;
+    margin-bottom: 10px;
+}
+
+.f_amall{
+    font-size: 12px;
+}
+
+.r_small{
+    font-size: 12px;
+    float:right
+}
+
+.animal_list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    display: inline-block;
+}
+
+.img_li{
+    width: 230px;
+    padding: 0 10px;
+    float: left;
+    display: block;
+}
+
+.img_li img{
+    width: 230px;
+}
+
+.img_li ul{
+    list-style: none;
+    width: 204px;
+}
+
+.img_il ul li{
+    padding-left: 7px;
+}
+
+.img_li ul li span{
+    font-weight: 700;
+}
+
+/* 공지사항, 입양 후기 */
+
+#mid{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 30px;
+    height: 175px;
+}
+
+.m_left{
+    width: 65%;
+    float: left;
+    margin-right: 5%;
+}
+
+.m_top{
+    padding-top: 10px;
+}
+
+.notice{
+    float: left;
+    width: 46%;
+}
+
+.m_top .notice:first-child{
+    margin-right: 8%;
+}
+.notice ul{
+    padding-left: 20px;
+}
+
+.notice ul li{
+    height: 25px;
+    font-size: 13px;
+}
+
+.m_right{
+    width: 30%;
+}
 
 

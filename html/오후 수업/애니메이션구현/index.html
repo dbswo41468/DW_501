@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .container{
+            width: 100%;
+            height: 100vh;
+            /* img 태그가 아닌 다른 태그에 이미지 넣기 */
+            background-image: url(background.png);
+            background-position: center;
+            /* cover를 해야 배견화면 이미지가 화면에 꽉 찬다 */
+            background-size: cover;
+            position: relative; 
+            padding: 0 8%;
+        }
+
+        .logo{
+            padding: 50px 30px;
+            cursor: pointer;
+        }
+
+        /* content css */
+
+        .content{
+            position: absolute;
+            top:50%;
+            color:  #fff;
+            transform: translateY(-50%);
+        }
+
+        .content h1{
+            font-size: 64px;
+            font-weight: 600;
+        }
+
+        .content h1 span{
+            color: #ff3753;
+        }
+
+        .time{
+            display: flex;
+        }
+
+        .time div{
+            /* 아이템 크기 지정 */
+            flex-basis: 100px;
+        }
+
+        .time div p{
+            font-size: 60px;
+            margin-bottom: -12px;
+            margin-right: 30px;
+        }
+
+        .rocket{
+            /* absolute는 부모가 position이 relative라면
+               부모태그 기준으로 자식태그를 이동시킬 수 있다.  */
+            position: absolute;
+            right: 20%;
+            bottom: 0;
+            /* 
+                rocket : keyframes 이름
+                4s(4초) : 애니메이션 실행 시간
+                linear : 일정한 방향
+                infinite : 무한 반복
+            */
+            animation : rocket 4s linear infinite;  
+        }
+        /* @ : 어노테이션 */
+        @keyframes rocket{
+            /* opacity : 투명도 0은 보임, 1은 안보임 */
+            /* 0% 시작 */
+            0%{
+                bottom: 0;
+                opacity: 0;
+            }
+            100%{  /* 100% 끝*/
+                bottom: 105%;
+                opacity: 1;
+            }
+        }
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- 로고 -->
+        <div class="logo">
+            <img src="logo.png" alt="">
+        </div>
+        <!-- 내용 -->
+        <div class="content">
+            <p>재영 사이트에 오신걸 환영합니다</p>
+            <h1>we're <span>Launching</span> Soon</h1>
+            <div class="time">
+                <div>
+                    <p id="days">00</p>
+                    <span>Days</span>
+                </div>
+                <div>
+                    <p id="hours">00</p>
+                    <span>Hours</span>
+                </div>
+                <div>
+                    <p id="minutes">00</p>
+                    <span>Minutes</span>
+                </div>
+                <div>
+                    <p id="seconds">00</p>
+                    <span>Seconds</span>
+                </div>
+            </div>
+        </div>
+        <!-- 애니매이션 이미지 -->
+        <img class="rocket" src="rocket.png" alt="">
+    </div>
+</body>
+
+<script>
+
+    var endDay = new Date('February 06, 2023 00:00:00'); // 2023년 2월 6일 날짜 가져오기
+    // setInterval 무한으로 실행 시켜주는 자바스크립트 함수
+    setInterval(function(){
+        var nowDay = new Date().getTime(); //현재 시간 불러오기
+        console.log(nowDay)//현재 시간을 숫자로 표현 약 1980년 기준으로 초 카운팅
+        var diff = endDay - nowDay; // 미래시간과 현재 시간을 빼준다.
+        // 1000 = 1초 , 60초 1분, 60분 1시간, 24시간 1하루
+        var days = Math.floor(diff / (1000*60*60*24));
+        // Math.floor: 소수 내림 ex) 1.2일 남았으면 => 1일로
+        var hours = Math.floor((diff % (1000*60*60*24)) / (1000* 60*60));
+        var minutes = Math.floor((diff % (1000*60*60)) / (1000* 60));
+        var seconds = Math.floor((diff % (1000*60)) / (1000));
+
+        document.getElementById('days').innerHTML = days;
+        document.getElementById('hours').innerHTML = hours;
+        document.getElementById('minutes').innerHTML = minutes;
+        document.getElementById('seconds').innerHTML = seconds;
+    },1000);
+</script>
+</html>
