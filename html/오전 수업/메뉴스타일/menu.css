@@ -1,0 +1,60 @@
+/* menu.css */
+
+#menu{
+    width: 1000px;
+    height: 80px;
+    position: relative;
+}
+
+#menu ul{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    position: relative;
+}
+
+#main_menu{
+    width: 1000px;
+    height: 80px;
+    position: relative;
+}
+
+#main_menu>li{
+    width: 200px;
+    height: 80px;
+    float: left;
+    line-height: 80px;
+    text-align: center;
+    background: pink;
+    position: relative;
+}
+
+#main_menu .sub{
+    display: none;
+}
+
+#main_menu .sub li{
+
+}
+
+#main_menu:hover .sub{
+    display: block;
+    background: lightgoldenrodyellow;
+    height: 240px;
+    
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
