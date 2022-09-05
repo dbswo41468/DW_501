@@ -93,20 +93,27 @@
         console.log(i+'단 종료');
     }
     
-    
-    for(let i = 0; i <5 ; i++) {
-        for(let j = 5; j > i; i--){
-            document.write('*');
+
+
+
+    // 3~6단까지 만들기
+
+    for(var i=3; i<=6; i++){
+        console.log(i+'단을 시작합니다');
+        for(var j=1; j<=9; j++){
+            console.log(i+'*'+j+'='+(i*j));
         }
-        document.write('<br>');
     }
 
 
+// 5~9단 까지 만들기
 
-
-
-
-
+for(i=5; i<=9; i++){
+    console.log(i+'단을 시작합니다');
+    for(var j=5; j<=9; j++){
+        console.log(i+'*'+j+'='+(i*j));
+    }
+}
 
 
 

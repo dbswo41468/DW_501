@@ -14,37 +14,99 @@
     <div id="main5"></div>
 
     <div id="root" class="container">
-        
+
     </div>
 </body>
 <script>
 
-// 인터넷 검색
-for (let i = 0; i < 5; i++) {
-  for (let j = 5; j > i; j--) {
-    document.write('*');
-  }
-  document.write('<br>');
-}
-// 종찬이형님 답
-for(var i=0; i<5; i++){
-    var star = '';
-    for(j=i; j<5; j++){
-        star += '*';
-    }
-    document.getElementById("main"+(i+1)).innerHTML = star;
-    console.log(star);
-}
-// 선생님 답
+// // 인터넷 검색
+// for (let i = 0; i < 5; i++) {
+//   for (let j = 5; j > i; j--) {
+//     document.write('*');
+//   }
+//   document.write('<br>');
+// }
+// // 종찬이형님 답
+// for(var i=0; i<5; i++){
+//     var star = '';
+//     for(j=i; j<5; j++){
+//         star += '*';
+//     }
+//     document.getElementById("main"+(i+1)).innerHTML = star;
+//     console.log(star);
+// }
+// // 선생님 답
 
-var html = '';
-for(var i=5; i>0; i--){
-    for(var j=0; j<i; j++){
-        html += '*';
+// var html = '';
+// for(var i=5; i>0; i--){
+//     for(var j=0; j<i; j++){
+//         html += '*';
+//     }
+//     html += '<div></div>';
+// }
+// document.getElementById('root').innerHTML = html;
+
+
+// //1~5개 까지
+
+for(var i=0; i<1; i++){
+    var quf = '';
+    for(var j=i; j<5; j++){
+        quf += '*';
+        console.log(quf);
     }
-    html += '<div></div>';
 }
-document.getElementById('root').innerHTML = html;
+
+// 1~8개 까지
+
+for(var i=0; i<1; i++){
+    var quf1 = '';
+    for(var j=i; j<9; j++){
+        quf1 += '*';
+        console.log(quf1);
+    }
+}
+
+// 1~9까지
+
+for(var i=0; i<1; i++){
+    var quf2 = '';
+    for(var j=i; j<9; j++){
+        quf2 += '*';
+        console.log(quf2);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
