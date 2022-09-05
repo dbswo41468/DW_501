@@ -1,0 +1,87 @@
+/* acc.css */
+
+.accordianMenu{
+    /* 12px~20px에서 설정 하겠다/그렇게 하지 않아도 된다 */
+    font: 12px/20px 돋움;
+    color: #424242;
+    background: #fff;
+    padding: 10px;
+    width: 500px;
+    margin: 0;
+}
+
+.accordianMenu h1{
+    margin: 0;
+    font-size: 20px;
+    text-shadow: 2px 2px 2px #aeaeae;
+}
+
+.accordianMenu h2{
+    margin: 5px 0; /* 위 아래 5px, 왼쪽 오른쪽 0 */
+    padding: 0;
+}
+
+.accordianMenu h2 a{
+    font-size: 15px;
+    display: block;
+    font-weight: normal;
+    color: #424242;
+    text-shadow: 2px 2px 2px #aeaeae;
+    text-decoration: none;
+    background: -webkit-gradient(linear,left top, left bottom,from(#d4f4f4),to(#6799ff));
+    background: -moz-linear-gradient(top,#d4f4f4,#6799ff);
+    -webkit-border-radius:5px;
+    -moz-border-radius:5px;
+    border-radius:5px;
+    height: 50px;
+    line-height: 50px;
+}
+
+.accordianMenu :target h2 a , .accordianMenu h2 a:hover{
+    background: -webkit-gradient(linear,left top, left bottom,from(#6799ff),to(#d4f4f4));
+    font-weight: 800;
+}
+
+.accordianMenu p{
+    padding: 0 10px;
+    margin: 0;
+    height: 0;
+    overflow: hidden;
+    -webkit-transition: height 0.5s ease-in;
+    transition: height 0.5s ease-in;
+    /* ease-in : 처음에 느렸다가 점점 빨라지는 효과 */
+    /* ease : 서서히 빨랐다가 천천히 느려지는 */
+    /* ease-out : 처음에 빨랐다가 확 느리게 간다 */
+    /* ease-in-out : 처음에 빨랐다가 마지막에 빠르게 느려진다 */
+
+}
+/* :target : 마우스 클릭시 */
+
+.accordianMenu :target p{
+    height: 100px;
+    overflow: auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

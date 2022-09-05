@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="main1"></div>
+    <div id="main2"></div>
+    <div id="main3"></div>
+    <div id="main4"></div>
+    <div id="main5"></div>
+
+    <div id="root" class="container">
+        
+    </div>
+</body>
+<script>
+
+// 인터넷 검색
+for (let i = 0; i < 5; i++) {
+  for (let j = 5; j > i; j--) {
+    document.write('*');
+  }
+  document.write('<br>');
+}
+// 종찬이형님 답
+for(var i=0; i<5; i++){
+    var star = '';
+    for(j=i; j<5; j++){
+        star += '*';
+    }
+    document.getElementById("main"+(i+1)).innerHTML = star;
+    console.log(star);
+}
+// 선생님 답
+
+var html = '';
+for(var i=5; i>0; i--){
+    for(var j=0; j<i; j++){
+        html += '*';
+    }
+    html += '<div></div>';
+}
+document.getElementById('root').innerHTML = html;
+
+
+
+</script>
+</html>
