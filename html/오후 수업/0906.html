@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+
+<script>
+
+    var x = 20; // x라는 이름을 가진 변수 생성
+    x = 20; // x라는 변수 재활용
+
+    var x = 20; // 자바스크립트가 허용하는 문제점
+                // 원래는 변수 이름을 중복해서 선언할 수 없다.
+
+
+    let y1 = 10;
+    let y2 = 10; // 오류 why? 변수 이름이 중복 생성
+
+
+    // for & 배열 무한반복!!!!!!!!!!!!!!!!!!!!!!!
+
+    // 1~30까지 출력 for문 사용
+
+    for(var i=0; i<=30; i++){
+        console.log("문제1번 = "+i);
+    }
+
+    
+
+    // for 문 사용하지 않고 배열안에 있는 숫자를 모두 더하시오
+    var array = [5,10,7,20];
+    var zr = array[0]+array[2]
+    console.log("문제2번 = "+zr);
+
+
+
+    //for문을 이용해서 짝수만 출력하시오
+
+    var array = [2,4,9,10];
+    var value = 0;
+    for(var i=0; i<array.length; i++){
+        console.log("문제3번 = "+array[i]);
+        var x = array[i];
+        if(x%2 == 0){
+            console.log('짝수는  => '+array[i]); // if 조건이 맞는 i만 출력된다
+        }
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</html>

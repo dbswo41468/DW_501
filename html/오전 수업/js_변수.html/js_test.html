@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> js_test.html </title>
+    
+
+<script>
+
+
+// 10과 5는 일회성 데이터다
+
+// 변수 조건 : 메모리 타입지정(데이터 타입에 따라 메모리 크기가 결정)
+//             재사용이 가능해야한다.
+//             읽기, 쓰기 권한이 있어야한다.
+
+
+// 컴퓨터 전원 단추 누르기 -> cmos(bios) 동작 하면서 하드웨어 상태 체크 -> hdd 부팅영역 
+
+// -> 운영체제 찾아서 메모리에 보내기(로드) -> 컴퓨터 권한을 운영체제에게 넘
+
+// -> 메모리, cpu, hdd 그래픽카드, 랜카드 등등 설정 가능
+
+num = 100; // num이라는 메모리공간에 100을 저장한다.
+// = -> 대입연산자(오른쪽에서 왼쪽으로 저장)
+// 변수의 이름은 예약어(window,var, document, location, onload...) 금지
+//      변수 이름의 첫글자는 영어로 시작 ( 1num 안됨 )
+// 변수의 이름은 의미있는 이름으로 ( 사용하는 곳에 맞는 이름 - apple, number, boy1, phone ...)
+
+num2 = num + 10; // num2 변수에 num+10을 저장 ( 100+ 10 )
+
+num = num + 100; // num 변수에 100+100 저장 , num 공간에 200을 덮어쓰기 저장
+
+pi = 3.14; // 실수저장
+name1 = '이순신'; // 문자열 저장
+// 문자열은 " " 로 감싸주어야한다. 또는 ' ' 가능
+// ' ' 문자열은 변경 하지않을 문자열 , " " 문자열은 다른문자열로 변경 되는 경우
+
+city = '대전';
+city = '광주';
+addr = '대전시 중구 선화동';
+
+content = "구매후기 : 교체 작업 후 확인 가능하니 제품에 하자가있다. ";
+
+// 출력 방법
+
+//alert(city); // alert 함수 : 브라우저에 알림을 띄운다
+document.write(addr); // html 에 write(쓰기) , body 태그에 삽입
+
+document.write("<hr>");
+
+
+// 입력 방법
+//name = prompt("이름을 입력하세요");
+//document.write("이름 : "+name);
+
+/*
+    이름, 직업, 나이, 사는곳 입력받아 화면에 출력하시오
+*/
+
+name = prompt("이름을 입력하세요");
+document.write("이름 : "+name+"<br>");
+
+job = prompt("직업을 입력하세요");
+document.write("직업 : "+job+"<br>");
+
+age = prompt("나이를 입력하세요")
+document.write("나이 : "+age+"<br>")
+
+town = prompt("사는곳을 입력하세요");
+document.write("사는곳 : "+town+"<br>");
+
+
+
+
+
+
+// 문자 와 문자열의 차이
+// 문자는 메모리 공간 1만큼 사용 , 문자열은 메모리 공간 2 이상 사용
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+
+</head>
+<body>
+
+</body>
+</html>
