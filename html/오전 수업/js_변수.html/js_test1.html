@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<script>
+/*
+var num = 10; // 변수 중복 선언 가능, 변수 값 재할당 가능
+
+let kor = 90; // 중복 선언 불가, 변수값 재 할당 가능
+// 전역 변수 : 현재 스크립트 파일 내에서 어디서든 사용가능한 변수
+// 지역 변수 : 자신이 선언된 위치에서만 사용 가능
+
+var b = 111;// 전역변수
+for(i=0; i<10; i++){
+    let i=10; // 지역변수
+    a = b+10;
+    var c=20;
+}
+
+for(k=0; k<10; k++){
+        b = b+k;
+}
+
+
+const pi = 3.14; // 변수 선언과 초기화를 동시에 진행, 중복 선언 불가
+// const 불변의 값
+// const 여기에 저장된 값 변경하지 마라
+//                  변수 값 재할당 불가능
+// 선언 : pi라는 이름으로 변수를 사용하겠다.
+
+// var, let 으로 변수를 선언 하고 초기화 이후에 다른 값을 저장할 수 있다.
+// const 로 변수를 선언하고 초기화 이후에 다른 값 저장 불가(상수)
+*/
+
+// 문자열->숫자
+// 1. Number() 2. parseInt()
+// () 안에는 숫자로 변환 할 문자열 입력
+
+// var num = Number(prompt("숫자 입력 : ")); // 웹 입력 받기 - 문자열 값
+
+// alertd("숫자 변환 가능 : "+isNaN(num))
+// isNaN : false 나오면 숫자 변환 가능, true 나오면 숫자 변환 불가능
+
+
+// var num = parseInt(prompt("숫자 입력 : "));
+
+//document.write( num+10+"<br>");
+
+//  국어, 수학, 영어, 역사 점수를 입력 받아서 총점과 평균 구하여 출력
+// 출력 예시 ) 국어 : 80점
+//             수학 : 30점
+//             영어 : 90점
+//             역사 : 70점
+//             총점 : 220점 평균 : 67.5점
+
+/*
+var kr = parseInt(prompt("국어 점수")) // 입력창이 뜨고 숫자를 입력하면 출력된다
+var ms = parseInt(prompt("수학 점수"))
+var en = parseInt(prompt("영어 점수"))
+var hi = parseInt(prompt("역사 점수"))
+
+
+var total = kr+ms+en+hi;
+var avg = total/4;
+
+document.write("국어 : "+kr);
+document.write("<br>수학 : "+ms);
+document.write("<br>영어 : "+en);
+document.write("<br>역사 : "+hi);
+document.write("<br>총점 : " + total+ "평균 : " + avg);
+
+
+var num1 =10;
+var num2 =30;
+var num3 = num1 + num2;
+
+
+
+// 연산자
+    대입 연산자 : = (오른쪽 값을 왼쪽에 저장)
+    산술 연산자 : + , - , * , /(몫 값,실수 까지 나온다) , %(나머지 값) 나누기가 2개인 이유는 나누기를 하면 결과값이 2개 라서
+    증감 연산자 : ++ , -- 
+    비교 연산자 : (대소) > , < , >= , <=
+                    (등가) ==(같다, 같은 타입 끼리 비교할 경우) , ===(같다, 다른 타입일 경우) , !=(같지 않다) 
+    논리 연산자 : &&(and,그리고) , || (or) , ! (not.부정)
+    
+    조건 연산자(삼항연산자) : 조건식 ?(참,거짓 물어보는것) 참일경우 실행 내용 : 거짓일 경우 내용
+                            주어진 내용이 참이냐 거짓이냐에 따라서 어떤 행동을 할 것이냐 물어보는 연산자
+
+연산자 우선 순위 1. () 2. [] 3. . 4. -> 5. ++(앞에 입력) 6. + 7. - .......... ++(뒤에 입력)
+*/
+
+var tall = 156;
+// 바이팅 입장 가능 키 제한 150이상 190이하
+// 조건식 && 조건식 and 연산자 양쪽의 식이 모두 참 일경우만 참
+// 조건식 || 조건식 or 연산자는 한쪽의 식이 참이라면 참
+// not 연산자 : !(tall<140) 조건식 앞에 써야한다
+
+// 연산자 하나에 피연산자 2개 붙어야한다
+
+// document.write(tall >= 150 && tall<=190);
+
+// var num1;
+// var num2;
+// var num3;
+
+// 두 변수중에서 num1에 큰 숫자를 입력했을경우 // 입력 했을 경우 : !! parseInt("숫자"));
+// num1, num2를 비교하여 참이 나오게 만드시오.
+var num1 = parseInt(prompt("숫자"));
+var num2 = parseInt(prompt("숫자"));
+var num3 = parseInt(prompt("숫자"));
+document.write(num1 < num2 && num1 > num3);
+
+
+
+
+
+var a =10;
+// 변수 뒤에 증감 연산자 붙은 경우  b = a++ 뒤에 붙은 경우 나중에 더해진다
+// 변수 앞에 증감 연산자 붙은 경우 b = ++a
+var b=0;
+// // 뒤
+// b = a;
+// a = a+1;
+
+// // 앞
+// a = a+1;
+// b = a;
+
+// document.write(++a);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</head>
+<body>
+    
+</body>
+</html>

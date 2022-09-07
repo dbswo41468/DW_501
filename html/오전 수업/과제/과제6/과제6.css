@@ -1,0 +1,136 @@
+/* 과제 6 .css */
+
+
+#big{
+    width: 1600px;
+    height: 850px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding:  0 auto;
+}
+
+#top{
+    width: 1600px;
+    height: 100px;
+    display: flex;
+}
+
+#left{
+    width: 1600px;
+    height: 750px;
+    border-right:  1px solid black;
+    display: flex;
+}
+
+#right{
+    width: 1300px;
+    height: 0 auto;
+    border-bottom: 1px solid black;
+    background: red;
+}
+
+#top_one{
+    width: 300px;
+}
+
+.top_img img{
+    width: 300px;
+    height: 100px;
+}
+
+.top_img img{
+    width: 200px;
+    height: 80px;
+    margin-left: 40px;
+    margin-top: 5px;
+
+}
+
+#top_too{
+    width: 1300px;
+
+}
+
+.top_too_img{
+    width: 1300px;
+}
+
+.top_too_img img{
+    width: 300px;
+    height: 80px;
+    margin-left: 380px;
+    margin-top: 5px;
+}
+
+#left_box{
+    width: 300px;
+    height: 0 auto;
+    background: green;
+}
+
+.left_idps_box{
+    width: 300px;
+    height: 200px;
+    background: purple;
+    margin: 0 auto;
+    
+}
+
+
+.left_id{
+    display: flex;
+    padding: 15px 0  0 10px;
+    margin-left: 20px;
+}
+
+.left_ps{
+    display: flex;
+    padding: 10px 0  0 10px;
+    margin-left: 20px;
+}
+
+.left_id_input_box{
+    margin-left: 20px;
+}
+
+.left_ps_input_box{
+    margin-left: 5px;
+}
+
+.left_ps_box{
+    width: 150px;
+    background: gray;
+}
+
+.left_id_box{
+    width: 150px;
+    background: gray;
+}
+
+.left_login_bt{
+    width: 227px;
+    margin-left: 30px;
+    margin-top: 15px;
+    background: greenyellow;
+}
+
+.left_text_box{
+    display: flex;
+}
+
+.left_text_too_id{
+    width: 50px;
+    height: 50px;
+    background: yellow;
+}
+
+
+
+
+
+
+
+
+
+
+
