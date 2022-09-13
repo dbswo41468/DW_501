@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+
+        // 제어문
+        // if, switch, for, whie, do~while
+        // 조건문 if, switch
+        // 반복문 for, while, do~while
+
+
+        // if문 : if(조건식){ } , if(조건식){ }else{ } ,
+        //       if(조건식){ }else if(조건식){ }else{ }
+        
+        // var num = 10;
+        // if(num>5){
+        //     //만약 num이 5보다 크다면
+        //     //{ } 조건식이 참일경우 실행 내용
+        //     alert("5보다 크다");
+        // }
+
+        // 위 if문 실행순서
+        // 조건식 비교 -> 조건식이 참이라면 { 시작 ( { -> 제어문, 함수의 시작을 뜻함)
+        // 내용 실행 -> } 실행 되어 조건식 종료
+
+        // 조건식 비교 -> 조건식이 거짓이라면 종료
+
+        // num > 5 ? alert("5보다 크다") : alert("5보다 작다")
+
+        // var num = 10;
+        // if(num > 5){ // -> 조건식이 참일경우 실행
+        //     alert("5보다 크다")
+        // }
+        // else{ // -> 조건식이 거짓일 경우 실행
+        //     alert('5보다 작다');
+        // }
+        // if문 실행내용으로 참, 거짓 겨웅에만 실행될 내용만 작성
+        // 관계 없는 내용을 작성해도 무방하지만 코드의 복잡성을 초래하므로 필요한 내용만 작성
+        
+        // var result = num + 10;
+
+        // 두 정수를 입력받아서 가장 큰 수 만 출력
+
+        // var num1 = parseInt( prompt("정수 : "));
+        // var num2 = parseInt( prompt("정수 : "));
+
+        // if(num1 > num2){
+        //     alert(num1)
+        // }
+        // else{
+        //     alert(num2)
+        // }
+
+        // var r = Math.floor(Math.random() * 10 ) ;
+        // // 랜덤 함수 : 0~ 0.99999.....까지 나오는것, 1은 없다
+        // // *10 -> 0.000 *10 , 0.1134 *10 , 0.452 * 10
+        // // 랜덤 범위 ( 1~10 ) Math.floor(Math.random() *10) +1;
+        // // 랜덤 벙위 ( 1~3 ) Math.floor(Marh.random() *3) +1;
+        // // 랜덤 범위 ( 11~30 ) Math.floor(Marh.random()*20)+11; 더할 값은 범위 최소값 입력
+        // // 랜덤 범위 ( 23~102 ) Math.floor(Marh.random()*80)+23;
+        // alert(r);
+
+        // 동전 맞추기 게임
+        // 1 - 앞면 , 2 - 뒷면
+        // 랜덤 함수를 사용하여 동전 앞면 뒷면 맞추기 만들기
+        // 랜덤 함수를 동작 -> 나는 앞면 , 뒷면 값 입력 -> 랜덤 값과 내가 입력한 값 비교하여
+        // 정답인지 아닌지 출력
+
+        // var coin = parseInt( prompt("1. 앞면 , 2. 뒷면"));
+        // var user = Math.floor(Math.random() * 2 )+1 ;
+
+        // if(coin == user){
+        //     alert("정답"); 
+        // }
+        // else(
+        //     alert("오답")
+        // )
+
+        // 컴퓨터와 내가 주사위 게임을 한다.
+        // 주사위는 2개씩 던진다. : 내꺼 , 컴퓨터 랜덤 함수 2개를 만든다
+        // 각자 주사위 2개를 던져서 나온 합이 큰 쪽이 승리 : 각 더한 값을 대입시키는 var를 만든다
+        // 누가 이겼는지 출력하시오 : 대입한 변수를 if문으로 푼다
+        // 컴 3,3 나 2,2 -> 나의 승리
+        // 컴 4,4 나 3,3 -> 컴의 승리
+
+         var co1 = Math.floor(Math.random()*6)+1;
+         var co2 = Math.floor(Math.random()*6)+1;
+
+         var cp1 = Math.floor(Math.random()*6)+1;
+         var cp2 = Math.floor(Math.random()*6)+1;
+
+        var co = co1 + co2;
+
+        var cp = cp1 + cp2;
+
+        if( co1 == co2 && cp != cp) {
+            alert("유저 승");
+        } else if (
+            (co1 == co2 && cp1 == cp2) || (co1 != co2 && cp1 != cp2)
+        ){
+            if(co > cp){
+                alert("유저 승")
+            } else if ( co == cp){
+                alert("비겼다")
+            }  else{
+                alert("컴퓨터 승")
+            }
+        }
+
+
+            // if( cp > coin){
+            //     if( cp1 == cp2 ){
+            //         alert(cp1+" , "+cp2+" 컴퓨터 승")
+            //     }
+            //     else{
+            //         alert(cp+"컴승")
+            //     }
+                
+            //     }
+
+            // else{
+            //     if( coin1 == coin2 ){
+            //         alert(coin1+" , "+coin2+" 컴퓨터 승")
+            //     }
+            //     else{
+            //         alert(coin+" 유승")
+            //     }
+            // }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
