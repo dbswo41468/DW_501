@@ -34,16 +34,10 @@
 }
 
 .top_img img{
-    width: 300px;
-    height: 100px;
-}
-
-.top_img img{
     width: 200px;
     height: 80px;
     margin-left: 40px;
     margin-top: 5px;
-
 }
 
 #top_too{
@@ -115,22 +109,97 @@
 }
 
 .left_text_box{
-    display: flex;
-}
-
-.left_text_too_id{
-    width: 50px;
+    width: 300px;
     height: 50px;
-    background: yellow;
+    background: paleturquoise;
+}
+
+.left_dis{
+    width: 300px;
+    height: 50px;
+    display: flex;
+    background: firebrick;
+}
+
+.left_dis_box{
+    display: flex;
+    margin-left: 30px;
+    margin-top: 8px;
+    font-size: 15px;
+}
+
+.left_dis_us{
+    margin-right: 30px;
+}
+
+.Genre_martial{
+    width: 240px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    background: darkblue;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 5px;
+}
+
+.Genre_fantasy{
+    width: 240px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    background: saddlebrown;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 5px;
+}
+
+.Genre_fusion{
+    width: 240px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    background: cornflowerblue;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 5px;
+}
+
+.Genre_general{
+    width: 240px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    background: olive;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 5px;
+}
+
+.right_img{
+    background: wheat;
+    width: 650px;
+    height: 750px;
+    margin: 0 auto;
+    padding: 0 auto;
 }
 
 
 
 
+.right_img_img{
+    width: 650px;
+    height: 750px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
 
-
-
-
-
-
-
+.right_img_img img{
+    width: 600px;
+    height: 500px;
+    margin-left: 25px;
+}

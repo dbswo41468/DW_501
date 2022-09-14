@@ -1,0 +1,103 @@
+/* 과제6-2.css */
+
+.big{
+    width: 1600px;
+    height: 850px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding:  0 auto;
+}
+
+.top{
+    width: 1600px;
+    height: 100px;
+    display: flex;
+    background: red;
+}
+
+.all{
+    width: 1600px;
+    height: 750px;
+    border-right:  1px solid black;
+    display: flex;
+}
+
+.right{
+    width: 1600px;
+    height: 750px;
+    border-bottom: 1px solid black;
+    background: gold;
+    
+}
+
+.top1{
+    width: 300px;
+    height: 100px;
+    background: violet;
+}
+
+.top2{
+    width: 1300px;
+    height: 100px;
+    background: blue;
+}
+
+.logo img{
+    width: 300px;
+    height: 100px;
+}
+
+.info{
+    width: 800px;
+    height: 750px;
+    background: green;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.info_box_box{
+    width: 600px;
+    height: 700px;
+    background: red;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.info_box{
+    width: 290px;
+    height: 50px;
+    background: hotpink;
+    display: flex;
+    text-align: right;
+    margin: 0 auto;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

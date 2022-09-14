@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <script>
+
+        // 랜덤 함수 Math.floor(Math.random())
+        // Math.floor : 소수점 자리 제거 Math.floor(2.14 , 1) -> 2.1
+        // Math.random() : 랜덤함수 0.0000.. ~ 0.99999... 중 랜덤 값
+
+
+        // 가위바위보
+        // 1. 가위 2. 바위 3. 보
+        // 컴퓨터와 가위바위보를 해서 승 , 패 , 무  출력
+        // 힌트 : 논리 연산자
+
+        /*
+        var user = parseInt(prompt("1=가위 2=바위 3=보"));
+
+        var cp = Math.floor(Math.random()*3)+1;
+        if(user ==  cp){
+            document.write("비김");
+        }
+        else if( (user ==1 && cp==3) || (user==2 && cp==1) ||  (user==3 && cp==2)){
+            document.write("나의 승");
+        }
+        else{
+            document.write("나의 패배");
+        }
+        */
+
+       /*문제2
+            주차장 요금
+            주차장 기본 요금:1000 (1000원에 기본시간 20분)
+            10분당 100원 추가 요금
+
+           //기본 1000=20분 , 10분당 100원 추가 요금//
+
+            2시간 이상 주차시 기본요금 1700원 으로 변경 (2시간에 1700원)
+            120
+
+            4시간 이상 주차시 기본요금 2700원 으로 변경 (4시간에 2700원)
+            240
+
+            8시간 이상 주차시 주차요금은 5000원 으로 변경 (추가요금 없음)
+            480
+
+            주차시간을 입력 받아 요금 구하기 (주차시간은 시간, 분 따로 입력)
+            예) 주차시간 2 34 -> 2시간 34분 주차
+                2시간 34분 주차 요금 : 2000원
+                1시간 5분 주차 요금 : 1300원
+                31분 주차 요금 : 1000원
+                6시간 29분 주차 요금 : 4100원
+        
+        var ti = parseInt(prompt("시간"));
+        var time = parseInt(prompt("분"));
+        var basic = 1000;
+        var add = 100;
+        var pk =( ti*60)+time
+
+        if(ti >=8){ // 8시간 이상 주차
+            basic=5000;
+            pk=0;
+        }
+        else if(ti >=4){ // 4시간 이상 주차
+            basic=2700;
+            pk= pk - 240; 
+        }
+
+        else if(ti >=2){ // 2시간 이상 주차
+            basic=1700;
+            pk= pk - 120;
+        }
+
+        else if(pk>=30){ // 30분 이상 주차
+            pk=pk-30;
+        }
+
+        var price = basic + (parseInt( pk /10)*add)
+        price =(ti == 0) & (time<=30) ? basic : price;
+        document.write("주차 요금 : "+price+" 원")
+        */
+
+    // if문 : 조건식의 참(true), 거짓(false) 의해서 동작
+    // if문에 사용될 조건식은 범위가 큰것 부터 조건식 작성
+    // 조건식 만들기 어렵다면 노트에 작성
+    // if문은 가정하에 만들어야 한다.
+    // 바이킹 탑승 키제한 150이상 190이하
+    // 만약 내가 키를 145라고 입력한다면 조건식은 어떻게?
+    // 145를 이용하여 조건식의 결과가 거짓이 나오게 만들기
+    // 만약 175를 입력한다면 조건식의 결과가 참이 나오게 만들기
+        
+    // 인적사항
+
+    // var name = prompt("이름");
+    // var addr = prompt("주소");
+    // var emil = prompt("이메일");
+    // var job = prompt("직업");
+    // if( job == "학생"){
+    //     school = prompt ("재학중인 학교이름");
+    // }
+    
+    // // 핸드폰 번호 입력 - 업이 입력
+    // var 폰 = "010-1234-1234";
+    // if( 폰.indexOf("-") != -1){
+    //     alert("- 없이 입력하세요");
+    // }
+
+    // switch 와 if문 차이점
+    // if문은 참과 거짓에 의해서 동작
+    // switch 문은 선택에 의한 동작
+    // switch 문에서는 참과 거짓 결과가 나오는 조건식을 사용하지 않는다.
+    // switch 문은 프로그램에서 가장 큰 조건문 작성에 사용된다.
+    // 메뉴, 마우스, 키보드, 프로그램 창 이동
+    
+    // var num =1;
+
+    // switch(num){
+    //     case 1:
+    //     case 8:
+    //     case 5:
+    //         document.write('5를 선택했다.');
+    //         break;
+    //     case 11:
+    //         document.write('11을 선택했다.');
+    //         break;
+    //     case 25:
+    //         document.write('25를 선택했다.');
+    //         break;
+    //     case 10:
+    //         document.write('10을 선택했다.');
+    //         break;
+    //     default:
+    //         document.write('잘못 선택했다')
+
+    // }
+
+
+var select = prompt("1.데이터 저장 2. 데이터 삭제 3. 데이터 추가 4. 데이터 수정 5. 종료");
+
+switch(select){
+    case '데이터 저장':
+        document.write('데이터 저장을 선택했다.');
+        break;
+    case '데이터 삭제':
+        break;
+    case 3:
+        break;
+    case 4:
+        break;
+    case 5:
+        break;
+    default :
+        document.write("메뉴를 다시 선택 하세요");
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

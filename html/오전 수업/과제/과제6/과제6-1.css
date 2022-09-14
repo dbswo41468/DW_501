@@ -1,0 +1,135 @@
+/* 과제6-1.css */
+
+.big{
+    width: 1600px;
+    height: 850px;
+    border: 1px solid black;
+    margin: 0 auto;
+    padding:  0 auto;
+    display: flex;
+}
+
+.mid{
+    width: 300px;
+    height: 0 auto;
+    background: gold;
+}
+
+.bt{
+    width: 1300px;
+    height: 850px;
+    background: rgb(42, 75, 219);
+}
+
+.logo{
+    width: 300px;
+    height: 100px;
+    background: hotpink;
+}
+
+.logo_box img{
+    width: 300px;
+    height: 100px;
+}
+
+.mid_id{
+    width: 250px;
+    height: 130px;
+    background: hotpink;
+    margin: 0 auto;
+    padding: o auto;
+    margin-top: 30px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+.menu_box{
+    width: 250px;
+    height: 500px;
+    background: firebrick;
+    margin: 0 auto;
+    padding: o auto;
+    margin-top: 30px;
+}
+
+.menu1{
+    width: 235px;
+    height: 50px;
+    background: greenyellow;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-bottom: 10px;
+    border-radius: 10px;
+    color: white;
+    text-align: left;
+    font-size: 30px;
+    padding-left: 15px;
+}
+
+.bt_img_box{
+    width: 1000px;
+    height: 600px;
+    background: navajowhite;
+    margin: 0 auto;
+    padding: 0 auto;
+    display: flex;
+}
+
+.bt_img{
+    width: 250px;
+    height: 350px;
+    background: tomato;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-top: 50px;
+    border-radius: 15px;
+}
+
+.bt_img img{
+    width: 250px;
+    height: 350px;
+    border-radius: 15px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
