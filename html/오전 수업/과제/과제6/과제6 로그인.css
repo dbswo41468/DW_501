@@ -1,6 +1,4 @@
-/* 과제 6 .css */
-
-
+/* 과제6 로그인 */
 #big{
     width: 1600px;
     height: 850px;
@@ -235,6 +233,33 @@
     margin-left: 100px;
     
 }
+
+.mid_id{
+    width: 250px;
+    height: 130px;
+   
+    margin: 0 auto;
+    padding: o auto;
+    margin-top: 30px;
+    border-radius: 15px;
+    color: white;
+    text-align: center;
+    font-size: 30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

@@ -119,28 +119,28 @@
     // 메뉴, 마우스, 키보드, 프로그램 창 이동
     
     // var num =1;
+/*
+    switch(num){
+        case 1:
+        case 8:
+        case 5:
+            document.write('5를 선택했다.');
+            break;
+        case 11:
+            document.write('11을 선택했다.');
+            break;
+        case 25:
+            document.write('25를 선택했다.');
+            break;
+        case 10:
+            document.write('10을 선택했다.');
+            break;
+        default:
+            document.write('잘못 선택했다')
 
-    // switch(num){
-    //     case 1:
-    //     case 8:
-    //     case 5:
-    //         document.write('5를 선택했다.');
-    //         break;
-    //     case 11:
-    //         document.write('11을 선택했다.');
-    //         break;
-    //     case 25:
-    //         document.write('25를 선택했다.');
-    //         break;
-    //     case 10:
-    //         document.write('10을 선택했다.');
-    //         break;
-    //     default:
-    //         document.write('잘못 선택했다')
-
-    // }
-
-
+    }
+*/
+/*
 var select = prompt("1.데이터 저장 2. 데이터 삭제 3. 데이터 추가 4. 데이터 수정 5. 종료");
 
 switch(select){
@@ -158,16 +158,50 @@ switch(select){
     default :
         document.write("메뉴를 다시 선택 하세요");
 }
+*/
 
+// 가위바위보 랜덤함수 사용
+// 랜덤값 1.가위 2.바위 3.보
+// 랜덤값에 따라 현재 가위바위보 중 무엇을내었는가 출력
+// switch문으로 구현
 
+/*
+var user = parseInt(prompt("1=가위 2=바위 3=보"));
+var cp = Math.floor(Math.random()*3)+1;
 
+switch(user - cp){
+        case -2:
+        case 1:
+            document.write("나의 승");
+            break;
+        case 2:
+        case -1:
+            document.write("나의 패배");
+            break;
+        case 0:
+            document.write("무승부");
+    }
+*/
 
+    // 점수 입력 받아서 90이상이면 'A등급' , 80점 이상이면 'B등급' ,
+    // 70점 이상이면 'C등급' 나머지는 'F등급' 이라고 출력하기
 
+var score = parseInt(prompt("점수 입력해주세요"));
 
-
-
-
-
+switch(parseInt(score/10)){
+    case 10:
+    case 9:
+        document.write("A등급");
+        break;
+    case 8:
+        document.write("B등급");
+        break;
+    case 7:
+        document.write("C등급");
+        break;
+    default :
+        document.write("F등급");
+    }
 
 
 

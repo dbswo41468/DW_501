@@ -11,31 +11,31 @@
 
 .mid{
     width: 300px;
-    height: 0 auto;
-    background: gold;
+    background: rgb(90,162,221);
+    border-right: 1px solid black;
 }
 
 .bt{
     width: 1300px;
     height: 850px;
-    background: rgb(42, 75, 219);
+ 
 }
 
 .logo{
     width: 300px;
     height: 100px;
-    background: hotpink;
+ 
 }
 
 .logo_box img{
     width: 300px;
     height: 100px;
+    border-right: 1px solid black;
 }
 
 .mid_id{
     width: 250px;
     height: 130px;
-    background: hotpink;
     margin: 0 auto;
     padding: o auto;
     margin-top: 30px;
@@ -45,27 +45,60 @@
     font-size: 30px;
 }
 
-.menu_box{
-    width: 250px;
-    height: 500px;
-    background: firebrick;
-    margin: 0 auto;
-    padding: o auto;
-    margin-top: 30px;
-}
 
 .menu1{
-    width: 235px;
+    width: 240px;
     height: 50px;
-    background: greenyellow;
-    margin: 0 auto;
-    padding: 0 auto;
-    margin-bottom: 10px;
-    border-radius: 10px;
-    color: white;
-    text-align: left;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    background: darkblue;
+    text-align: center;
     font-size: 30px;
-    padding-left: 15px;
+    color: white;
+    padding-top: 5px;
+    border-radius: 10px;
+    margin-top: 40px;
+
+
+}
+
+.menu2{
+    width: 240px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    background: saddlebrown;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+
+.menu3{
+    width: 240px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    background: cornflowerblue;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 5px;
+    border-radius: 10px;
+}
+
+.menu4{
+    width: 240px;
+    height: 50px;
+    margin-left: 30px;
+    margin-bottom: 5px;
+    background: olive;
+    text-align: center;
+    font-size: 30px;
+    color: white;
+    padding-top: 5px;
+    border-radius: 10px;
 }
 
 .bt_img_box{
@@ -75,6 +108,7 @@
     margin: 0 auto;
     padding: 0 auto;
     display: flex;
+    border-radius: 10px;
 }
 
 .bt_img{
@@ -93,13 +127,43 @@
     border-radius: 15px;
 }
 
+.title{
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+    color: white;
+}
 
+.push{
+    width: 1300px;
+    height: 250px;
+    background: rgb(91, 147, 60);
+    display: flex;
+    border-radius: 10px;
+}
 
+.push_img{
+    margin-left: 15px;
+    margin-right: 15px;
+}
 
+.push_img img{
+    width: 150px;
+}
 
+.push_box{
+    display: flex;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-top: 15px;
+}
 
-
-
+.recommendation{
+    width: 150px;
+    height: 150px;
+    color: white;
+    font-size: 50px;
+}
 
 
 
