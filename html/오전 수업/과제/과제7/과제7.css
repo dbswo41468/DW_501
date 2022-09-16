@@ -1,0 +1,95 @@
+/* 과제7.css */
+
+.top{
+    width: 800px;
+    height: 800px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.com{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0 auto;
+    background: hotpink;
+}
+
+.box{
+    display: flex;
+    margin-top: 50px;
+}
+
+.rock_box{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.paper_box{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.scissors_box{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.rps{
+
+}
+
+.rps img{
+    width: 200px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0 auto;
+}
+
+.bt_box{
+    width: 100px;
+    height: 50px;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-top: 50px;
+}
+
+.rock_bt{
+    width: 200px;
+    height: 190px;
+    /* background-image: url("rock.gif"); */
+}
+
+.paper_bt{
+    width: 200px;
+    height: 190px;
+    /* background-image: url("paper.gif"); */
+}
+
+.scissors_bt{
+    width: 200px;
+    height: 190px;
+    /* background-image: url("scissors.gif"); */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

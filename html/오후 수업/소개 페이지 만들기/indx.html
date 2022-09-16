@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        .section{
+            width: 80%;
+            height: 800px;
+            margin: 50px auto;
+            background: gold;
+        }
+
+        .gallery-title{
+            text-align: center;
+        }
+
+        .gallery-title h1{
+            font-size: 36px;
+            font-weight: 700;
+        }
+
+        .gallery-title p{
+            color: #777;
+            font-size: 16px;
+            font-weight: 600;
+        }
+        
+        .row{
+            margin-top: 15px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+       .gallery-col{
+        position: relative;
+       }
+
+       .gallery-col img{
+        border-radius: 10px;
+        object-fit: cover;
+        width: 100%;
+        height: 98%;
+       }
+
+       .layer{
+        position: absolute;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 98%;
+       }
+
+       .layer h3{
+        position: absolute;
+        bottom: 0;
+        opacity: 0;
+        font-size: 20px;
+        color: rgb(46,49,49,1);
+        transition: 0.6s;
+        transform: translateX(-50%);
+        left: 50%;
+       }
+
+       .layer:hover{
+        cursor: pointer;
+        background: rgba(232,232,232,0.8);
+       }
+
+       .layer:hover h3{
+        opacity: 1;
+        bottom: 50%;
+       }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="section gallery">
+        <!-- 소개 -->
+        <div class="gallery-title">
+            <h1>넷플릭스 수리남 소개</h1>
+            <p>
+                수리남은 넷플릭스에서 2022년 9월부터 방영된 대한민국의 스릴러, 범죄 드라마이다.
+            </p>
+        </div>
+        <!-- 내용 -->
+        <div class="row">
+            <!-- gallery-col : 사진 -->
+            <div class="gallery-col">
+                <img src="img/하정우.PNG" alt="">
+                <div class="layer">
+                    <h3>강인구 역</h3>
+                </div>
+            </div>
+            <div class="gallery-col">
+                <img src="img/황정민.PNG" alt="">
+                <div class="layer">
+                    <h3>전요한 역</h3>
+                </div>
+            </div>
+            <div class="gallery-col">
+                <img src="img/유연석.PNG" alt="">
+                <div class="layer">
+                    <h3>데이빗 박 역</h3>
+                </div>
+            </div>
+            <div class="gallery-col">
+                <img src="img/박해수.PNG" alt="">
+                <div class="layer">
+                    <h3>최창호 역</h3>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div>
+        <!-- 줄거리 만들기 -->
+        <div class="section contents">
+            <div class="gallery-title">
+                <h1>넷플릭스 수리남 줄거리</h1>
+                <p>
+                    수리남은 넷플릭스에서 2022년 9월부터 방영된 대한민국의 스릴러, 범죄 드라마이다.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
