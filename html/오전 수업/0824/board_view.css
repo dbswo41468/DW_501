@@ -1,0 +1,56 @@
+
+    #write_box{width: 100%;
+        height: auto;
+        margin-top: 100px;}
+
+#write_wrap{width: 800px;
+         height: auto;
+         margin: 0 auto;
+         
+         border-radius: 20px;}
+
+.move_list{width: 100px;
+        height: 40px;}
+
+.write_form{width: 760px;
+         height: 600px;
+         margin-top: 50px;
+         
+         border-radius: 20px;
+         margin: 0 20px 0 20px;}
+
+.box{display: flex;
+  width: 760px;
+  height: 40px;
+  line-height: 40px;
+  margin-bottom: 20px;}
+
+.box_title{width: 150px;
+        padding-right: 15px;
+        text-align: right;
+        font-size: 20px;}
+
+.box_input input{width: 300px;
+              height: 20px;}         
+
+.box_input textarea{width: 510px;
+                 height: 400px;
+                 resize: none;}
+
+#save_bt{width: 400px;
+      height:40px;
+      background: black;
+      color: white;
+      font-size: 15pt;
+      font-weight: 800;
+      align-items: center;
+      margin-left: 90px;}      
+
+.bt{width: 600px;
+ height: 50px;
+ margin: 0 auto;
+ margin-top: 30px;
+ margin-bottom: 50px;
+ display: flex;
+ }
+

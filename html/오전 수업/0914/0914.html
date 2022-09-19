@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // 랜덤함수 Math.floor(Math.random())
+        // Math.floor : 소수점 자리 제거.
+        // Math.random : 랜덤 함수 0.0000... ~ 0.9999... 중 랜덤 값
+
+        //가위바위보 
+        // 1.가위 2.바위 3.보
+        /*var user = parseInt(prompt("유저 입력"))
+        var computer = Math.floor(Math.random() * 3) + 1; 
+        if(user > computer){
+           if(user == 3 && computer == 1){
+                alert("유저 : " + user + " 컴퓨터 : " + computer +" 컴퓨터 승 ")
+           }
+           else{
+                alert("유저 : " + user + " 컴퓨터 : " + computer +" 유저 승 ")
+           }
+        }
+       
+        else if(user < computer){
+            if(user == 1 && computer == 3){
+                alert("유저 : " + user + " 컴퓨터 : " + computer +" 유저 승 ")
+           }
+           else{
+                alert("유저 : " + user + " 컴퓨터 : " + computer +" 컴퓨터 승 ")
+           }
+        }
+
+        else{
+            alert("유저 : " + user + " 컴퓨터 : " + computer +" 무승부 ")
+        }*/
+
+        // 주차장 기본요금 1000원
+        // 10분당 100원 추가
+        // 2시간 이상 주차시 기본요금 1700원으로 변경
+        // 4시간 이상 주차시 2700원으로 변경
+        // 8시간 이상 주차시 5000원으로 변경 (추가요금 없음)
+
+        // 예) 주차시간 2시간 34분 주차
+        //     2시간 34분 주차 : 2000원
+        //     1시간 5분 주차 : 1300원
+        //     31분 주차 : 1000원
+        //     6시간 29분 주차 : 4100원 
+
+    //     var time = parseInt(prompt("시간 입력"))
+    //     var min = parseInt(prompt(" 분 입력"))
+    //     var ptime = time * 60 + min
+    //     var cost = 1000;
+    //     if(ptime >= 40 && ptime < 120){
+    //         var pktime = ptime >= 120 ? ptime-120 : ptime-30;
+    //         var price = (parseInt(pktime/10)*100) + cost;
+    //         document.write("주차시간 : " + time + "시간" + min+ "분"  + "<br>" + " 주차요금 : " + price + "원")
+    //     }
+    //     else if(ptime >= 120 && ptime < 239){
+    //         cost = ptime >= 120 ? 1700 : cost;
+    //         var pktime = ptime >= 120 ? ptime-120 : ptime-30;
+    //         var price = (parseInt(pktime/10)*100) + cost;
+    //         // price = time <= 39 ? cost : price;
+    //         document.write("주차시간 : " + time + "시간" + min+ "분"  + "<br>" + " 주차요금 : " + price + "원")
+    //     }
+    //     else if(ptime >= 240 && ptime < 479){
+    //         cost = ptime >= 240 ? 2700 : cost;   
+    //         var pktime = ptime >= 240 ? ptime-240 : ptime-30;  
+    //         var price = (parseInt(pktime/10)*100) + cost;
+    //         // price = time <= 39 ? cost : price;
+    //         document.write("주차시간 : " + time + "시간" + min+ "분"  + "<br>" + " 주차요금 : " + price + "원")
+    //     }   
+    //     else if(ptime >= 480){
+    //         cost = ptime >= 480 ? 5000 : cost;
+    //         var pktime = ptime >= 480 ? ptime-240 : ptime-30;
+    //         // var price = (parseInt(ptime/10)*100) + cost;
+    //         price = ptime >= 480 ? 5000 : price;
+    //         document.write("주차시간 : " + time + "시간" + min+ "분"  + "<br>" + " 주차요금 : " + price + "원")
+    //    }     
+    //    else if(ptime < 40){ 
+    //         price = min <= 39 ? cost : price;
+    //         document.write("주차시간 : " + time + "시간" + min+ "분"  + "<br>" + " 주차요금 : " + price + "원")
+    //     }
+
+        // var cost = 1000;
+        // var add = 100;
+        // var hour = parseInt(prompt("시간 입력"));
+        // var min = parseInt(prompt("분 입력"));
+        // var total_time = hour * 60 + min
+        // if(hour >= 8){
+        //     cost = 5000;
+        //     total_time = 0;
+        // }
+        // else if(hour >= 4){
+        //     cost = 2700;
+        //     total_time = total_time - 240;
+        // }
+        // else if(hour >= 2){
+        //     cost = 1700
+        //     total_time = total_time - 120;
+        // }
+        // else if(total_time >= 30){
+        //     total_time = total_time - 30;
+        // }
+
+        // var price = cost + parseInt(total_time / 10) * add;
+        // document.write("주차 요금 : " + price + "원")
+        
+
+        // if 문 : 조건식의 참(true) , 거짓(false) 의해서 동작
+        // if 문에 사용 될 조건식은 범위가 큰것부터 조건식 작성
+        // 조건식 만들기 어렵다면 노트에 작성
+        // if문은 가정하에 만들어야 한다.
+        // 바이킹 탑승 제한 키 150이상 190이하
+        // 만약 내가 키를 145라고 입력한다면 조건식은 어떻게?
+        // 145를 이용해 조건식 결과가 거짓이 나오게 만들기
+
+
+
+
+        //인적사항 - 직업이 학생일 경우
+            var name = prompt("이름");
+            var addr = prompt("주소");
+            var eamil = prompt("이메일");
+            var job = prompt("직업");
+            var school;
+            if(job == "학생"){
+                school = prompt("학교이름");
+            }
+            var 폰 = "010-1234-1234"
+            if(폰.indexOf("-" != -1)){
+                alert("- 없이 입력하세요")
+            }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

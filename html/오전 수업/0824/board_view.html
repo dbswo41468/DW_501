@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="board_view.css">
+</head>
+<body>
+    <div id="write_box">
+        <div id="write_wrap">
+            <a href="">목록</a>
+       
+    <div>
+        <form method="get" action="board_save.html">
+            <div class="write_form">
+                <div class="box box1">
+                    <div class="box_title">작성일</div>
+                    <div class="box_input1">
+                        <input type="text"name="write" id="write">
+                    </div>
+                    <div class="box_title">조회수</div>
+                    <div class="box_input1"> 
+                        <input type="text"name="조회" id="조회">
+                    </div>
+                </div>
+                <div class="box">
+                     <div class="box_title">작성자</div>
+                     <div class="box_input">
+                        <input type="text" name="writer" id="writer">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box_title">제목</div>
+                    <div class="box_input">
+                        <input type="text" name="title" id="title">
+                    </div>
+                </div>
+                <div class="box">
+                    <div class="box_title content_box">내용</div>
+                    <div class="box_input">
+                        <textarea name="content" id="content" cols="30" rows="10"></textarea>
+                    </div>
+                </div>
+            </div>    
+                <div class="bt">
+                    <button type="button" id="save_bt">목록</button>
+                    <button type="button" id="save_bt">수정</button>
+                    <button type="button" id="save_bt">삭제</button>
+                </div>
+            
+        </form>   
+    </div>
+    </div> 
+
+    </div>
+</body>
+</html>

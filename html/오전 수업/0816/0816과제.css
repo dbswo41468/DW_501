@@ -1,0 +1,41 @@
+table {border-collapse: collapse;
+    width: 800px;}
+.로그인{text-align: right; padding-right: 70px;}
+
+.이미지 {text-align: center;font-size: 1pt; width: 200px; }
+
+.이미지:hover{opacity: 0.4;}
+
+.서브메뉴 {background-color: rgb(0, 100,204); 
+          color:white;
+          font-size: 1pt;
+          font-weight: bold;
+          width:auto;
+          }
+
+.메뉴{text-align:center; font-size:13pt;} 
+
+.소개:hover{background-color:#999; font-weight:bold;}
+
+.소개{margin-right: 30px;}
+
+#공지사항{font-size:15px;border-bottom:1px gray;
+         padding: 15px;}
+
+.서브:hover{background-color: rgb(178,235,244); 
+           color: black; 
+           font-weight: normal;}
+
+.서브{font-size: 15pt; margin-bottom: 15px;} 
+
+.이미지img{width: 320px; height:160px;}
+
+
+.뉴스{border-bottom:1px solid black; 
+     font-size: 15pt; margin-left: 5%;
+     margin-right: 8%; margin-bottom: 20%;}
+
+.공지{border: 1px solid black;}
+#공지사항 .뉴스 .news:hover{border: 1px solid black}
+#공지사항 .뉴스 .공지:hover{border:0;}
+

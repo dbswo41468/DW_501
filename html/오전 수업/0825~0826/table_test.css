@@ -1,0 +1,40 @@
+#one td{border:1px solid black;
+        width:100px;
+        height:50px;}
+#two td{border:3px solid red;
+        width:200px;
+        height:80px;}
+#three td{border:1px solid blue;
+          height:30px;}
+#one:hover td{border:3px solid green;}
+/* id가one인 태그위에 마우스가 올라오면, 해당태그의 하위태그인 td에 style을 적용하겠다.*/
+#two:hover{background-color: pink;}
+/* class명은 여러개 가질수 있다.*/
+.color{border:1px solid black;
+       width:50px;
+       height:50px;}
+.black{background-color: black; color: white;}
+.blue{background-color: blue;}
+.red{background-color: red;}
+.green{background-color: green;}
+.yellow{background-color: yellow;}
+.color_box td{border: 1px solid black;
+              width: 40px;
+              height: 30px;}
+/* color_box 에 8가지 색상을 표현
+   각 칸 마다 서로 다 른 색으로 표현
+
+   실행순서
+   1. 각 칸에 지정할 색 이름 작성
+   2. 각 칸에 마우스를 올려주면 배경색으로 작성된 색으로 변경 
+      참고/.color_box td:hover{background:yellow;}
+   */
+
+.빨강:hover{background-color: red;}
+.노랑:hover{background-color: yellow;}
+.주황:hover{background-color: orange;}
+.초록:hover{background-color: green;}
+.파랑:hover{background-color: blue;}
+.보라:hover{background-color: violet;}
+.회색:hover{background-color: gray;}
+.검정:hover{background-color: black; color: white;}

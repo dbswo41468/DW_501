@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #input_wrap{
+            display: flex;
+            flex-direction: column;
+            /* display: flex; + flex-direction: column; : 세로 순서를 정할 수 있다? */
+            width: 300px;
+        }
+        
+        #input_wrap input{
+            height: 40px;
+            font-size: 1.7rem;
+            /* rem : 현재 html 사이즈에서 1.7 만큼 증가시킨다 */
+        }
+    </style>
+
+    <script>
+    // 두개의 숫자를 입력받아 두숫자중 큰숫자를 출력하시오
+        function execute(){
+            var num1 = document.getElementById('number1');
+            var num2 = document.querySelector('#number2');
+            // 클래스 불러올 때 사용
+            var res = document.getElementById('result');
+
+            if(parseInt(num1.value) > parseInt(num2.value)){
+                res.innerHTML = " <h2> 큰 숫자 : " + num1.value+"</h2>";
+            }
+            else{
+                res.innerHTML = " <h2> 큰 숫자 : " + num2.value+"</h2>";
+            }
+        }
+    
+        
+        
+
+
+
+
+    
+    </script>
+</head>
+<body>
+    <div id="input_wrap">
+        <input type="text" id="number1" placeholder="정수입력">
+        <input type="text" id="number2" placeholder="정수입력">
+        <input type="button" onclick="execute()" value="입력">
+    </div>
+    <hr>
+    <div id="result">
+
+    </div>
+</body>
+</html>

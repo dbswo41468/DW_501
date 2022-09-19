@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #info input{
+            width: 100px;
+
+        }
+    </style>
+
+    <script>
+        // 직업이 군인 또는 변호사만 출력 하기
+
+       function enroll(){
+            // input 값을 모두 변수 지정 해주고
+            var name = document.querySelector("#name");
+            var job = document.querySelector("#job");
+            var age = document.querySelector("#age");
+            var res = document.querySelector("#result");
+
+            // 직업 값이 군인 or 변호사 라면
+            if(job.value == "군인" || job.value == "변호사" || job.value == "공무원"){
+                res.innerHTML = "이름 : " + name.value + " 직업 : " + job.value + " 나이 : " + age.value;
+                // innerHTML : 자바스크립트를 통해서 html의 content를 가져오고 값을 화면에 보여주거나 직접 변경해서 출력
+                // 변호사 출생년도 구하기
+                var age_vear = age.value;
+                var title = "나이 : ";
+                if(job.value == "공무원"){
+                age_year = 2022 - parseInt(age.value)+1;
+                title = "출생년도 : ";
+            }
+            res.innerHTML = '이름 : ' + name.value + ' 직업 : ' + job.value + title + age_year;
+            }
+       }
+    </script>
+</head>
+<body>
+    
+    <div id="info">
+        <input type="text" id="name" placeholder="이름">
+        <input type="text" id="job" placeholder="직업">
+        <input type="text" id="age" placeholder="나이">
+        <input type="button" onclick="enroll()" value="등록">
+    </div>
+    <div id="result">
+        <hr>
+    </div>
+</body>
+</html>

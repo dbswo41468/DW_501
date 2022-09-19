@@ -1,0 +1,252 @@
+body,div,ul{padding: 0;
+            margin: 0;}
+
+#header_wrap{width: 100%;
+             height: 40px;
+             background: #6A84B7;}
+
+#global_wrap{width: 1000px;
+             margin:0 auto;
+             height: 40px;}
+
+#util{float: right;
+      width: 500px;
+      list-style-type: none;
+      display: inline-block;
+      vertical-align: middle;
+      padding: 9px 0 10px 0;}
+
+#util li{float: left;
+         padding: 0 11px;
+         color: white;
+         font-size: 12px;}
+
+#util li:nth-child(1){border: 0px;}
+
+.city{color: yellow;}
+
+.site01{color: greenyellow;}
+
+#logo_menu_wrap{width: 100%;
+                height: 80px;
+                background: #223C6F;}
+
+#logo_menu{width: 1000px;
+           height: 80px;
+           margin: 0 auto;
+           display: flex;
+           }
+
+#logo{width: 200px;
+      height: 60px;
+      font-size: 19px;
+      color: white;
+      font-weight: 800;
+      padding-top: 20px;}
+
+#logo img{width: 40px;
+          height: 40px;}
+
+#menu{width: 800px;}
+
+#menu_list{padding: 0;
+           margin: 0;
+           list-style-type: none;
+           color: white;
+           font-size: 16px;
+           font-weight: 800;
+           width: 800px;
+           height: 80px;}
+
+#menu_list li{float: left;
+              height: 80px;
+              line-height: 80px;
+              width: 133.3px;
+              text-align: center;
+              position: relative;}
+
+#menu_list li ul{padding: 0;
+                 margin: 0;
+                 width: 0; 
+                 height: 0;
+                 position: relative;
+                 opacity: 0;
+                }
+
+#menu_list li ul li{width: 0;
+                    height: 0;
+                    position: absolute;
+                    top: -10px;
+                    float: none;
+                    list-style-type: none;}
+
+#menu_list li:hover ul{position: relative;
+                       opacity: 1;
+                       background: #223C6F;
+                       width: 133.3px;
+                       top: 10px;}
+
+#menu_list li:hover ul li{position: relative;
+                          width: 133.3px;
+                          height: 30px;
+                          line-height: 30px;
+                          text-align: center;
+                          background: #223C6F;}                      
+
+#main_img{width: 100%;
+          height: 350px;
+          background: rgb(192, 229, 224);}
+
+.m_image{width: 1000px;
+         height: 350px;
+         margin: 0 auto;}
+
+.m_image img{width: 1000px;
+             height: 350px;}
+
+#post_wrap{width: 1000px;
+           height: 800px;
+           margin: 0 auto;}
+
+#contents{width: 100%;
+          height: 310px;
+          position: relative;}
+
+#contents h2{font-weight: 600;
+             margin-bottom: 10px;}
+
+.f_small{font-size: 12px;}
+
+.r_small{font-size: 12px; 
+         float: right;}
+
+.animal_list{list-style-type: none;
+             margin: 0;
+             padding: 0;
+             width: 100%;
+             display: inline-block;}
+
+.img_li{width: 230px;
+        padding: 0 10px;
+        float: left;
+        display: block;}
+
+.img_li img{width: 230px;}
+
+.img_li ul{list-style-type: none;
+           width: 204px;}
+
+.img_li ul li{padding-left:7px;}
+
+.img_li ul li span{font-weight: 700;}
+
+#mid{width: 1000px;
+     margin: 0 auto;
+     margin-top: 30px;
+     height: 175px;}
+
+.m_left{width: 65%;
+        float: left;
+        margin-right: 5%;}
+
+.m_top{padding-top: 10px;}
+
+.notice{float: left;
+        width: 46%;}
+
+.m_top .notice:first-child{margin-right: 8%;}
+
+.notice ul{padding-left: 20px;}
+
+.notice ul li{font-size:13px;
+              height: 25px;}
+
+.m_right{width: 30%;
+         float: left;}
+
+.conbanner{border: 1px solid #dadee1;
+           box-sizing: border-box;
+           padding: 11px 15px;
+           height: 88px;}
+
+.conbanner h2{margin:0;
+              margin-bottom: 5px;
+              font-size: 15px;}
+
+.conbanner p{font-size: 88%;
+             line-height: 18px;}
+
+/* 하단부 운영시간 , 입양프로세스 */
+
+#bottom{height: 152px;
+        border: 1px solid #e7e7e7;
+        margin-bottom: 0px;
+        margin-top: 40px;}
+
+.time{width: 322px;
+      float: left;
+      padding: 20px 0 20px 20px;
+      background: #efefed url(bg_tel.jpg) no-repeat right 0;
+      height: 112px;}
+
+.time h2{font-size: 15px;
+         margin-top: 0;}
+
+.time dl{font-size: 11px;
+        line-height: 18px;}
+
+.time dl dt{float: left;
+            font-weight: 600;
+            padding-right: 8px;}
+
+.proce img{width: 655.5px;
+           height: 152px;}
+
+/* foot */
+#footwrap{background: #3e3e3e;
+          width: 100%;
+          margin-top: 30px;
+          position: relative;}
+
+#foot{margin: 0 auto;
+      width: 1000px;
+      padding: 24px;
+      position: relative;}
+
+#foot ul{list-style-type: none;
+         margin: 0;
+         margin-bottom: 5px;
+         overflow: hidden;
+         padding: 0;
+         color: #f1f1f1;}
+
+#foot ul li{float: left;
+            padding-right: 13px;
+            font-size: 14px;
+            margin-right: 13px;
+            border-right: 1px solid #6d6d6d;}
+
+#foot ul li:last-child{border: none;}
+
+#foot address{margin: 3px 20px 2px 0px;
+              color: #f1f1f1;
+              line-height: 20px;
+              font-size: 13px;
+              display: inline-block;
+              font-style: normal;}
+
+.foot_logo{position: absolute;
+           top: 20px;
+           right: 20px;}
+
+
+
+
+
+
+
+
+
+
+
+

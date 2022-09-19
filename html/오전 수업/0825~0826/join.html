@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="join.css">
+</head>
+<body>
+    <div id="join_mask">
+        <div id="join_wrap">
+            <h2>회원가입</h2>
+            <fieldset>
+                <legend>기본정보</legend>
+                <div class="input_wrap">
+                    <div class="title">아이디</div>
+                    <div class="join_input">
+                        <input type="text" name="id" id="id" placeholder="아이디를 입력하세요.">
+                    </div>
+                    <div class="title">비밀번호</div>
+                    <div class="join_input">
+                        <input type="password" name="pw" id="pw" placeholder="비밀번호를 입력하세요.">
+                    <div class="title">비밀번호확인</div>
+                    <div class="join_input">
+                        <input type="password" name="repw" id="repw" placeholder="비밀번호확인">
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <div class="title">이메일</div>
+                    <div class="join_input">
+                        <input type="email" name="email" id="email" placeholder="이메일을 입력하세요.">
+                    </div>
+                </div>
+                <div class="input_wrap">
+                    <div class="title">이름</div>
+                    <div class="join_input">
+                        <input type="name" name="name" id="name" >
+                    </div>
+                </div>
+                <div>
+                    <div class="input_wrap">
+                        <div class="title">생년월일</div>
+                        <div class="join_input">
+                            <select>
+                                <option>2010</option>
+                                <option>2009</option>
+                                <option>2008</option>
+                                <option>2007</option>
+                                <option>2006</option>
+                            </select>
+                            년도
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            월
+                            <select>
+                                <option>1</option>
+                                <option>2</option>
+                                <option>3</option>
+                                <option>4</option>
+                                <option>5</option>
+                            </select>
+                            일
+                        </div>
+                    </div>
+                </div>
+            </fieldset>
+            <hr>
+            <fieldset>
+                <legend>선택사항</legend>
+                <div class="input_wrap">
+                    <div class="title">주소</div>
+                    <div class="add_item">
+                       <input type="text" name="postcode" id="postcode" placeholder="우편번호">
+                       <button type="button" value="주소검색">주소검색</button>
+                    </div>
+                    <div>
+                        <input type="text" name="addr1" id="addr1">
+                    </div>
+                    <div>
+                        <input type="text" name="addr2" id="addr2">
+                    </div>
+                </div>
+            </fieldset>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table.html</title>
+    <link rel="stylesheet" type="text/css" href="table.css">
+</head>
+<body>
+    <!-- cellspacing 간격설정 -->
+    <table id="table_wrap">
+        <tr><!--1-->
+           <td colspan="4" height="60" class="top">로그인 / 문의</td>
+        </tr>
+        <tr> <!--2-->
+           <td colspan="4" height="60">
+              <table id="menu">
+                 <tr>
+                    <td>HOME</td>
+                    <td>센터소개</td>
+                    <td>유기동물공고</td>
+                    <td>유기동물이야기</td>
+                    <td>참여마당</td>
+                    <td>공지사항</td>
+                 </tr>
+              </table>
+           </td>
+        </tr>
+        <tr height="350"> <!--3-->
+           <td rowspan="2" width="150" >
+              <ul id="sub_menu">
+                <li>서브메뉴1</li>
+                <li>서브메뉴2</li>
+                <li>서브메뉴3</li>
+                <li>서브메뉴4</li>
+                </ul>
+           </td>
+           <td width="150"></td>
+           <td width="550">
+                <img src="https://placeimg.com/550/350/nature" class="main_img">
+           </td>
+           <td width="150"></td>
+        </tr>
+        <tr height="100"> <!--4-->
+           <td colspan="3">
+              <table id="notice" cellsapcing="0">
+                  <tr id="notice_word">
+                    <td class="nt">공지사항</td>
+                    <td class="news">news</td>
+                    <td></td>
+                  </tr>
+                  <tr id="notice_line">
+                    <td colspan="5"></td>
+                  </tr>
+              </table> 
+
+              <div id="change" >
+                <div class="title">
+                    <div class="t2 t">news</div>
+                    <div class="t1 t">공지사항</div>
+                </div>
+                <div class="content">                    
+                </div>
+                <div id="p">
+                    <div id="n1">공지사항</div>
+                    <div id="n2">news</div>
+                </div>
+                <script>
+                    n1 = document.querySelector("n1");
+                    n2 = document.querySelector("n2");
+                    n2.addEventlistener("mouseover",function(){
+                       n2.style.border="1px solid black";
+                       n1.style.border="0";
+                    })
+                    n2.addEventlistener("mouseleave",function(){
+                       n2.style.border="0";
+                       n1.style.border="1px solid black";
+                    })
+                </script>
+            
+           </td>
+        </tr>
+        <tr height="60"> <!--5-->
+           <td colspan="4"></td>
+        </tr> 
+    </table>
+
+</body>
+</html>

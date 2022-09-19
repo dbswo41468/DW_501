@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //switch 과 if문의 차이점
+        //if문은 참과 거짓에 의해서 동작
+        //switch문은 선택에 의한 동작
+        //switch문에서는 참과 거짓의 결과가 나오는 조건식을사용하지않는다.
+        //switch문은 프로그램에서 가장큰 조건문 작성에 사용된다.
+        // 메뉴, 마우스, 키보드, 프로그램 창이용
+
+        /*var num =5;
+        switch(num){
+            // case newfile:   
+            // case save:
+            // case open folder:
+            // case exit:
+            case 5:
+                document.write('5을 선택했다.');
+                break
+            case 11:
+                document.write('11을 선택했다.');
+                break
+            case 25:
+                document.write('25를 선택했다.');
+                break
+            case 10:
+                document.write('10을 선택했다.');
+                break
+            default:
+                document.write('잘못 선택했습니다.')
+        }*/
+        // var select = prompt("1.데이터저장 2.데이터삭제 3.데이터추가 4.데이터수정 5.수정")
+        // switch(select){
+        //     case 1: break;
+        //     case 2: break;
+        //     case 3: break;
+        //     case 4: break;
+        //     case 5: break;
+        //     default:            
+        //         document.write("메뉴를 다시 선택하세요.")
+        // }
+
+        //가위바위보 랜덤함수사용
+        //랜덤값 1.가위 2.바위 3.보
+        //랜덤값에 따라 현재 가위바위보중 무엇을내었는가 출력
+        // var computer = Math.floor(Math.random()* 3)+1;
+        // var user = prompt("유저입력");
+        // document.write("유저 : " + user + "<br>");
+        // switch(computer){
+        //     case 1 : document.write("컴퓨터 : 가위"); break
+        //     case 2 : document.write("컴퓨터 : 바위"); break
+        //     case 3 : document.write("컴퓨터 : 보"); break 
+        // }
+        // var computer = Math.floor(Math.random()*3)+1;
+        // var user = parseInt(prompt("1.가위 2.바위 3.보"));
+        // switch(computer-user){
+        //     case -2:
+        //     case 1:
+        //         document.write("유저 승");
+        //         break
+        //     case 2:
+        //     case -1:
+        //         document.write("컴퓨터 승");
+        //         break
+        //     case 0:
+        //         document.write("무승부");            
+        // }
+        //점수 입력받아서 90점이상이면 a등급 80점이상이면 b등급
+        //     70점이상이면 c등급 나머지는 f등듭으로 출력
+
+        var a = parseInt(prompt("점수입력"));
+        var b = parseInt(a/10);
+        switch(b){
+            case 10:
+            case 9:
+                document.write("a등급") 
+                break; 
+            case 8:
+                document.write("b등급")  
+                break;
+            case 7:
+                document.write("c등급")
+                break;
+            default:
+                document.write("f등급")        
+        }
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

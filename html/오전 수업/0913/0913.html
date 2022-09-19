@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        //제어문
+        //if switch for while do-while
+        // 조건문 if switch
+        // 반복문 for while do while
+
+        // if문 if(조건식){ }  if(조건식){ } else{ }
+        //      if(조건식){ } else if{ }
+
+        // var num = 10;
+        // if(num > 5){
+        //     alert('5보다 크다')
+        // }
+        // else{
+        //     alert('5보다 작다')
+        // }
+        // num > 5 ? alert('5보다 크다') : alert('5보다 작다');   
+        // result = num + 10;
+        
+        // var num1 = parseInt(prompt('정수입력'))
+        // var num2 = parseInt(prompt('정수입력'))
+        // if(num1 > num2){
+        //     alert('큰수는 : ' + num1)
+        // }
+        // else{
+        //     alert('큰수는 : ' + num2)
+        // }
+
+        // var r = Math.floor(Math.random() * 10);
+        // 랜덤함수 0.0000000000 ~ 0.9999999999
+        // *10 : 0.000 * 10 , 0.114 * 10 , 0,452 * 10
+        // 랜덤범위 (1 ~ 10) Math.floor(Math.random() * 10) + 1;
+        // 랜덤범위 (1 ~ 3) Math.floor(Math.random() * 3) + 1;
+        // 랜덤범위 (11 ~ 13)  
+        // 랜덤범위 (11 ~ 13)Math.floor(Math.random() * 20) + 11;
+        // 랜덤범위 (23 ~ 102)Math.floor(Math.random() * 80 )+ 23;
+        alert(r)   
+
+        // 동전 맞추기 게임
+        // 1 = 앞면 2 = 뒷면
+        // 랜덤 함수를 사용하여 동전 앞면 뒷면 맞추기  
+        // var num = parseInt(prompt('숫자입력'))
+        // var coin = Math.floor(Math.random() * 2) +1;
+        // if(num == coin){    
+        //     alert('정답')     
+        // }
+        // else{
+        //     alert('오답')
+        // } 
+
+        // 컴퓨터와 주사위게임 
+        // 주사위는 던진다.
+        // 각자 주사위 2개를 던졌을경우 나온 합이 누가 더 큰지
+        // 주사위 합이 작아도 두주사위 값이 같은숫자라면 승리
+        var dice1 = Math.floor(Math.random() * 6) +1;
+        var dice2 = Math.floor(Math.random() * 6) +1;
+        var userdice1 = Math.floor(Math.random() * 6) +1;
+        var userdice2 = Math.floor(Math.random() * 6) +1;
+        var cpt = dice1  + dice2;
+        var user = userdice1 + userdice2
+        if(cpt > user){
+           if(userdice1 == userdice2){
+                document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + "유저 승 "  + " user1 : " +userdice1 +  " user2 : " +userdice2) 
+            }
+            else{
+                document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 컴퓨터 승 ") 
+            }
+        }
+        else if(cpt == user){
+            document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 무승부")
+        }
+        else{
+            if(dice1 == dice2){
+                document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 컴퓨터 승 "   + " cpt1 : " + dice1 +  " cpt2 : " + dice2)
+            } 
+            else{
+                document.write("컴퓨터 점수 : "  + cpt + " 유저 점수 : " + user + " 유저 승 ") 
+            }
+        }
+
+    </script>     
+</head>
+<body>
+    
+</body>
+</html>

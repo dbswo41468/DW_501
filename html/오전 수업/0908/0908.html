@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+    /*  var num1 = 10;
+        var num2 = 20;
+        var num3 = 0;
+
+        num3 = num2 % num1; // % : 나누기연산 결과값은 나머지값
+        num3 = num2 > num1; // 비교연산자 비교연산자의 결과는 true,false
+        num2 = 15;
+        num1 = 29;
+        num3 = num2 > num1; //false
+        num3 = num2 == num1; //false
+        num3 = num1 > num2; //true
+        num3 = num2 != num1; //true
+
+        var result;
+        num1 = 21; 
+        num2 = 36;
+        num3 = 25;
+        result = num2 > num1 && num2 > num3; //true
+        // 참 && 참 > 참 참 && 거짓 > 거짓
+        // 거짓 && 참 > 거짓 거짓 & 거짓 > 거짓
+        result = num1 > num2 || num2 > num3; //true 
+        // 참 || 참 > 참 거짓 || 참 > 참
+        // 참 || 거짓 > 참 거짓 || 거짓 > 거짓
+
+        result = (num1 > 10 || num2 <40) && (num3 > 100 && num2 <10);
+
+        //조건연산자 : 조건식 ? 참일경우 내용 : 거짓일경우 내용 ; 
+
+        var num1 = parseInt(prompt("정수입력"));
+        var num2 = parseInt(prompt("정수입력"));
+        var result = num1 > num2 ? num1 : num2;
+        document.write(result)
+
+        조건연산자에서 참과 거짓에 해당한느 부분에 변수 , 데이터(정수,실수,문자열)
+        계산식 , 조건연산자 , 함수 등등 가능
+        단 대입연산자 안됨
+
+        바이킹 탑승조건 키 130이상만 탑승가능 
+        var num1 = parseInt(prompt("키입력"));
+        var result = num1 >= 130 ? "탑승가능" : "탑승불가";
+        document.write(result)
+        //3개의 정수를 입력받아 가장큰수 출력
+        var num1 = parseInt(prompt("정수입력"));  
+        var num2 = parseInt(prompt("정수입력"));
+        var num3 = parseInt(prompt("정수입력"));
+
+        
+        var large = num1 > num2 ? num1 : num2;
+	        large = large > num3 ? large : num3;
+
+	    document.write(large);
+        var num = parseInt(prompt("정수입력"));
+        var result = (num%4 == 0) ? num : "";
+        document.write(result)*/ 
+
+        var time = parseInt(prompt("주차시간 : "))
+        var cost = 1000;
+        cost = time >= 120 ? 1500 : cost;
+
+        var ptime = time >= 120 ? time-120 : time-30;
+        var price = (parseInt(ptime/10)*100) + cost;
+        price = time <= 39 ? cost : price;
+        document.write("주차시간 : " + time + "분" + "<br>" + " 주차요금 : " + price + "원")
+
+        
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

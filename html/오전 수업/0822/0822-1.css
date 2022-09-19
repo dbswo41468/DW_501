@@ -1,0 +1,4 @@
+/* .image{float: left;} */
+
+#box{display: flex;
+     flex-wrap: wrap;}

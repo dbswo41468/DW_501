@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script type="text/javascript">
+        // document.getElementById("num");
+        // document.getElementsByClassName("클래스명")
+        // document.getElementsByName("name명")
+        // document.getElementsByTagName("태그 명")
+
+        // document.querySelector("#num");
+        // document.querySelector("클래스명")
+        // document.querySelectorAll("클래스명")
+        // document.querySelectorAll("태그 명")
+        // document.querySelectorAll("[name명]")
+        function data_push(){
+        // var number = document.getElementById("num");
+        // var val = number.value;
+        
+        // var res = document.getElementById("result")
+        // res.innerHTML = val;
+        var num = document.getElementById("num").value;
+        var res = document.getElementById("result");
+
+        if(parseInt(num)%2 == 0){
+            res.innerHTML = "짝"    
+        }else{
+            res.innerHTML = "홀"
+        }
+    
+    
+    
+    
+    }
+
+
+
+
+
+    </script>
+</head>
+<body>
+    <input type="text" name="num" id="num">
+    <button type="button" onclick="data_push()">입력</button>
+    <hr>
+    <div id="result"></div>
+</body>
+</html>

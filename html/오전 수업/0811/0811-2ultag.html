@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0811-2ultag</title>
+
+    <style>
+        /* style(css) 의 주석 */
+        /* 선택자 - css는 html에 효과를 적용하기위한 언어 ,
+                    html에 여러개의 태그가 사용되므로 , 특정
+                    태그만 선택하여 효과를 적용하려면 ,
+                    선택자라는 것을 사용해야 한다.
+            선택자의 종류 - 태그이름, id, class 
+            id - 현재 html문서에서 고유한 이름이어야 한다.
+                 (중복불가) ex) (<ul id="drink list") 다른태그에 id 사용불가
+            class - id와 다르게 중복 가능
+            (같은 class명으로 여러 태그에 적용할경우 사용) 
+        */
+        ul{list-style-type:none;}
+        
+        #cafe{
+            background: #A50000; color: aqua; font-size: 15pt;
+        
+        }
+        .drink_list>ul{
+            opacity:0;
+            height: 0;
+        }
+        .drink_list:hover ul{
+            opacity: 1;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+<!-- <ul style="list-style-type:circle;">
+        <li>Coffe</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+    <ul style="list-style-type:none;">
+        <li>Coffe</li>
+        <li>Tea</li>
+        <li>Milk</li>
+    </ul>
+-->
+    <ul id="cafe">
+        <li class="drink_list"><button style="font-size: 15pt; color:brown">coffe</button>
+            <ul>
+                <li><u>아메리카노</u></li>
+                <li><u>카페라떼</u></li>
+                <li><u>바닐라라떼</u></li>
+            </ul>
+        </li>
+        <li class="drink_list"><button style="font-size: 15pt; color:brown">Tea</button>
+            <ul>
+                <li><u>카모카일</u></li>
+                <li><u>레몬</u></li>
+                <li><u>자스민</u></li>
+            </ul>
+        </li>
+        <li class="drink_list"><button style="font-size: 15pt; color:brown">Milk</button>
+            <ul>
+                <li><u>녹차라떼</u></li>
+                <li><u>고구마라떼</u></li>
+            </ul>
+        </li>
+    </ul>
+</body>
+</html>

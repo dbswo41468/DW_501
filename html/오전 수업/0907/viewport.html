@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+<script type="text/javascript">
+
+    var num = 10;
+    // let kor = 90; // 중복선언 불가 , 변수값 재할당 가능
+
+    //전역 변수 : 현재 스크립트 파일 내에서 어디서든 사용가능한 변수
+    //지역 변수 : 자신이 선언한 위치에서만 사용가능
+    var b = 111; //전역변수
+    for(var i=0;i<10;i++){
+        let a = 10; //지역변수
+        a = b + 10;
+        var c = 20;
+    }     
+    for(var k=0;k<5;k++){
+        b = b+k
+    }
+
+
+
+    const pi = 3.14;// 변수선언과 초기화를 동시에 진행 ,  중복선언불가
+    // const 불변의 값
+    // const 여기에 저장된 값 변경하지 마라.
+
+    // 변수 값 재할당 불가능
+    // 선언 : pi라는 이름으로 변술르 사용하겠다.
+
+
+
+
+    var num = 10; // 변수 중복선언 가능 , 변수값 재할당 가능
+    //var,let 으로 변수를 선언하고 초기화 이후에 다른 값을 저장 할 수 있다.
+    //const으로 변수를 선언하고 초기화이후에 다른값 저장 불가(상수)
+    //문자열 > 숫자
+    //1.Number() 2. parseInt()
+    //()안에는 숫자로 변환할 문자열입력
+
+    // var num = Number(prompt('숫자입력 : '));
+    // //var num = parseInt(prompt('숫자입력 : '));
+    
+    // var num2 = 100;
+    
+    // alert("숫자 변환가능 ? : " + isNaN(num) )
+    // //inNaN : true면 숫자 변환불가 , false면 숫자 변환 가능
+
+    // document.write(num+10);
+
+    // 국어 수학 영어 역사 점수를 입력받아 총점과 평균구하여 출력
+    // 국어 : 80점 수학 30점 영어 90점 역사 70점
+
+    
+    // var kor = parseInt(prompt('국어점수'));
+    // var math =  parseInt(prompt('수학점수'));
+    // var eng =  parseInt(prompt('영어점수'));;
+    // var his = parseInt(prompt('역사점수'));
+    // var sum = kor + math + eng + his;
+    // var arg = sum / 4;
+
+    // // document.write("국어 : " + kor + "점" + "<br>")
+    // // document.write("수학 : " + math +  "점" + "<br>")
+    // // document.write("영어 : " + eng +  "점" + "<br>")
+    // // document.write("역사 : " + his +  "점" + "<br>")
+    // // document.write("총점 : " + sum + "점" + "<br>")
+    // // document.write("평균 : " + arg + "점" + "<br>")
+    // document.write("국어 : " + kor + "점" + "<br>" + "수학 : " + math + "점" + "<br>"+
+    //                "영어 : " + eng + "점" + "<br>" + "역사 : " + his + "점" + "<br>"+
+    //                "총점 : " + sum + "점" + "<br>" + "평균 : " + arg + "점" + "<br>")
+
+    // var num1 = 10;
+    // var num2 = 30;
+    // var num3 = num1 + num2;
+
+    /* 연산자
+       대입연산자 : = (오른쪽 값을 왼쪽에 저장)
+       산술연산자 : + , - , * , / , %
+       증강연산자 : ++,--
+       비교연산자 : (대소) > , < , >= , <= 
+                   (등가) == , != , ===
+       논리연산자 : &&(and) , || (or) , ! (not) 
+       조건연산자(상향연산자) : 조건식 ? 참일경우실행내용 : 거짓일경우실행내용
+    */
+    // alert(13 % 5);
+
+    var a = 10;
+    var b = 0;
+    a = a+1;
+    b = a;
+    // document.write(++a)
+
+    var num1 = 10;
+    var num2 = 15;
+    var num3 = 20;
+    var tall = 156;
+    //바이킹 입장 가능 키제한 150이상190이하
+    //조건식 && 조건식 and 연산자 양쪽의 식이 모두 참일경우에만 참
+    //조건식 || 조건식 or 연산자는 한쪽의 식이 참이라면 참
+    // not 연산자 !(tall<140)
+    // document.write(tall >=150 && tall<= 190)
+
+    //var num1
+    //var num2
+    //var num3
+    //두 변수중에서 num1에 큰숫자를 입력했을경우
+    //num1,num2를 비교하여 참이 나오게 만드시오
+
+    var num1 = parseInt(prompt("num1"))
+    var num2 = parseInt(prompt("num2"))
+    var num3 = parseInt(prompt("num3"))
+    document.write(num1 > num2 && num > num3)
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

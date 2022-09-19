@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>js_tset.html</title>
+    <!-- <link rel="stylesheet" type="text/css" href=""> -->
+    <javascript type="text/javascript">
+
+    </javascript>
+    <script type="text/javascript">
+        // 자바스크립트
+        // 컴파일
+        // 변수 : 데이터를 저장하는 메모리공간
+        // 메모리 : ram
+        // 메모리종류 : dram
+
+        // alert(10+5);
+        // 10 과 5는 일회성 데이터이다.
+        // 변수 조건 : 메모리 타입지정 (데이터 타입에 따라 메모리 크기가 결정)
+        //            재사용이 가능해야한다.
+        //            읽기,쓰기권한이 있어야한다. 
+        num = 100; // num이라는 메모리공간에 100을 저장한다.
+                   // = > 대입연산자
+                   // 변수이름은 예약어 (window,var,document,location,onload...)금지
+                   // 변수이름의 첫글자는 영어로 시작(1num 안됨)
+                   // 변수의 이름은 의미있는 이름으로
+        num1 = num + 10; //num2에 num + 10을 대입
+        num = num + 100; //num에 100+100을 대입 , num공간에 200을 덮어쓰기 저장
+        
+        pi = 3.14; //실수저장
+        // name = '이순신' //문자열 저장
+        //문자열은 "" 로 감싸주어야한다. 또는 '' 가능
+        // ''문자열은 변경하지 않을 문자열 , "" 문자열은 다른 문자열로 변경되는 경우
+
+        // city = '대전';
+        // addr = '대전시 중구 선화동'
+
+        // content = "구매 후기 : 교체작업 후 확인하니 제품에 하자가 있다."
+
+        // alert(city);
+        // document.write(addr);
+        document.write("<hr>");
+        // name = prompt("이름을 입력하세요")
+        // document.write("이름은 :" + name)
+        //문자와 문자열의 차이
+        //문자는 메모리공간 1만큼 사용 , 문자열은 메모리공간 2이상 사용
+        
+        // 이름,직업,나이,사는곳 입력받아 화면에 출력
+
+    //     name = '이종빈';
+    //     job = '학생';
+    //     age = '25';
+    //     city = '대전';
+
+    //    document.write(" 이름 "+ name +" 직업 " + job + " 나이 " + age + " 사는 곳 " + city)
+          name = prompt("이름")
+          job = prompt("직업")
+          age = prompt("나이")
+          city = prompt("사는 곳")
+          document.write(" 이름 "+ name +" 직업 " + job + " 나이 " + age + " 사는 곳 " + city)
+
+    </script>
+</head>
+<body>
+    <!-- 나는 홈페이지 입니다. -->
+</body>
+</html>

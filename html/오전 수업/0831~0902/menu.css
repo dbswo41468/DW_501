@@ -1,0 +1,163 @@
+#menu{width: 1000px;
+      /* height: 80px; */
+      position: relative;}
+
+#menu ul{list-style: none;
+         padding: 0;
+         margin: 0;
+         position: relative;}
+
+#main_menu{width: 1000px;
+           height: 80px;
+           position: relative;}
+
+#main_menu>li{width: 200px;
+              height: 80px;
+              line-height: 80px;
+              float: left;
+              text-align: center;
+              background: pink;
+              position: relative;}
+
+
+#main_menu .sub1{display: none;}
+
+#main_menu:hover .sub1{display: block;
+                      background: lightgoldenrodyellow;
+                      height: 240px;}
+#main_menu .sub2{display: none;}
+     
+#main_menu:hover .sub2{display: block;
+                      background: lightgoldenrodyellow;
+                      height: 240px;}
+
+#main_menu .sub3{display: none;}
+          
+#main_menu:hover .sub3{display: block;
+                      background: lightgoldenrodyellow;
+                      height: 240px;}
+#main_menu .sub4{display: none;}
+               
+#main_menu:hover .sub4{display: block;
+                      background: lightgoldenrodyellow;
+                      height: 240px;}
+#main_menu .sub5{display: none;}
+                    
+#main_menu:hover .sub5{display: block;
+                      background: lightgoldenrodyellow;
+                      height: 240px;}
+                    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
