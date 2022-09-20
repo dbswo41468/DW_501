@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <script>
-        // 다음 사진
         var idx = 1;
         function next(){
             idx++;
@@ -16,21 +15,34 @@
             var img = document.getElementById("mimg");
             img.src = '../../image/' + idx + '.jpg';
         }
-        // 이전 사진
-        function pre(){
-            idx--;
-            if( idx == 0){
-                idx = 4;
+        
+        var set = '';
+
+        function start() {
+            set = setInterval( function () {
+                idx++;
+                if(idx == 5) {
+                    idx=1;
+                }
+                var img = document.getElementById('mimg');
+                img.src = '../../image/' + idx + '.jpg';
+                }, 1000);
             }
-            var img = document.getElementById('mimg');
-        img.src = '../../image/' + idx + '.jpg';
-        }
+            
+            function end() {
+                clearInterval(set);
+            }
+            
+            
+        
     </script>
 </head>
 <body>
     <!-- .. : 상위 폴더를 의미함 -->
     <img src="../../image/1.jpg" id="mimg">
     <div>
+        <button onclick="start()">시작</button>
+        <button onclick="end()">종료</button>
         <button onclick="pre()">이전</button>
         <button onclick="next()">다음</button>
     </div>

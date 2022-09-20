@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #box{
+            width: 500px;
+            height: 500px;
+            background: greenyellow;
+            margin: 0 auto;
+            padding: 0 auto;
+            text-align: center;
+        }
+    </style>
+
+    <script>
+        // 루프문 (반복문)
+        // for, wile, do~while
+        // while - for
+        
+        // 초기값 , 조건식 , 증강식
+        // 시작번호 , 끝나는 숫자 
+        // 시작 숫자부터 마지막 숫자까지  얼마만큼 증가 또는 감소
+        
+        // 100번 반복 시작 숫자 : 3 증가하는 값 : 1 마지막 숫자 : ?
+
+
+        // 1. 2~9 중에 하나를 입력받아 해당 숫자 구구단이 출력되게 만들기
+        // 입력은 input 태그를 통해 입력받기
+        // 출력은 div에 출력하기
+
+        // 2. 숫자 하나 입력받기
+        // 입력받은 숫자만큼 반복하기
+        
+    //     function gugu(){ // 버튼태그
+    //         var num = document.getElementById('num'); // input 가져오기
+    //         var res = document.getElementById('result'); // 출력할 div 가져오기
+
+    //     var out = '';
+    //     var i = 1;
+    //     while( i <=num.value/* 9  1번문제*/ ){  // i가 num 입력값보다 작을 때 out += "반복 <br>"; 을 실행하고 i++; 으로 i 값이 증가해 num입력값과 같아질 때 까지 반복한다
+
+    //         out += "반복 <br>";
+    //         i++;
+            
+    //         // out += num.value + '*' + i + '=' + num.value * i  +'<br>' 1번문제
+    //         // i++; 1번 문제
+    //     }
+    //     res.innerHTML = out;
+    // }
+
+/*
+    // 매개변수라고 한다
+    function select_coin( it ){
+        var coin = Math.floor(Math.random()*10)+1; // 랜덤값
+        // coin 값이 짝수고 2로 나눈 값이 0 &&(그리고) it 값에 front 가 있다면 맞다
+        var res = document.querySelector("#result1")
+        if( (coin % 2 == 0 && it=="front") )
+            res.innerHTML="앞면 , 정답";
+        else if( (coin % 2 == 1 && it=="back")  )
+            res.innerHTML="뒷면 , 정답";
+        else
+            res.innerHTML="오답~다음에 다시";
+    } // 식이 한줄이라면 { } <= 안써도 된다
+*/
+ 
+// 앞면 뒷면 을 선택 했을 경우 10번중 정답이 나올 확률은?
+
+/*
+    function select_coin( it ){ // it 안에 'front' , 'back' 이 있다고 선언한것과 같다
+        var coin = Math.floor(Math.random()*10)+1;
+        var res = document.querySelector("#result1")
+
+        var out = "";
+        var i=1;
+        var count = 0;
+
+        while(i<10){
+            var coin = Math.floor(Math.random()*10)+1;
+            switch(coin % 2){
+                case 0 : 
+                    switch(it){
+                        case 'front' :
+                         out += '앞면 , 정답 <br>';
+                         count++;
+                         break;
+                        case 'back' :
+                         out += '앞면 , 오답 <br>';
+                         break;
+                    }
+                    break;
+                case 1 : 
+                switch(it){                       
+                    case 'back' :
+                         out += '뒷면 , 정답 <br>';
+                         count++;
+                         break;
+                        case 'front' :
+                         out += '뒷면 , 오답 <br>';
+                         count++;
+                         break;
+                }
+            }i++;
+        }
+        // whlie문 끝
+        out += "정답확률 : " + count * 10 + '%'; // -> out = out + "a"
+        res.innerHTML=out;
+    }
+*/
+
+
+    // 무한루프
+    // 무한루프 : 무한대 반복
+/*
+    var k =1;
+    while(true){
+        document.write("무한반복");
+        if(k == 100) break;
+        k++;
+    }
+*/
+/*   while(true){
+        var num= parseInt(prompt());
+        document.write(num + '<br>');
+        if(num == 0);
+        break;
+    }
+*/
+
+    </script>
+</head>
+<body>
+    <input type="number" id="num">
+    <button onclick="gugu()">구구단</button>
+    <hr>
+    <div id="result">
+    </div>
+    
+    <hr>
+
+    <!-- <input type="button" value="앞면" onclick="select_coin('front')">
+    <input type="button" value="뒷면" onclick="select_coin('back')">  -->
+    <!-- ( ) 안에 뭔가 있다면 변수를 만들어 가져와야한다 -->
+    <!-- <hr>
+    <div id="result1">
+    </div> -->
+
+    <input type="number" id="row"/>
+    <input type="number" id="col"/>
+    <button onclick="make()">테이블 생성</button>
+    <hr>
+    <div id="result1">
+
+    </div>
+</body>
+</html>
+
+<script>
+
+// 루프 & 테이블 태그를 이용 테이블 자동 만들기
+function make(){
+
+var res = document.getElementById("result1");
+var row = document.getElementById("row");
+var col = document.getElementById("col");
+
+var out = "";
+var i=1;
+out += "<table>";
+while(i <= row.value){
+    out += "<tr>";
+        var k = 1;
+        while(k <= col.value){
+            out += "<td> a </td>";
+            k++;
+        }
+    out += "</tr>";
+    i++
+}
+    out += '</table>';
+
+    res.innerHTML = out;
+}
+</script>
+
+<style>
+
+    table tr td {
+        width: 50px;
+        height: 50px;
+        text-align: center;
+        border: 1px solid black;
+    }
+</style>

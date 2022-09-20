@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="과제7.css">
+    <head>
+
+</head>
+<body onload="start()"> 
+<div class="top">
+    <div class="com">
+        <img id="cp_img" src="./">
+    </div>
+    <div class="box">
+        <div class="rock_box">
+            <div class="rps_box">
+                <button id="rock_bt" onclick="rock_click()"><img id="rock_img"  src="rock.png"></button>
+            </div>
+        </div>
+        <div class="paper_box">
+            <div class="paper_box">
+                <button id="paper_bt" onclick="paper_click()"><img id="paper_img"  src="paper.png"></button>
+            </div>
+        </div>
+        <div class="scissors_box">
+            <div class="rps_box">
+                <button id="scissors_bt" onclick="scissors_click()"><img id="scissors_img" src="si.png"></button>
+            </div>
+        </div>
+    </div>
+    <div id="rere">
+    </div>
+    <div id="start">
+        <button >돌리기</button>
+    </div>
+</div>
+</body>
+<script>
+    var idx = 0;
+    var str;
+    
+    function start() {
+        var set = '';
+            // set = setInterval( function () {
+            //     idx++;
+            //     if(idx == 3) {
+            //         idx=1;
+            //     }
+            //     var img = document.getElementById('cp_img');
+            //     img.src = 'rock.png';
+            //     }, 1000);
+            if(idx == 0){
+              document.getElementById("cp_img").src = "rock.png"
+                idx++;
+            }
+            else if(idx == 1){
+                document.getElementById("cp_img").src = "paper.png"
+                idx++;
+            }
+            else if(idx == 2){
+                document.getElementById("cp_img").src = "si.png"
+                idx=0;
+            }
+            str = setTimeout(start,1000);
+            }
+
+    var rock = document.getElementById('rock_bt'); // rock 변수에 버튼 태그를 대입했다
+    var paper = document.getElementById('paper_bt');
+    var scissors = document.getElementById('scissors_bt');
+    var cp_img = document.getElementById("cp_img"); // 이미지 값을 가져온다
+    function rock_click(){ // rock를 눌렀을 때 결과값
+        var com = Math.floor(Math.random()*3)+1; // com의 랜덤 값
+        if(com == 1){
+            res.innerHTML="무승부";
+            cp_img.src = "rock.png"; // 무승부면 주먹 사진이 나온다
+        }
+        else if(com == 3){
+            res.innerHTML="승"
+            cp_img.src = "scissors.png";
+        }
+        else{
+            res.innerHTML="패배"
+            cp_img.src = "paper.png";
+        }
+    }
+    function paper_click(){
+        var com = Math.floor(Math.random()*3)+1;
+        if(com == 2){
+            res.innerHTML="무승부";
+            cp_img.src = "paper.png";
+        }
+        else if(com == 1){
+            res.innerHTML="승";
+            cp_img.src = "rock.png";
+        }
+        else{
+            res.innerHTML="패";
+            cp_img.src = "si.png";
+        }
+    }
+    function scissors_click(){
+        var com = Math.floor(Math.random()*3)+1;
+        if(com == 3){
+            res.innerHTML="무승부";
+            cp_img.src = "si.png";
+        }
+        else if(com == 2){
+            res.innerHTML="승";
+            cp_img.src = "paper.png";
+        }
+        else{
+            res.innerHTML="패";
+            cp_img.src = "rock.png";
+        }
+    }
+    
+
+    var res= document.getElementById('rere');
+
+
+
+    </script>
+</html>
