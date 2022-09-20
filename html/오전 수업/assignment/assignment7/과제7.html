@@ -9,32 +9,36 @@
     <head>
 
 </head>
-<body onload="start()"> 
+<body> 
 <div class="top">
     <div class="com">
-        <img id="cp_img" src="./">
+        <img id="cp_img" src="즐거운.png">
     </div>
     <div class="box">
-        <div class="rock_box">
-            <div class="rps_box">
-                <button id="rock_bt" onclick="rock_click()"><img id="rock_img"  src="rock.png"></button>
+        <div class="box_box">
+            <div class="rock_box">
+                <div class="rps_box">
+                    <button id="paper_box" onclick="rock_click()"><img id="rock_img"  src="rock.png"></button>
+                </div>
             </div>
-        </div>
-        <div class="paper_box">
-            <div class="paper_box">
-                <button id="paper_bt" onclick="paper_click()"><img id="paper_img"  src="paper.png"></button>
+            <div class="rock_box">
+                <div class="rps_box">
+                    <button id="paper_bt" onclick="paper_click()"><img id="paper_img"  src="paper.png"></button>
+                </div>
             </div>
-        </div>
-        <div class="scissors_box">
-            <div class="rps_box">
-                <button id="scissors_bt" onclick="scissors_click()"><img id="scissors_img" src="si.png"></button>
+            <div class="rock_box">
+                <div class="rps_box">
+                    <button id="paper_bt" onclick="scissors_click()"><img id="scissors_img" src="si.png"></button>
+                </div>
             </div>
         </div>
     </div>
     <div id="rere">
     </div>
     <div id="start">
-        <button >돌리기</button>
+        <div id="start1">
+            <button onclick="start()" id="bt1">돌리기</button>
+        </div>
     </div>
 </div>
 </body>
@@ -44,14 +48,6 @@
     
     function start() {
         var set = '';
-            // set = setInterval( function () {
-            //     idx++;
-            //     if(idx == 3) {
-            //         idx=1;
-            //     }
-            //     var img = document.getElementById('cp_img');
-            //     img.src = 'rock.png';
-            //     }, 1000);
             if(idx == 0){
               document.getElementById("cp_img").src = "rock.png"
                 idx++;
@@ -64,12 +60,12 @@
                 document.getElementById("cp_img").src = "si.png"
                 idx=0;
             }
-            str = setTimeout(start,1000);
+            str= setTimeout(start,500);
             }
 
     var rock = document.getElementById('rock_bt'); // rock 변수에 버튼 태그를 대입했다
     var paper = document.getElementById('paper_bt');
-    var scissors = document.getElementById('scissors_bt');
+    var scissors = document.getElementById('si_bt');
     var cp_img = document.getElementById("cp_img"); // 이미지 값을 가져온다
     function rock_click(){ // rock를 눌렀을 때 결과값
         var com = Math.floor(Math.random()*3)+1; // com의 랜덤 값
@@ -79,7 +75,7 @@
         }
         else if(com == 3){
             res.innerHTML="승"
-            cp_img.src = "scissors.png";
+            cp_img.src = "si.png";
         }
         else{
             res.innerHTML="패배"

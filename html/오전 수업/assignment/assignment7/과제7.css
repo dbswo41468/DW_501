@@ -5,6 +5,7 @@
     height: 800px;
     margin: 0 auto;
     padding: 0 auto;
+    background: pink;
 }
 
 .com{
@@ -12,23 +13,46 @@
     height: 200px;
     margin: 0 auto;
     padding: 0 auto;
-    background: hotpink;
 }
 
-.box{
-    display: flex;
-    margin-top: 50px;
-}
-
-.rock_box{
+.com img{
     width: 200px;
     height: 200px;
     margin: 0 auto;
     padding: 0 auto;
 }
 
+.box{
+    width: 800px;
+    height: 200px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-top: 50px;
+    
+}
+
+.box_box{
+    width: 800px;
+    height: 200px;
+    display: flex;
+    margin: 0 auto;
+    padding: 0 auto;
+    margin-right: 95px;
+
+    
+}
+
+.rock_box{
+    width: 60px;
+    height: 200px;
+    margin: 0 auto;
+    padding: 0 auto;
+    
+}
+
 .paper_box{
-    width: 200px;
+    width: 60px;
     height: 200px;
     margin: 0 auto;
     padding: 0 auto;
@@ -41,8 +65,10 @@
     padding: 0 auto;
 }
 
-.rps{
-
+.rps_box{
+    width: 200px;
+    height: 200px;
+    
 }
 
 .rps img{
@@ -81,22 +107,45 @@
 #rere{
     width: 60px;
     height: 60px;
-    margin-right: 50px;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
 }
 
-.start{
-    width: 80px;
-    height: 20px;
+#start {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
 }
 
+#rock_img{
+    width: 150px;
+    height: 150px;
+}
 
+#paper_img{
+    width: 150px;
+    height: 150px;
+}
 
+#scissors_img{
+    width: 150px;
+    height: 150px;
+}
 
+#bt1{
+    text-align: center;
+}
 
-
-
-
-
+#start1 {
+    width: 60px;
+    height: 60px;
+    margin: 0 auto;
+    padding: 0 auto;
+    text-align: center;
+}
 
 
 
