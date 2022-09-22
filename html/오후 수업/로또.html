@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>제 1회 dw 로또 프로그램</title>
+    <style>
+        body{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .lotto{
+            width: 500px;
+            margin: 50px auto;
+            background: hotpink;
+        }
+    </style>
+</head>
+<body>
+    <!-- 로또 번호를 입력하는 ui -->
+    <div id="lotto" class="lotto">
+        <input id="first_number" type="text" placeholder="로또 번호를 입력해주세요...">
+        <input id="second_number" type="text" placeholder="로또 번호를 입력해주세요...">
+        <input id="third_number" type="text" placeholder="로또 번호를 입력해주세요...">
+        <input id="fourth_number"type="text" placeholder="로또 번호를 입력해주세요...">
+        <input id="fifth_number"type="text" placeholder="로또 번호를 입력해주세요...">
+        <input id="sixth_number"type="text" placeholder="로또 번호를 입력해주세요...">
+
+
+        <div>
+            <button onclick="doCheckLottoNumber()">입력 완료</button>
+        </div>
+    </div>
+    <!-- 결과를 확인하는 창 -->
+    <div class="lotto">
+        <h2>2022-09-22 ** 회차 결과</h2>
+        <h3 id="result">23 8 19 44 1 0</h3>
+        <p id="rank">1 등</p>
+    </div>
+</body>
+<script>
+   doCheckLottoNumber2();//메소드 호출
+    /*
+    로또 프로그램
+
+    메소드는 = 기능
+
+    * 로또 관련 기능 나열하기 *
+
+    기능 정의
+
+    1. 로또 번호 입력 ㅇ
+    2. 번호 검증 ㅇ
+        2-1. 입력한 번호를 확인한다
+        2-2. 중복번호 체크
+    3. 결과 확인 x
+    4. 등수 확인
+    5. 당첨금 확인
+    6. 추첨 종료
+
+    2. 기능 구현
+
+    3. 기능 테스트
+    */
+    // 1-2. 번호 검증
+    // 함수 (메소드) 이름을 작성할 때는 동사로 한다.
+    // 메소드 이름은길면 길수록 좋다
+    // 메소드 이름  처음에 대문자가 아니라 소문자가 온다.
+
+    // 첫번쨰 방법
+    function doCheckLottoNumber(){
+        var first_number = document.getElementById(first_number).value;
+        var second_number = document.getElementById(second_number).value;
+        var third_number = document.getElementById(third_number).value;
+        var fourth_number = document.getElementById(fourth_number).value;
+        var fifth_number = document.getElementById(fifth_number).value;
+        var sixth_number = document.getElementById(sixth_number).value;
+        var isSuccess = true; // 번호 확인 여부
+        var lottoNumber = []; // 배열 생성
+
+        isSuccess = doCheckLottoNumber(first_number);
+        if( !isSuccess){
+            // 만약에 isSuccess가 false라면
+            alert('숫자는 1 ~ 45에 있는 숫자로 입력해야합니다.')
+            return false;
+        }
+        lottoNumber[0] = second_number; // if로 검증 후 배열 0번째에 값을 대입
+        isSuccess = doCheckLottoNumber(second_number);
+        if( !isSuccess){
+            // 만약에 isSuccess가 false라면
+            alert('숫자는 1 ~ 45에 있는 숫자로 입력해야합니다.')
+            return false;
+        }
+        lottoNumber[1] = third_number; // if로 검증 후 배열 0번째에 값을 대입
+        isSuccess = doCheckLottoNumber(third_number);
+        if( !isSuccess){
+            // 만약에 isSuccess가 false라면
+            alert('숫자는 1 ~ 45에 있는 숫자로 입력해야합니다.')
+            return false;
+        }
+        lottoNumber[2] = fourth_number; // if로 검증 후 배열 0번째에 값을 대입
+        isSuccess = doCheckLottoNumber(fourth_number);
+        if( !isSuccess){
+            // 만약에 isSuccess가 false라면
+            alert('숫자는 1 ~ 45에 있는 숫자로 입력해야합니다.')
+            return false;
+        }
+        lottoNumber[3] = fifth_number; // if로 검증 후 배열 0번째에 값을 대입
+        isSuccess = doCheckLottoNumber(fifth_number);
+        if( !isSuccess){
+            // 만약에 isSuccess가 false라면
+            alert('숫자는 1 ~ 45에 있는 숫자로 입력해야합니다.')
+            return false;
+        }
+        lottoNumber[4] = first_number; // if로 검증 후 배열 0번째에 값을 대입
+        
+        isSuccess = doCheckLottoNumber(sixth_number);
+        if( !isSuccess){
+            // 만약에 isSuccess가 false라면
+            alert('숫자는 1 ~ 45에 있는 숫자로 입력해야합니다.')
+            return false;
+        }
+        lottoNumber[5] = sixth_number; // if로 검증 후 배열 0번째에 값을 대입
+        isSuccess = doCheckLottoNumber(sixth_number);
+        var result = doCheckOverIapNumber(lottoNumber);
+        
+        // 중복된 숫자 판별 하는 함수
+        function doChevkOverIapNumber(lottoNumber){
+            console.log(lottoNumber);// 배열 형태로 출력
+            var coumt = 0;
+            for( var i= 0; i < lottoNumber.length; i++){
+                for( var j=0; j < lottonNumber.length; j++){
+                    if ( i != j){
+                        if ( lottoNumber[i] == lottoNumber[j]){
+                            ++count;
+                        }
+                    }
+                }
+                if (count > 0) {
+                    alert('숫자는 중복 될 수 없습니다');
+                    break;
+                }
+            }
+            return count;
+        }
+    }
+
+        
+
+    // 중복된 숫자 판별 하는 함수
+    function doCheckOverIapNumber(lottoNumber){
+
+    }
+
+    // 입력한 숫자가 1~45인지 확인하는 함수
+    function doCheckInputNumber(number){
+        if(number < 1 && number > 45){
+            return true;
+        }
+        return false;
+    }
+
+    // 두번째 방법
+
+    function doCheckLottoNumber2() { // children : 부모 태그를 기준으로 자식 태그를 가져옴
+        var lotto = document.getElementById('lotto').children; // 결과를 배열로 리턴 해줌.
+        for(var i=0; i < lotto.length; i++){
+            if(lotto[i].localName  == 'input'){
+                var value = lotto[i].value;
+                console.log(value); // for 문을 이용한 input value 가져오기
+            }
+        }
+    }
+
+    </script>
+</html>

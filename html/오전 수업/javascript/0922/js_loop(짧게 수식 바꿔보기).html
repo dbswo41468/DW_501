@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script>
+        // 반복문
+        // for (초기값; 조건식; 증감식)
+        // 랜덤 값 ( 랜덤 범위 1~100 ) 중에서만 4의 배수만 출력하기
+        // 20번 반복 해여 4의 배수만 출력하기
+       
+
+        // 반복문이 한번 돌때마다 랜덤값이 4의 배수인지 확인
+/*
+        for( var i=1; i<=20; i++){ // <= 1부터 20번 반복 한다는 식
+            var rd = Math.floor(Math.random()*100)+1; // 랜덤값
+            if( rd % 4 == 0){ // 랜덤값이 4와 나누고 0이 될 때
+                document.write(rd+'<br>') // 도출한다      
+            }
+        }
+*/
+
+        // 입력은 prompt로 입력하기
+        // 반복횟수 10번
+        // 랜덤 범위는 1~10
+        // 10번 숫자를 입력하여 입력한 숫자가 랜덤값과 일치하면
+        // 지뢰 밟은 사망, 일치하지 않으면 회피 성공 출력하기
+        // 반복문이 한번 동장 할때마다 새로운 랜덤값 발생
+ /*       
+        for(var i = 1; i <= 10; i++){ // 반복 횟수
+            var coin = parseInt( prompt("숫자 입력")); // 내 숫자 입력
+            if( coin > 10 || coin < 1){ // 10보다 크거나 or( || ) 1보다 작으면 아래 식 실행
+                document.write("잘못된 입력으로 사망");
+                break;
+            }
+            if(isNaN(coin)){ // isNaN : 이것이 숫자가 아닌것이 맞습니까? 라는 뜻
+                            // 숫자가 아니니까 아래 수식이 실행된다.
+                            // NaN : 낫 어 넘버 
+                document.write("미입력 사망");
+                break;
+            }
+            var rd  = Math.floor(Math.random()*10)+1;
+            if( rd == coin ){
+                document.write("사망 <br>");
+                break;
+            }
+            else( // 짧은 식 일 때 괄호 안써도 된다
+                document.write("회피 <br>")
+            )
+           
+
+            }  
+*/      
+/*
+            for(var i=2; i<=9; i++){
+                for(var k=1; k <=9; k++){
+                    document.write(i+"*"+k+"="+i*k+'<br>');
+                }
+            }
+*/
+
+            for(var i = 1; i<=5; i++){ // 줄 개수
+                for(var k=5; k>=i; k--){ // 한 줄에 별 개수
+                    document.write('*'); 
+                }
+                document.write("<br>"); 
+            }
+
+
+    
+        // 비밀번호 찾기
+        // 1. 비밀번호는 총 4자리 숫자다
+        // 2. 비밀번호 각 자리는 1~9 중 하나이다.
+        // 3. 비밀번호에 중복은 없다. 예) 2239 안됨
+        // 4. 첫번째 숫자는 세번째 숫자 보다 7 크다. *(8,9) * *(1,2) * 
+        // 5. 두번째 숫자는 네번째 숫자보다 작다. *(8,9) *(7,5,6,4,3) *(1,2) *(8,7,6,5,4,3)
+        // 6. 비밀번호를 역순으로 한 숫자와 비밀번호를 더하면 16566이다
+        // 7. 위 조건에 맞는 비밀번호 4자리를 구하시오
+            // a b c d
+        for(var a = 1; a <= 9; a++){ // a b c d = 1~9 까지의 수 대입
+            for( var b = 1; b <= 9; b++){
+                for( var c=1; c<=9; c ++){
+                    for(var d=1; d<=9; d++){
+                        if(a != b && a != c && a != d && b != c && b != d && c !=d ){ // 중복 지우기
+                            if( a == c+7){ // a 에는 8 , 9 대입
+                                if( b < d ){ // d가 더 크면
+                                    var e = (a*1000) + (b*100) + (c*10) + d; 
+                                    var f = (d*1000) + (c*100) + (b*10) + a; 
+                                    if( e + f == 16566 ){
+                                        document.write('비밀번호 : ' + e );
+                                    }
+
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+    </script>       
+</head>
+<body>
+
+</body>
+</html>

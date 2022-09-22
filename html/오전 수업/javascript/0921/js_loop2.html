@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+
+
+
+    </style>
+
+    <script>
+
+        // 반복문 사용
+        // 1~100 까지 숫자중 13의 배수만 출력하시오
+        // document.write() 사용하여 출력
+
+        /*
+        var i = 1;
+        while(i<=100){
+            if(i % 13 == 0)
+                document.write(i+"<br>")
+                i++;
+            }
+        */
+
+        // 1~100 까지 숫자중 4와 7의 공배수만 출력
+            var i = 1;
+            while(i<=100){ 
+                if(i%4 == 0 && i%7 == 0)
+                    document.write(i+"<br>");
+                    i++;
+            } // 해석 : 4 * 7 =28 이니까 둘이 공배수값인 28을 100 아래까지 더하는것
+            var i = 1;
+            while(i<=100){ 
+            if(i%(4*7) == 0)document.write(i+"<br>");
+            i++;
+            }
+
+            // 1~100 까지 숫자의 24의 약수
+
+            var i=24;
+            while(i>= 1){
+                if(24 % i == 0)
+                document.write(i+'<br>');
+                i--;
+            }  // 24 부터 구하기 , 숫자를 앞에 쓰는게 중요하다
+
+            var i=1;
+            while(i<=24){
+                if(24 % i == 0)
+                document.write(i+'<br>');
+                i++;
+            }  // 1부터 구하기 , 숫자를 앞에 쓰는게 중요하다
+
+
+            // 124와 96의 공약 수 출력하기
+
+            var i = 1;
+            while(i <=124){
+                if(96%i == 0 && 124%i == 0)
+                document.write(i+"<br>");
+                i++;
+            }
+
+            var num1 = 124 , num2 = 96;
+            var i=1;
+            var small = num1 < num2 ? num1 : num2;
+            while(i <= small){
+                if(num1 % i==0 && num2 % i == 0)
+                document.write(i+'<br>');
+                i++;
+            }
+
+
+
+            // 124와 155의 최대 공약수 출력하기
+
+            var i = 155; // 최대값 지정
+            while(i >=1){ //155~1로 내려간다
+                if(124 % i == 0 && 155 % i == 0 ){ // 124 = 31 , 155 = 1 이 나온다
+                    document.write('최대 공약수 = '+i+'<br>'); // 구하려는건 최대 공약수 이기 때문에 처음 나온 124 = 31을 구하고
+                    break;} //  break 를 걸어줘서 31에서 멈춘다
+                i--; // 그후 155~1로 내려가야 하기 때문에 i 값을 빼준다
+            }
+
+
+            var num1 = 124;
+            var num2 = 155;
+            var i = num1 < num2 ? num1 : num2;
+
+            while( i>=1){
+                if(num1 % i == 0 && num2 % i == 0){
+                    document.write('최대 공약수 = '+i);
+                    break;
+                }
+                i--;
+            }
+            // 베스킨라빈스
+
+            var out =  'user : '; // 전역변수
+            var num31 = 0; // 전역변수
+            var turn = true; // 전역변수
+            var cnt = 0; // 전역변수
+            function input(){
+                if(cnt == 3){
+                    alert("3번 입력했습니다. 입력완료를 눌러주세요");
+                    return; // 함수 종료
+                }
+                var num = document.querySelector("#num");
+                if(num.value <= num31 ||( !turn && num.value > num31 +1)){
+                    alert("잘못입력했습니다. 패배....");
+                    return;
+                }
+                turn = true;
+                num31 = num.value;
+                // 편의 ui
+                num.value=""; // input 태그 값 지우기
+                num.focus(); // 해당 input 태그에 커서 위치하기
+                cnt++;
+                out += num31 + '    ';
+                if( num31 == 31) {
+                    complete();
+                }
+            }
+            function complete(){
+                var res = document.querySelector("#result");
+                res.innerHTML= out; // user 출력
+                
+                // computer 숫자
+                var com = Math.floor(Math.random() * 3)+1;
+                out += "<br> com : ";
+                var i = 1;
+                while( i <= com){ 
+                    out += ++num31+"    " // ++ : 앞에 써야 먼저 증강되고 출력된다 
+                    if(num31 == 31) break;
+                    i++;
+                }
+                res.innerHTML = out;
+                turn = false;
+
+                if(num31 == 31){
+                    alert('컴 패배');
+                    return;
+                }
+                out+="<br> user : ";
+                cnt = 0;
+                
+            }
+            function check(){
+                if(window.event.keyCode==13) input();
+                // alert(window.event.keyCode); // 키보드 이벤트 번호 찾기
+            }
+
+
+    </script>
+</head>
+<body>
+    <div>
+        <input type="number" id="num" onkeydown="check()">
+        <input type="button" onclick="input()" value="입력">
+        <input type="button" onclick="complete()" value="입력 완료">
+    </div>
+    <hr>
+    <div id="result">
+
+    </div>
+</body>
+</html>

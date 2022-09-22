@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #top{
+            width: 800px;
+            height: 800px;
+            margin: 0 auto;
+            background: greenyellow;
+            padding-top: 50px;
+        }
+        #mid{
+            width: 500px;
+            height: 500px;
+            margin: 0 auto;
+            background: hotpink;
+        }
+
+        #top_box{
+            width: 250px;
+            height: 200px;
+            margin: 0 auto;
+            background: rgb(48, 16, 16);
+            display: flex;
+        }
+
+        #dis_box{
+            width: 250px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            /* justify-content : 정렬방법  */
+            background: chocolate;
+            margin-top: 75px;
+        }
+
+        #bt_box_box{
+            width: 250px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            /* justify-content : 정렬방법  */
+            margin-top: 75px;
+            background: aqua;
+        }
+
+        #mid_box{
+            width: 250px;
+            height: 50px;
+            margin: 0 auto;
+            background: rgb(54, 250, 5);
+            display: flex;
+        }
+
+        #mid_box_box{
+            width: 250px;
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-around;
+            /* justify-content : 정렬방법  */
+            background: aqua;
+        }
+
+        #bt_box{
+            width: 250px;
+            height: 200px;
+            margin: 0 auto;
+            background: rgb(40, 153, 176);
+            display: flex;
+        }
+
+        #st_box{
+            width: 250px;
+            height: 50px;
+            margin: 0 auto;
+            background: rgb(24, 14, 133);
+        }
+
+        #dis_box1{
+            width: 50px;
+            height: 50px;
+            background: darkolivegreen;
+        }
+        #dis_box2{
+            width: 50px;
+            height: 50px;
+            background: darkolivegreen;
+        }
+        #dis_box3{
+            width: 50px;
+            height: 50px;
+            background: darkolivegreen;
+        }
+
+        .dis_img{
+            width: 50px;
+            height: 50px;
+        }
+
+        #user_box{
+            width: 50px;
+            height: 50px;
+            background: khaki;
+        }
+        
+        #vs_box{
+            width: 50px;
+            height: 50px;
+            background: rgb(251, 0, 126);
+        }
+
+        #vs_text_box{
+            width: 20px;
+            height: 20px;
+            text-align: center;
+            margin: 0 auto;
+            margin-top: 10px;
+            font-size: 20px;
+        }
+
+        #cp_box{
+            width: 50px;
+            height: 50px;
+            background: rgb(170, 30, 51);
+        }
+
+        #bt_box1{
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            background: rgb(71, 187, 121);
+        }
+
+        #bt_box2{
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            background: rgb(96, 72, 147);
+        }
+
+        #bt_box3{
+            width: 50px;
+            height: 50px;
+            margin: 0 auto;
+            background: rgb(234, 11, 11);
+        }
+
+        #st_box_box{
+            width: 77.9px;
+            height: 30px;
+            margin: 0 auto;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="top">
+        <div id="mid">
+            <div id="top_box">
+                <div id="dis_box">
+                    <div id="dis_box1">
+                        <img src="dis.png" class="dis_img">
+                    </div>
+                    <div id="dis_box2">
+                        <img src="dis.png" class="dis_img">
+                    </div>
+                    <div id="dis_box3">
+                        <img src="dis.png" class="dis_img">
+                    </div>
+                </div>
+            </div>
+            <div id="mid_box">
+                <div id="mid_box_box">
+                    <div id="user_box">
+                        내 점수
+                    </div>
+                    <div id="vs_box">
+                        <div id="vs_text_box">
+                            vs
+                        </div>
+                    </div>
+                    <div id="cp_box">
+                        컴 점수
+                    </div>
+                </div>
+            </div>
+            <div id="bt_box">
+                <div id="bt_box_box">
+                    <div id="bt_box1">
+                        <img src="dis.png" class="dis_img">
+                    </div>
+                    <div id="bt_box2">
+                        <img src="dis.png" class="dis_img">
+                    </div>
+                    <div id="bt_box3">
+                        <img src="dis.png" class="dis_img">
+                    </div>
+                </div>
+            </div>
+            <div id="st_box">
+                <div id="st_box_box">
+                    <button onclick="btbt()">눌러요잉~</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+
+function btbt(){
+    // 점수 가져오기
+    var ujs = document.getElementById('user_box');// 내 점수를 보여줌 , div를 가져오는것
+    var cjs = document.getElementById('cp_box');
+
+    
+    
+    // 컴 주사위
+    var com1 = Math.floor(Math.random()*6)+1;
+    var com2 = Math.floor(Math.random()*6)+1;
+    var com3 = Math.floor(Math.random()*6)+1;
+
+    var csum = com1+com2+com3; // 컴 주사위 총 값
+
+    // 내 주사위
+    var uj1 = Math.floor(Math.random()*6)+1;
+    var uj2 = Math.floor(Math.random()*6)+1;
+    var uj3 = Math.floor(Math.random()*6)+1;
+
+
+    var usum = uj1+uj2+uj3; // 내 주사위 총 값
+    ujs.innerHTML = usum; // 내 주사위 총 값 출력 (위에 한줄만 있어도됨)
+    cjs.innerHTML = csum;
+
+    if(csum < usum){
+        if(csum == 3){
+            alert("111 패배");
+        }else if(com1 == 3 &&  com2 == 3 && com3 == 3){
+            alert("333패배")
+        }else{
+            alert("승리")
+        }
+        
+    }
+    else if(csum == usum){
+        alert("비김");
+    }
+    else{
+        alert('짐');
+    }
+
+    if(csum == 3){
+        alert(' 컴이 무조건 이김');
+    }
+
+    if(uj1 == 1 &&  uj2 == 1 && uj3 == 1){
+        alert(' 내가 무조건 이김');
+    }
+
+        
+    
+    
+
+
+
+
+
+
+
+
+
+
+}
+
+
+</script>
+</html>

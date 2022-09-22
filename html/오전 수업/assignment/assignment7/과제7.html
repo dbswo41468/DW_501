@@ -60,7 +60,7 @@
                 document.getElementById("cp_img").src = "si.png"
                 idx=0;
             }
-            str= setTimeout(start,500);
+            str= setTimeout(start,50);
             }
 
     var rock = document.getElementById('rock_bt'); // rock 변수에 버튼 태그를 대입했다
@@ -81,6 +81,8 @@
             res.innerHTML="패배"
             cp_img.src = "paper.png";
         }
+        clearTimeout(str); // 클리어 타임 () : () <= 안에 setTimeout()를 대입한 변수 이름을 넣으면 멈춘다, 초기화 시켜준다는 뜻
+        
     }
     function paper_click(){
         var com = Math.floor(Math.random()*3)+1;
@@ -96,6 +98,7 @@
             res.innerHTML="패";
             cp_img.src = "si.png";
         }
+        clearTimeout(str);
     }
     function scissors_click(){
         var com = Math.floor(Math.random()*3)+1;
@@ -111,6 +114,7 @@
             res.innerHTML="패";
             cp_img.src = "rock.png";
         }
+        clearTimeout(str);
     }
     
 
