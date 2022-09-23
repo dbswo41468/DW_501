@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="과제8.css">
+</head>
+<body>
+    <div id="top" > 
+        <div id="mid">
+            <div id="mid_box">
+                <div class="bingo_line">
+                    <div class="bingo">연습</div>
+                    <div class="bingo">2</div>
+                    <div class="bingo">3</div>
+                    <div class="bingo">4</div>
+                    <div class="bingo">5</div>
+                </div>
+                <div class="bingo_line">
+                    <div class="bingo">1</div>
+                    <div class="bingo">2</div>
+                    <div class="bingo">3</div>
+                    <div class="bingo">4</div>
+                    <div class="bingo">5</div>
+                </div>
+                <div class="bingo_line">
+                    <div class="bingo">1</div>
+                    <div class="bingo">2</div>
+                    <div class="bingo">3</div>
+                    <div class="bingo">4</div>
+                    <div class="bingo">5</div>
+                </div>
+                <div class="bingo_line">
+                    <div class="bingo">1</div>
+                    <div class="bingo">2</div>
+                    <div class="bingo">3</div>
+                    <div class="bingo">4</div>
+                    <div class="bingo">5</div>
+                </div>
+                <div class="bingo_line">
+                    <div class="bingo">1</div>
+                    <div class="bingo">2</div>
+                    <div class="bingo">3</div>
+                    <div class="bingo">4</div>
+                    <div class="bingo">5</div>
+                </div>
+            </div>
+        </div>
+        <div id="bt">
+            <div class="bt_box">결과값</div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="lever_box">
+            <button id="bingo_bt"></button>
+        </div>
+    </div>
+</body>
+<script>
+    function bingo_bt(){ // 버튼 눌렀을 때, 시작
+
+    var practice = document.getElementById("bingo") // 연습 div 가져오기
+
+    var test = Math.floor(Math.random()*100)+1;
+    practice.innerHTML = test;
+
+    if(test < 0 ){
+        alert("연습");
+    }
+
+
+
+
+
+
+    } // 끝
+</script>
+</html>
