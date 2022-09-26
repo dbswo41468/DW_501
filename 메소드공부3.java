@@ -21,14 +21,14 @@ public class 메소드공부3 {
 		System.out.println(직업배열[직업-1]+"을 선택하셨습니다");
 	}
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) { // 메인 메소드 먼저 읽기
 		
 		System.out.println("### 게임 프로그램 시작 ###");
 		Scanner scan = new Scanner(System.in);
 		while(true) {
 			System.out.println("[1] 캐릭터 생성 [2] 직업 선택 [3] 프로그램 종료");
 			System.out.print("이용하실 서비스를 선택해주세요 ===>");
-			String menu = scan.next();
+			String menu = scan.next(); // 문자 받아오기
 			switch(menu) {
 				case "1" :
 					System.out.println("캐릭터 생성 메뉴 선택");

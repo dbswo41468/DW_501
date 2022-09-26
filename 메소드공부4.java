@@ -71,52 +71,52 @@ public class 메소드공부4 {
 	 * */
 		
 //	class Solution {
-	    public static int solution(int num) {
-	        int answer = 0;
-	        if(num == 1){
-	            return answer = 0;
-	        }
-	        while(true){ // while : () <= 안에 있는 조건이 만족할 때 까지 실행 , true <= 무한 반복
-	            if(answer == 500){
-	                answer = -1;
-	                break;
-	            }
-	            if(num == 1){
-	                break;
-	            }
-	            else if(num % 2 == 0){
-	                num = num / 2;
-	               
-	            }	
-	            else if(num % 2 == 1){
-	                num = num * 3 + 1;
-	            }	
-	            
-	            answer++;
-	        }
-	        return answer;
-	    }
-//	    
-//	}
-	    public static int solution(int n) {
-	    	// 1비트에 표연할 수 있는 수가 8자리
-	    	int snswer = 0; // int는 4바이트
-	    	long x = n; // long 는 8바이트
-	    	if(x ==1) return answer;
-	    	while(x != 1) {
-	    		if (n%2 == 0) { //입력된 수가 짝수라면
-	    			 x=x /2;
-	    			 ++answer;
-	    		}else {//입력된 수가 홀수라면
-	    			x = (x*3) + 1;
-	    			++answer
-	    		}
-	    		if(answer > 500) return -1;
-	    	}
-	    	return answer;
-	    }
-	
-	
+//	    public static int solution(int num) {
+//	        int answer = 0;
+//	        if(num == 1){
+//	            return answer = 0;
+//	        }
+//	        while(true){ // while : () <= 안에 있는 조건이 만족할 때 까지 실행 , true <= 무한 반복
+//	            if(answer == 500){
+//	                answer = -1;
+//	                break;
+//	            }
+//	            if(num == 1){
+//	                break;
+//	            }
+//	            else if(num % 2 == 0){
+//	                num = num / 2;
+//	               
+//	            }	
+//	            else if(num % 2 == 1){
+//	                num = num * 3 + 1;
+//	            }	
+//	            
+//	            answer++;
+//	        }
+//	        return answer;
+//	    }
+////	    
+////	}
+//	    public static int solution(int n) {
+//	    	// 1비트에 표연할 수 있는 수가 8자리
+//	    	int snswer = 0; // int는 4바이트
+//	    	long x = n; // long 는 8바이트
+//	    	if(x ==1) return answer;
+//	    	while(x != 1) {
+//	    		if (n%2 == 0) { //입력된 수가 짝수라면
+//	    			 x=x /2;
+//	    			 ++answer;
+//	    		}else {//입력된 수가 홀수라면
+//	    			x = (x*3) + 1;
+//	    			++answer
+//	    		}
+//	    		if(answer > 500) return -1;
+//	    	}
+//	    	return answer;
+//	    }
+//	
+//	
 //	-----------------
 	
 	    
@@ -133,7 +133,7 @@ public class 메소드공부4 {
 		System.out.println(xx);
 		
 		
-		System.out.println(solution(626331));
+		//System.out.println(solution(626331));
 }
 
 }
