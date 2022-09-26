@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+// 배열 : 데이터를 연속적으로 메모리 공간에 저장하기 위한 구조
+
+// 배열 생성
+
+var arr1 = new Array(); // 배열객체에 의한 배열 공간 생성 , 이렇게 쓰면 1번에 끝나는데 이게 정석이다
+var arr2 = []; // new Array 동작 , 이렇게 쓰면 3번 동작한다
+var arr3 = [10,20,30,40,50]; // new Array 동작 후 배열 공간에 5개의 데이터 저장
+
+document.write('arr3 : ' + arr3);
+arr2[0] = 10;
+arr2[0] = 20;
+arr2[0] = 1111;
+arr2[0] = 333;
+document.write('<br> arr2 : ' + arr2);
+
+// push 로 배열을 넣을 수 있다
+arr1.push(122);
+arr1.push(3232);
+arr1.push(324);
+arr1.push(3435);
+document.write('<br> arr1 : ' + arr1);
+
+
+</script>
+
+</head>
+<body>
+    
+</body>
+</html>

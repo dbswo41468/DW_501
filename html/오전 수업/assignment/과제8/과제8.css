@@ -42,7 +42,7 @@ body{
     background: violet;
 }
 
-.bingo{
+.bingo{ 
     width:199px;
     height: 149.2px;
     background: chocolate;
@@ -66,4 +66,12 @@ body{
     background: mediumaquamarine;
     margin-top: 150px;
     
+}
+
+.bingo_line div{ 
+    width:199px;
+    height: 149.2px;
+    background: chocolate;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
 }
