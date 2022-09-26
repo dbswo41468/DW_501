@@ -74,4 +74,10 @@ body{
     background: chocolate;
     border-right: 1px solid black;
     border-bottom: 1px solid black;
+    text-align: center;
+    font-size: 30px;
+    font-weight:600;
+    line-height:149.2px;
+    /* line-height : 글자를 세로 가운대로 오게한다. */
+
 }
