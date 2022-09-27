@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>미로탈출</title>
+    <link rel="stylesheet" href="과제9.css">
+</head>
+<body onload="user_animate()">
+    <div class="main_wrap">
+        <div class="game_title">미로 탈출!</div>
+        <div class="miro_wrap">
+            <div class="miro_row">
+                <div class="miro_col" id="miro_00">👫</div>
+                <div class="miro_col" id="miro_01"></div>
+                <div class="miro_col" id="miro_02"></div>
+                <div class="miro_col" id="miro_03"></div>
+                <div class="miro_col" id="miro_04"></div>
+                <div class="miro_col" id="miro_05"></div>
+                <div class="miro_col" id="miro_06"></div>
+                <div class="miro_col" id="miro_07"></div>
+                <div class="miro_col" id="miro_08"></div>
+                <div class="miro_col" id="miro_09"></div>
+            </div>
+            <div class="miro_row">
+                <div class="miro_col" id="miro_10"></div>
+                <div class="miro_col" id="miro_11"></div>
+                <div class="miro_col" id="miro_12"></div>
+                <div class="miro_col" id="miro_13"></div>
+                <div class="miro_col" id="miro_14"></div>
+                <div class="miro_col" id="miro_15"></div>
+                <div class="miro_col" id="miro_16"></div>
+                <div class="miro_col" id="miro_17"></div>
+                <div class="miro_col" id="miro_18"></div>
+                <div class="miro_col" id="miro_19"></div>
+            </div>
+            <div class="miro_row">
+                <div class="miro_col" id="miro_20"></div>
+                <div class="miro_col" id="miro_21"></div>
+                <div class="miro_col" id="miro_22"></div>
+                <div class="miro_col" id="miro_23"></div>
+                <div class="miro_col" id="miro_24"></div>
+                <div class="miro_col" id="miro_25"></div>
+                <div class="miro_col" id="miro_26"></div>
+                <div class="miro_col" id="miro_27"></div>
+                <div class="miro_col" id="miro_28"></div>
+                <div class="miro_col" id="miro_29"></div>
+            </div>
+            <div class="miro_row">
+                <div class="miro_col" id="miro_30"></div>
+                <div class="miro_col" id="miro_31"></div>
+                <div class="miro_col" id="miro_32"></div>
+                <div class="miro_col" id="miro_33"></div>
+                <div class="miro_col" id="miro_34"></div>
+                <div class="miro_col" id="miro_35"></div>
+                <div class="miro_col" id="miro_36"></div>
+                <div class="miro_col" id="miro_37"></div>
+                <div class="miro_col" id="miro_38"></div>
+                <div class="miro_col" id="miro_39"></div>
+            </div>
+            <div class="miro_row">
+                <div class="miro_col" id="miro_40"></div>
+                <div class="miro_col" id="miro_41"></div>
+                <div class="miro_col" id="miro_42"></div>
+                <div class="miro_col" id="miro_43"></div>
+                <div class="miro_col" id="miro_44"></div>
+                <div class="miro_col" id="miro_45"></div>
+                <div class="miro_col" id="miro_46"></div>
+                <div class="miro_col" id="miro_47"></div>
+                <div class="miro_col" id="miro_48"></div>
+                <div class="miro_col" id="miro_49"></div>
+            </div>
+            <div class="miro_row">
+                <div class="miro_col" id="miro_50"></div>
+                <div class="miro_col" id="miro_51"></div>
+                <div class="miro_col" id="miro_52"></div>
+                <div class="miro_col" id="miro_53"></div>
+                <div class="miro_col" id="miro_54"></div>
+                <div class="miro_col" id="miro_55"></div>
+                <div class="miro_col" id="miro_56"></div>
+                <div class="miro_col" id="miro_57"></div>
+                <div class="miro_col" id="miro_58"></div>
+                <div class="miro_col" id="miro_59"></div>
+            </div>
+            <div class="miro_row">
+                <div class="miro_col" id="miro_60"></div>
+                <div class="miro_col" id="miro_61"></div>
+                <div class="miro_col" id="miro_62"></div>
+                <div class="miro_col" id="miro_63"></div>
+                <div class="miro_col" id="miro_64"></div>
+                <div class="miro_col" id="miro_65"></div>
+                <div class="miro_col" id="miro_66"></div>
+                <div class="miro_col" id="miro_67"></div>
+                <div class="miro_col" id="miro_68"></div>
+                <div class="miro_col" id="miro_69"></div>
+            </div>
+            <div class="miro_row">
+                <div class="miro_col" id="miro_70"></div>
+                <div class="miro_col" id="miro_71"></div>
+                <div class="miro_col" id="miro_72"></div>
+                <div class="miro_col" id="miro_73"></div>
+                <div class="miro_col" id="miro_74"></div>
+                <div class="miro_col" id="miro_75"></div>
+                <div class="miro_col" id="miro_76"></div>
+                <div class="miro_col" id="miro_77"></div>
+                <div class="miro_col" id="miro_78"></div>
+                <div class="miro_col" id="miro_79"></div>
+            </div>
+            <div class="miro_row">
+                <div class="miro_col" id="miro_80"></div>
+                <div class="miro_col" id="miro_81"></div>
+                <div class="miro_col" id="miro_82"></div>
+                <div class="miro_col" id="miro_83"></div>
+                <div class="miro_col" id="miro_84"></div>
+                <div class="miro_col" id="miro_85"></div>
+                <div class="miro_col" id="miro_86"></div>
+                <div class="miro_col" id="miro_87"></div>
+                <div class="miro_col" id="miro_88"></div>
+                <div class="miro_col" id="miro_89"></div>
+            </div>
+            <div class="miro_row">
+                <div class="miro_col" id="miro_90"></div>
+                <div class="miro_col" id="miro_91"></div>
+                <div class="miro_col" id="miro_92"></div>
+                <div class="miro_col" id="miro_93"></div>
+                <div class="miro_col" id="miro_94"></div>
+                <div class="miro_col" id="miro_95"></div>
+                <div class="miro_col" id="miro_96"></div>
+                <div class="miro_col" id="miro_97"></div>
+                <div class="miro_col" id="miro_98"></div>
+                <div class="miro_col" id="miro_99"></div>
+            </div>
+        </div>
+    </div>
+</body>
+<script>
+    var miro_arr = new Array(10);
+    var user_gps = new Array(2);
+    var user_ani;
+    var user_ani_conut = 0;
+    user_gps = [0, 0];
+    var user_gps_div = document.getElementById("miro_"+user_gps[0]+""+user_gps[1]);
+    user_gps_div.style.borderBottom = "3px solid black";
+    user_gps_div.style.borderTop = "3px solid black";
+    user_gps_div.style.borderLeft = "3px solid black";
+    for(i = 0; i<miro_arr.length; i++){
+        miro_arr[i] = new Array(10);
+    }
+    miro_arr[0] = [1, 1, 0, 0, 1, 1, 1, 0, 1, 1];
+    miro_arr[1] = [0, 1, 0, 1, 1, 0, 1, 1, 1, 0];
+    miro_arr[2] = [0, 1, 1, 1, 0, 1, 0, 0, 0, 0];
+    miro_arr[3] = [1, 1, 0, 0, 1, 1, 1, 1, 1, 0];
+    miro_arr[4] = [1, 0, 1, 1, 1, 0, 0, 0, 1, 0];
+    miro_arr[5] = [1, 1, 0, 0, 1, 1, 1, 0, 1, 1];
+    miro_arr[6] = [0, 1, 0, 1, 0, 0, 1, 1, 0, 1];
+    miro_arr[7] = [1, 1, 0, 1, 1, 1, 0, 1, 0, 1];
+    miro_arr[8] = [1, 0, 0, 1, 0, 1, 0, 1, 0, 1];
+    miro_arr[9] = [1, 1, 1, 1, 0, 1, 1, 1, 0, 1];
+    
+    document.addEventListener("keydown", move);
+    function user_animate(){
+        if(user_ani_conut === 0){
+            user_gps_div.style.lineHeight = "60px";
+            user_ani_conut++;
+        }
+        else{
+            user_gps_div.style.lineHeight = "75px";
+            user_ani_conut = 0;
+        }
+        user_ani = setTimeout(user_animate, 150);
+    }
+    function road(){
+        if(user_gps[1] <= 0 ||miro_arr[user_gps[0]][user_gps[1]-1] === 0){
+            user_gps_div.style.borderLeft = "3px solid black";
+        }
+        if( user_gps[0] <= 0 || miro_arr[user_gps[0]-1][user_gps[1]] === 0){
+            user_gps_div.style.borderTop = "3px solid black";
+        }
+        if(user_gps[1] >= 9 || miro_arr[user_gps[0]][user_gps[1]+1] === 0){
+            user_gps_div.style.borderRight = "3px solid black";
+        }
+        if(user_gps[0] >= 9 || miro_arr[user_gps[0]+1][user_gps[1]] === 0){
+            user_gps_div.style.borderBottom = "3px solid black";
+        }
+    }
+    function move(key){
+        switch(key.keyCode){
+            case 37:
+                if(user_gps[1] <= 0){
+                    return;
+                }
+                if(miro_arr[user_gps[0]][user_gps[1]-1] === 1){
+                    user_gps_div.innerHTML = "";
+	    user_gps_div.style.border = "";
+                    user_gps[1]--;
+                    user_gps_div = document.getElementById("miro_"+user_gps[0]+""+user_gps[1]);
+                    user_gps_div.innerHTML = "👫";
+                    road();
+                }
+                break;
+            case 38:
+                if(user_gps[0] <= 0){
+                    return;
+                }
+                if(miro_arr[user_gps[0]-1][user_gps[1]] === 1){
+                    user_gps_div.innerHTML = "";
+	    user_gps_div.style.border = "";
+                    user_gps[0]--;
+                    user_gps_div = document.getElementById("miro_"+user_gps[0]+""+user_gps[1]);
+                    user_gps_div.innerHTML = "👫";
+                    road();
+                }
+                break;
+            case 39:
+                if(user_gps[1] >= 9){
+                    return;
+                }
+                if(miro_arr[user_gps[0]][user_gps[1]+1] === 1){
+                    user_gps_div.innerHTML = "";
+	    user_gps_div.style.border = "";
+                    user_gps[1]++;
+                    user_gps_div = document.getElementById("miro_"+user_gps[0]+""+user_gps[1]);
+                    user_gps_div.innerHTML = "👫";
+                    road();
+                }
+                break;
+            case 40:
+                if(user_gps[0] >= 9){
+                    return;
+                }
+                if(miro_arr[user_gps[0]+1][user_gps[1]] === 1){
+                    user_gps_div.innerHTML = "";
+	    user_gps_div.style.border = "";
+                    user_gps[0]++;
+                    user_gps_div = document.getElementById("miro_"+user_gps[0]+""+user_gps[1]);
+                    user_gps_div.innerHTML = "👫";
+                    road();
+                }
+                if(user_gps[0] === 9 && user_gps[1] === 9){
+                    alert("탈출 성공!");
+                }
+                break;
+        }
+    }
+</script>
+</html>

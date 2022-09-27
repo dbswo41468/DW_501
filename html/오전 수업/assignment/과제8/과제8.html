@@ -65,41 +65,94 @@
     
     // var isNum = false; 알아보기!!
     //    if(!isNum){} 알아보기!!
-    // isNum = false;
+    var isNum = false;
     function clicks(){ // 시작
-        for(var i=1; i<26; i++){ // 누르면 배경색 초기화
+        for(var i=1; i<=25; i++){ // 누르면 배경색 초기화
             var bingo =  document.getElementById("bingo"+i);
             bingo.style.color="black";
             bingo.style.background="chocolate";
         }
         
-        for(var i=1; i<26; i++){
+        for(var i=1; i<=25; i++){
+            isNum = false;
            var bingo =  document.getElementById("bingo"+i);
            // bing id 값 1~25까지 증강하는 법 , i 값을 id랑도 같이 사용 할 수 있다
-           var bing_random = Math.floor(Math.random()*100)+1;
+           var bing_random = Math.floor(Math.random()*25)+1;
            // 랜덤 값을 bing_random 에 대입
            for(var j = 1; j<i; j++){ // 중복제거 수식
             var bingoNum = document.getElementById("bingo"+j); // bing id 값 1~25까지 j 로 증강하고
             if(bingoNum.innerHTML == bing_random){ // bing id 값 과 랜덤 값이 같으면
                 i--; // i를 빼주고 다시 처음으로 돌아가서 이전에 나왔던 랜덤수(들)와 비교를 반복해준다
+                isNum = true;
                 break; // 같은 수가 나오지 않으면 멈추고 다음 식으로 넘어간다
             }
            }
-           bingo.innerHTML = bing_random;
-           
+           if(!isNum){
+                bingo.innerHTML = bing_random;
+                array[i-1] = bing_random;   // 배열에 내 랜덤 값은 저장한다
+           }
         }
+
+        
+        
     } // 끝
 
     // div에 나온 랜덤 값을 선택 해서 5개 한줄되면 결과값에 빙고 출력하기
+    
+    // 내가 누른게 배열에 있는지 확인
 
-
-
+    // 배열과  for문은 항상 같이 나와야한다!!!!!!!!!!!!!!
+    var color;
     function binck(a){ // 시작
-        var color =  document.getElementById("bingo"+a);
+        var score = 0;
+        color =  document.getElementById("bingo"+a);
         color.style.color="black";
         color.style.background="yellow";
-    }// 끝
+        score = color.innerHTML; // 점수를 넣었다
+        for(var i=0; i<array.length; i++){ 
+            if(array[i] == score ){
+                alert("array["+i+"] = "+array[i]);
+                bingo_chk();
+            }
+        }
 
-    // 배열로 내 랜덤값을 저장해야한다
+    }// 끝
+    var col_count = 0;
+    var row_count = 0;
+    var cross = 0;
+    function bingo_chk(){
+        col_count = 0;
+        // 0~4 가로
+        // 5~9 가로
+        // 10~14 가로
+        // 15~19 가로
+        // 20~24 가로
+        // 뭘?? 해야 다 같은 가로 값으로 치환 할 수 있을까.
+        for(var i = 1; i <= 5; i++){ // 첫번째 가로줄이 빙고입니까를 검사 하는것
+            color = document.getElementById("bingo"+i);
+            if(color.style.background == "yellow"){
+                col_count++;
+                if(col_count == 5){
+                    alert("1번 가로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        col_count = 0; // 계속 초기화가 된다
+        for(var i = 6; i <= 10; i++){ // 첫번째 가로줄이 빙고입니까를 검사 하는것
+            color = document.getElementById("bingo"+i);
+            if(color.style.background == "yellow"){
+                col_count++;
+                if(col_count == 5){
+                    alert("2번 가로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        col_count = 0; // 계속 초기화가 된다
+    }
+
+    // 다른 가로줄도 빙고입니까 되게 하기
+
 </script>
 </html>

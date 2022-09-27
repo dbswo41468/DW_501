@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+<script>
+    /*
+    var apple_box = new Array();
+    apple_box.push(68);
+    apple_box.push(65);
+    apple_box.push(61);
+    apple_box.push(69);
+    apple_box.push(66); // 마지막 인덱스는 4
+
+    for(var i=0; i<5; i++){
+        document.write( apple_box[i]+"<br>");     
+    }  
+    */
+    // 사과상자에 사과가 평균 몇개 담겨있는지 확인
+    /*
+    var sum = 0;
+    for(i=0; i<apple_box.length; i++){
+        sum = sum + apple_box[i];
+    }
+    document.write("사과갯수 평균 갯수 : " + (sum / apple_box.length)+"<br>");
+
+    // 각 사과 상자에서 사과상자 평균치와 비교했을 때 몇개 차이가 있는지 출력
+    // 사과 상자 평균 값은 정수로 구하여 사용
+    // 출력 예시) 1번 사과상자 : 3개 2번 사과상자 0개
+
+    var avg = parseInt(sum / apple_box.length); // parseInt : 정수로 변환??
+    
+    for(var i = 0; i<apple_box.length; i++){
+        document.write("<br>" + (i+1)+ " 번째 사과상자 : " + (.[i] - avg) + " 개");
+    }
+    */
+
+    // 1상자에 들어가는 고구마 수량을 입력하기
+    // 고구마 1개의 무게는 200g
+    // 고구마 수량을 입력하여 resul에 1번째 고구마상자 ?kg 출력하기
+   
+    var sweet_quan = new Array();
+    var sweet_kg = new Array();
+    function enroll(){
+        var quan = document.querySelector("#quan"); // 검색 해보기!!!!!
+        var num = parseInt(quan.value); // 입력한 고구마 수량
+        sweet_quan.push(num);
+        let kg = (num*200) / 1000; // 고구마 한상자 무게 (kg)
+        sweet_kg.push(kg);
+
+        var res = document.querySelector("#result");
+        var out = "";
+        
+        for(var  i=0; i<sweet_quan.length; i++){
+            out += (i+1) + " 번째 고구마 상자 " + sweet_kg[i] + " kg ("+sweet_quan[i] + "개) <br>"
+        }
+
+        res.innerHTML = out;
+    }
+    
+    // 목적 :  타일에 있는 내용을 배열에 입력하는것
+
+
+
+
+</script>
+
+</head>
+<body>
+    <div>
+        <input type="number" id="quan" placeholder="고구마 수량 입력">
+        <button onclick="enroll()">입력</button>
+    </div>
+    <div id="result"></div>
+</body>
+</html>

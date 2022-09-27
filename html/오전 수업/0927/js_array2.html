@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script> // 선택한 파일 불러오기
+
+        window.onload = function(){ // onload는 브라우저에 출력된 이후를 뜻함 window.onload는
+                                // 브라우저에 모든 html이 출력된 이후 , 스크립트를 맨 아래 작성하지 않고 위에 써도 다시 위에 있는스크립트를 읽게 한다
+
+        document.getElementById("docread").addEventListener('change', readFile); // 뜻 물어보기!!!!! , 체인지 동작 할 때
+        };
+
+        //  여기서부터
+        async function readFile(e) {
+        var file = e.target.files[0]; // input 태그에서 선택한 파일 객체
+        if(!file){ // 파일 객체 존재유무
+            return; // 존재하지 않으면 종료
+        }
+
+        var text = await file.text();
+        // 여기까지는 중요 x
+
+
+        text = text.split('\n');
+        document.write(text[0] + '<br>');
+        document.write(text[1] + '<br>');
+        // 중요함!!!!
+
+        /*
+        var reader = new FileReader(); // 파일 불러오기 위한 reader 객체 생성
+        reader.onload = function(e){
+            filedata = e.target.result; // 파일 불러오기 위한 리더기
+        };
+        reader.readAsText( file, 'euc-kr'); // 리더기를 통해 file에 담겨있는 내용 가져오기
+        */
+    }
+    
+    </script>
+</head>
+<body>
+
+    <div>
+        <input type="file" id="docread"> 
+        <!-- 타입을 파일로 입력하면 파일 가져올 수 있다 -->
+    </div>
+    
+</body>
+</html>

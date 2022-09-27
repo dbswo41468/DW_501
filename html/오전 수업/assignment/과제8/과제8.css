@@ -9,8 +9,6 @@ body{
 #top{
     width: 1000px;
     height: 900px;
-    margin-right: 1px;
-    background: greenyellow;
 }
 
 #mid{
@@ -25,39 +23,29 @@ body{
     height: 750px;
     margin: 0 auto;
     background: rgb(157, 86, 187);
-    display: flex;
+    border: 1px solid black;
 }
 
 #bt{
     width:1000px;
     height:150px;
     margin:0 auto;
-    background: rgb(82, 189, 189);
     display: flex;
 }
 
 .bingo_line{
-    width:200px;
-    height:750px;
+    width:1000px;
+    height:150px;
     background: violet;
-}
-
-.bingo{ 
-    width:199px;
-    height: 149.2px;
-    background: chocolate;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
+    display: flex;
+    border: 1px solid black;
 }
 
 .bt_box{
-    width: 999px;
-    height: 149px;
+    width: 1000px;
+    height: 150px;
     background: crimson;
-    border-right: 1px solid black;
-    border-left: 1px solid black;
-    border-bottom: 1px solid black;
-    margin-top: 1px;
+    margin-top: 20px;
 }
 
 #bottom{
@@ -65,19 +53,19 @@ body{
     height: 500px;
     background: mediumaquamarine;
     margin-top: 150px;
+    margin-left: 5px;
     
 }
 
 .bingo_line div{ 
-    width:199px;
-    height: 149.2px;
+    width:200px;
+    height: 150px;
     background: chocolate;
-    border-right: 1px solid black;
-    border-bottom: 1px solid black;
     text-align: center;
     font-size: 30px;
     font-weight:600;
-    line-height:149.2px;
+    line-height:150px;
+    border: 1px solid black;
     /* line-height : 글자를 세로 가운대로 오게한다. */
 
 }
