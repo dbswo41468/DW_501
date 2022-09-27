@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="과제8.css">
+</head>
+<body>
+    <div id="top" > 
+        <div id="mid">
+            <div id="mid_box">
+                <div class="bingo_line"> 
+                    <div id="bingo1" onclick="binck(1)"></div>
+                    <div id="bingo2" onclick="binck(2)"></div>
+                    <div id="bingo3" onclick="binck(3)"></div>
+                    <div id="bingo4" onclick="binck(4)"></div>
+                    <div id="bingo5" onclick="binck(5)"></div>
+                </div>
+                <div class="bingo_line"> 
+                    <div id="bingo6" onclick="binck(6)"></div>
+                    <div id="bingo7" onclick="binck(7)"></div>
+                    <div id="bingo8" onclick="binck(8)"></div>
+                    <div id="bingo9" onclick="binck(9)"></div>
+                    <div id="bingo10" onclick="binck(10)"></div>
+                </div>
+                <div class="bingo_line"> 
+                    <div id="bingo11" onclick="binck(11)"></div>
+                    <div id="bingo12" onclick="binck(12)"></div>
+                    <div id="bingo13" onclick="binck(13)"></div>
+                    <div id="bingo14" onclick="binck(14)"></div>
+                    <div id="bingo15" onclick="binck(15)"></div>
+                </div>
+                <div class="bingo_line"> 
+                    <div id="bingo16" onclick="binck(16)"></div>
+                    <div id="bingo17" onclick="binck(17)"></div>
+                    <div id="bingo18" onclick="binck(18)"></div>
+                    <div id="bingo19" onclick="binck(19)"></div>
+                    <div id="bingo20" onclick="binck(20)"></div>
+                </div>
+                <div class="bingo_line"> 
+                    <div id="bingo21" onclick="binck(21)"></div>
+                    <div id="bingo22" onclick="binck(22)"></div>
+                    <div id="bingo23" onclick="binck(23)"></div>
+                    <div id="bingo24" onclick="binck(24)"></div>
+                    <div id="bingo25" onclick="binck(25)"></div>
+                </div>
+            </div>
+        </div>
+        <div id="bt">
+            <div class="bt_box">결과값</div>
+        </div>
+    </div>
+    <div id="bottom">
+        <div id="lever_box">
+            <button onclick="clicks()" id="but">시작,초기화</button>
+        </div>
+    </div>
+    
+</body>
+<script>
+    var start_bt = document.getElementById('but');
+    var array = new Array();
+    
+    // var isNum = false; 알아보기!!
+    //    if(!isNum){} 알아보기!!
+    var isNum = false;
+    function clicks(){ // 시작
+        for(var i=1; i<=25; i++){ // 누르면 배경색 초기화
+            var bingo =  document.getElementById("bingo"+i);
+            bingo.style.color="black";
+            bingo.style.background="chocolate";
+        }
+        
+        for(var i=1; i<=25; i++){
+            isNum = false;
+           var bingo =  document.getElementById("bingo"+i);
+           // bing id 값 1~25까지 증강하는 법 , i 값을 id랑도 같이 사용 할 수 있다
+           var bing_random = Math.floor(Math.random()*25)+1;
+           // 랜덤 값을 bing_random 에 대입
+           for(var j = 1; j<i; j++){ // 중복제거 수식
+            var bingoNum = document.getElementById("bingo"+j); // bing id 값 1~25까지 j 로 증강하고
+            if(bingoNum.innerHTML == bing_random){ // bing id 값 과 랜덤 값이 같으면
+                i--; // i를 빼주고 다시 처음으로 돌아가서 이전에 나왔던 랜덤수(들)와 비교를 반복해준다
+                isNum = true;
+                break; // 같은 수가 나오지 않으면 멈추고 다음 식으로 넘어간다
+            }
+           }
+           if(!isNum){
+                bingo.innerHTML = bing_random;
+                array[i-1] = bing_random;   // 배열에 내 랜덤 값은 저장한다
+           }
+        }
+
+        
+        
+    } // 끝
+
+    // div에 나온 랜덤 값을 선택 해서 5개 한줄되면 결과값에 빙고 출력하기
+    
+    // 내가 누른게 배열에 있는지 확인
+
+    // 배열과  for문은 항상 같이 나와야한다!!!!!!!!!!!!!!
+    var color;
+    function binck(a){ // 시작
+        var score = 0;
+        color =  document.getElementById("bingo"+a);
+        color.style.color="black";
+        color.style.background="yellow";
+        score = color.innerHTML; // 점수를 넣었다
+        for(var i=0; i<array.length; i++){ 
+            if(array[i] == score ){
+                // alert("array["+i+"] = "+array[i]); // 클릭시 div 배열 위치와 담긴 랜덤 숫자 출력
+                bingo_chk();
+            }
+        }
+
+    }// 끝
+    var col_count = 0;
+    var row_count = 0;
+    var cross = 0;
+    function bingo_chk(){
+        col_count = 0;
+        roW_count = 0;
+        // 0~4 가로
+        // 5~9 가로
+        // 10~14 가로
+        // 15~19 가로
+        // 20~24 가로
+        // 뭘?? 해야 다 같은 가로 값으로 치환 할 수 있을까.
+        
+        // 가로줄 시작
+        for(var i = 1; i <= 5; i++){ // 첫번째 가로줄이 빙고입니까를 검사 하는것
+            color = document.getElementById("bingo"+i);
+            if(color.style.background == "yellow"){
+                col_count++;
+                if(col_count == 5){
+                    alert("1번 가로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        col_count = 0; // 계속 초기화가 된다
+
+        for(var i = 6; i <= 10; i++){
+            color = document.getElementById("bingo"+i);
+            if(color.style.background == "yellow"){
+                col_count++;
+                if(col_count == 5){
+                    alert("2번 가로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        col_count = 0; // 계속 초기화가 된다
+
+        for(var i = 11; i <= 15; i++){
+            color = document.getElementById("bingo"+i);
+            if(color.style.background == "yellow"){
+                col_count++;
+                if(col_count == 5){
+                    alert("3번 가로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        col_count = 0; // 계속 초기화가 된다
+
+        for(var i = 16; i <= 20; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(color.style.background == "yellow"){
+                col_count++;
+                if(col_count == 5){
+                    alert("4번 가로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        col_count = 0; // 계속 초기화가 된다
+
+        for(var i = 21; i <= 25; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(color.style.background == "yellow"){
+                col_count++;
+                if(col_count == 5){
+                    alert("5번 가로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        col_count = 0; // 계속 초기화가 된다
+
+        // 가로줄 끝
+
+        // 세로줄 시작
+        // 세로줄 넣으니까 이상해짐....다른 방법이 필요하다
+        // 세로줄 div를 배열에 넣어서 뽑아 써야하나 싶은데
+        // 머리속에 떠오르지 않는다
+
+        for(var j = 1; j <= 21; j++){ 
+            color = document.getElementById("bingo"+j);
+            if(color.style.background == "yellow"){
+                row_count++;
+                if(row_count == 5){
+                    alert("1번 세로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        row_count = 0;
+
+        for(var j = 2; j <= 22; j++){ 
+            color = document.getElementById("bingo"+j);
+            if(color.style.background == "yellow"){
+                row_count++;
+                if(row_count == 5){
+                    alert("2번 세로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        row_count = 0;
+
+        for(var j = 3; j <= 23; j++){ 
+            color = document.getElementById("bingo"+j);
+            if(color.style.background == "yellow"){
+                row_count++;
+                if(row_count == 5){
+                    alert("3번 세로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        row_count = 0;
+
+        for(var j = 4; j <= 24; j++){ 
+            color = document.getElementById("bingo"+j);
+            if(color.style.background == "yellow"){
+                row_count++;
+                if(row_count == 5){
+                    alert("4번 세로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        row_count = 0;
+
+        for(var j = 5; j <= 25; j++){ 
+            color = document.getElementById("bingo"+j);
+            if(color.style.background == "yellow"){
+                row_count++;
+                if(row_count == 5){
+                    alert("5번 세로줄 빙고 완성!");
+                }
+            }
+            
+        }
+        row_count = 0;
+
+        // 세로줄 끝
+
+    }
+
+
+</script>
+</html>
