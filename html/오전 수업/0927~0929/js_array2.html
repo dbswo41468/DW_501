@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script> // 선택한 파일 불러오기
+
+        window.onload = function(){ // onload는 브라우저에 출력된 이후를 뜻함 window.onload는
+                                // 브라우저에 모든 html이 출력된 이후 , 스크립트를 맨 아래 작성하지 않고 위에 써도 다시 위에 있는스크립트를 읽게 한다
+
+        document.getElementById("docread").addEventListener('change', readFile); // 뜻 물어보기!!!!! , 체인지 동작 할 때
+        };
+
+        //  여기서부터
+        async function readFile(e) {
+        var file = e.target.files[0]; // input 태그에서 선택한 파일 객체
+        if(!file){ // 파일 객체 존재유무
+            return; // 존재하지 않으면 종료
+        }
+
+        var text = await file.text();
+        list = text.split('\n');
+        // 여기까지는 중요 x
+
+        // document.write(text);
+        // split() -> 문자열 분할
+        // text = text.split('\n');
+        // \n : 엔터 문자 , /t : tab 문자
+
+        // for( var i=0; i< text.length; i++){
+        //     document.write(text[i]+'<br>');
+        // }
+       
+        // 중요함!!!!
+
+        /*
+        var reader = new FileReader(); // 파일 불러오기 위한 reader 객체 생성
+        reader.onload = function(e){
+            filedata = e.target.result; // 파일 불러오기 위한 리더기
+        };
+        reader.readAsText( file, 'euc-kr'); // 리더기를 통해 file에 담겨있는 내용 가져오기
+        */
+    }
+    
+    var list = new Array();
+
+    function out_list() {
+        var out = '';
+        for( let i in list){ // 배열을 위한 for문 ,  0~7 까지 알아서 출력한다
+            out += list[i]+'<br>';
+        }
+        document.querySelector('#list').innerHTML = out;
+    }
+
+    function search(){
+        var word = document.getElementById("word");
+        var name = word.value; // 검색어
+
+        for(let i in list){
+            // let temp = list[i].split(' '); // 이름 나이 주소 사이에 있는 ' ' 공백을 split로 잘라서 배열에 저장한다
+            // if(temp[0] == name){
+
+            // indexOf(찾을문자열) 함수 는 문자열 안에서 입력한 문자열과 일치하는 위치를 찾아
+            //                    인덱스를 반환
+            // 예) "abcd".indexOf("bc") -> 결과 1
+
+                if(list[i].indexOf(name) != -1){ // indexOf : 배열구조에서 사용한다
+                document.querySelector('#list').innerHTML = list[i];
+                return; // 함수 종료
+            }
+        }  
+        document.querySelector('#list').innerHTML = " 검색결과와 일치하는 정보가 없습니다. ";
+    } // 함수 종료
+    </script>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+<style>
+
+    .srh_wrap{
+        display:flex;
+        margin-top:10px;
+        border:1px solid black;
+        width:220px;
+    }
+
+    .srh_wrap input{
+        border:0;
+        outline: none;
+        width:200px;
+    }
+</style>
+</head>
+<body>
+
+    <div>
+        <input type="file" id="docread"> 
+        <!-- 타입을 파일로 입력하면 파일 가져올 수 있다 -->
+    </div>
+    <div>
+        <input type="button" onclick="out_list()" value="전체리스트">
+
+        <div class="srh_wrap">
+            <input type="search" id="word">            <!--  검색하는 기능  -->
+            <span onclick="search()"><i class="bi bi-search"></i></span>
+
+        </div>
+
+    </div>
+    <div id="list"></div>
+
+</body>
+</html>

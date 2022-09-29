@@ -1,0 +1,53 @@
+@charset "utf-8";
+/* boom.css */
+
+body,
+div,
+table,
+p,
+ul {
+    padding: 0;
+    margin: 0;
+    background: #778899;
+    vertical-align: baseline;
+    box-sizing: border-box;
+    /*  보더를 줘도 넓이 값이 처음 설정값으로 고정된다 */
+}
+/* 첨 시작할 때 바디를 잡아준다 */
+
+#wrap{
+    width: 1000px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+table{
+    width: 1000px;
+    border-spacing: 0;
+}
+
+table tr td{
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

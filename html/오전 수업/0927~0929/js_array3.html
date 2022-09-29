@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+
+  <script>
+// \t -> tab
+// lotto.txt 파일 오픈하여 화면에 출력하기
+// 출력 형태는
+// 회차   발표일   번호1   번호2   번호3   번호4    번호5   번호6
+
+// 파일안에 있는 내용을 위 처럼 구분하여 출력하기
+// ul 또는 table 태그 사용하면 됨
+
+   var list = new Array();
+   window.onload = function(){ // onload는 브라우저에 출력된이후를 뜻함 window.onload는
+                            // 브라우저에 모든 html이 출력된 이후
+    document.getElementById("docread").addEventListener('change',readFile); //뜻 질문하기
+  };
+  
+
+      async function readFile(e){
+        var file = e.target.files[0]; // input 태그에서 선택한 파일 객체
+      if(!file){
+        // 파일객체 존재유무
+        return; //존재하지않으면 종료
+      }
+        var text = await file.text();
+        list = text.split("\n");
+        make_list();
+      }
+
+  
+  
+  function make_list(){
+    var out = "<table>";
+
+    out += "<tr> <th>회차</th><th>발표일</th><th>번호1</th><th>번호2</th>"
+    out += "<th>번호3</th><th>번호4</th><th>번호5</th><th>번호6</th> </tr>"
+    for(var i in list){
+        out += "<tr>";
+        let temp = list[i].split("\t");
+        for(var k in temp){
+            out += "<td>" + temp[k] + "</td>";
+        }
+
+        out += "</tr>";
+    }
+    out += "</table>";
+
+    document.getElementById("list").innerHTML = out;
+  }
+  
+
+
+
+
+  function appear(){
+    // 당첨번호 시작 인덱스 2 list[0].split("\t")[2]
+
+    var number = new Array(45); // (45) : 45개의 공간을 미리 만든다
+    number.fill(0); // 배열 45개 공간 0으로 초기화
+
+    // number[0] - 1, munber[1] - 2, number[3] - 3
+
+    for( var i in list){ // i 변수에 배열의 인덱스가 차례로 대입 0~마지막 까지
+        var temp = list[i].split("\t"); // tap 기준으로 자른다
+        for(var k = 2; k<temp.length; k++){ // (var i in temp+2) 와 같은 뜻
+        number[parseInt(temp[k])-1]++;
+        }
+    }
+    var view="";
+    // a += 23 -> a = a+ 23
+    for(var i in number){
+        view += "<div>" + (parseInt(i)+1) + "-> " + number[i] + "개</div>";
+    }
+    document.querySelector("#list").innerHTML = view;
+  }
+
+//   // 문제1.
+//   function high_low(){
+
+//     var number = new Array(45);
+//     number.fill(0);
+
+//     var cnt = document.getElementById("cnt").value;
+//     for(i in cnt){
+//         var temp = list[i].split("\t");
+//         for()
+//     }
+
+
+    // 선생님 해답
+    function high_low(){
+        var cnt = document.querySelector("#cnt").value;
+        var number = new Array(45);
+        number.fill(0);
+        for(var i=0; i<cnt; i++){
+            var temp = list[i].split("\t");
+            for(var k=2; k<temp.length; k++){
+                number[parseInt(temp[k]-1)]++;
+            }
+        }
+    var show ='<h3> 0번 출현한 숫자 </h3>';
+    for(var i in number){
+        if(number[i] == 0){
+            show += "<div>" +(parseInt(i)+1) + "</div>";
+        }
+    }
+    show += "<h3> 15번 이상 출현한 숫자 </h3>"
+    for(var i in number){
+        if(number[i] >= 15){
+            show += "<div>" +(parseInt(i)+1) + "</div>";
+        }
+    }
+    document.querySelector("#list").innerHTML = show;
+  }
+  </script>
+  <style>
+    table tr td{
+      border: 1px solid black;
+      width: 100px;
+      text-align: center;
+      background-color: yellow;
+      color: black;
+    }
+  </style>
+
+</head>
+<body>
+  <div>
+    <input type="file" id="docread">
+    <button type="button" onclick="appear()">출현횟수</button>
+  </div>
+  <div>
+    <!-- 가장 최근 당첨 회차 부터 input태그에 입력한 숫자만큼
+    중에서 0번 출현한 숫자, 또는 15번 이상 출현한 숫자를 찾아 출력
+    예시) input 입력 숫자 10
+        1034회 부터 1025회차까지 로또당첨 번호 출현 횟수 구하기
+        이중에서 0번 나온 숫자 또는 15이상 나온 숫자 찾아 출력 -->
+    <input type="number" id="cnt">
+    <button type="button" onclick="high_low()" >출력</button>
+  </div>
+  <div id="list"></div>
+</body>
+</html>

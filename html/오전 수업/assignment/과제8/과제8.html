@@ -49,7 +49,7 @@
             </div>
         </div>
         <div id="bt">
-            <div class="bt_box">결과값</div>
+            <div id="bt_box"></div>
         </div>
     </div>
     <div id="bottom">
@@ -62,6 +62,7 @@
 <script>
     var start_bt = document.getElementById('but');
     var array = new Array();
+    var text = document.getElementById("bt_box");
     
     // var isNum = false; 알아보기!!
     //    if(!isNum){} 알아보기!!
@@ -108,51 +109,208 @@
         color =  document.getElementById("bingo"+a);
         color.style.color="black";
         color.style.background="yellow";
+        
         score = color.innerHTML; // 점수를 넣었다
         for(var i=0; i<array.length; i++){ 
             if(array[i] == score ){
-                alert("array["+i+"] = "+array[i]);
+                // alert("array["+i+"] = "+array[i]); // 클릭시 div 배열 위치와 담긴 랜덤 숫자 출력
                 bingo_chk();
             }
         }
 
     }// 끝
-    var col_count = 0;
-    var row_count = 0;
-    var cross = 0;
+
+    var col_count = 0; // 가로줄
+    var row_count = 0; // 세로줄
+    var cross = 0; // 대각선줄
+    var cross1 = 0; // 대각선줄2
     function bingo_chk(){
+        var xxx = document.getElementById("bt_box");
         col_count = 0;
+        roW_count = 0;
         // 0~4 가로
         // 5~9 가로
         // 10~14 가로
         // 15~19 가로
         // 20~24 가로
         // 뭘?? 해야 다 같은 가로 값으로 치환 할 수 있을까.
+        
+        // 가로줄 시작
         for(var i = 1; i <= 5; i++){ // 첫번째 가로줄이 빙고입니까를 검사 하는것
             color = document.getElementById("bingo"+i);
             if(color.style.background == "yellow"){
                 col_count++;
                 if(col_count == 5){
-                    alert("1번 가로줄 빙고 완성!");
+                    bt_box.innerHTML = 'BINGO'
                 }
             }
             
         }
         col_count = 0; // 계속 초기화가 된다
-        for(var i = 6; i <= 10; i++){ // 첫번째 가로줄이 빙고입니까를 검사 하는것
+
+        for(var i = 6; i <= 10; i++){
             color = document.getElementById("bingo"+i);
             if(color.style.background == "yellow"){
                 col_count++;
                 if(col_count == 5){
-                    alert("2번 가로줄 빙고 완성!");
+                    bt_box.innerHTML = 'BINGO'
                 }
             }
             
         }
         col_count = 0; // 계속 초기화가 된다
+
+        for(var i = 11; i <= 15; i++){
+            color = document.getElementById("bingo"+i);
+            if(color.style.background == "yellow"){
+                col_count++;
+                if(col_count == 5){
+                    bt_box.innerHTML = 'BINGO'
+                }
+            }
+            
+        }
+        col_count = 0; // 계속 초기화가 된다
+
+        for(var i = 16; i <= 20; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(color.style.background == "yellow"){
+                col_count++;
+                if(col_count == 5){
+                    bt_box.innerHTML = 'BINGO'
+                }
+            }
+            
+        }
+        col_count = 0; // 계속 초기화가 된다
+
+        for(var i = 21; i <= 25; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(color.style.background == "yellow"){
+                col_count++;
+                if(col_count == 5){
+                    bt_box.innerHTML = 'BINGO'
+                }
+            }
+            
+        }
+        col_count = 0; // 계속 초기화가 된다
+
+        // 가로줄 끝
+
+        // 세로줄 시작
+        // 세로줄 넣으니까 이상해짐....다른 방법이 필요하다
+        // 세로줄 div를 배열에 넣어서 뽑아 써야하나 싶은데
+        // 머리속에 떠오르지 않는다
+
+        for(var i = 1; i <= 25; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(i % 5 == 1){ // 나눠지는 값으로 세로 구분
+                if(color.style.background == "yellow"){
+                    row_count++;
+                    if(row_count == 5){
+                        bt_box.innerHTML = 'BINGO'
+                }
+             }
+            }
+            
+        }
+        row_count = 0;
+
+        for(var i = 1; i <= 25; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(i % 5 == 2){
+                if(color.style.background == "yellow"){
+                    row_count++;
+                    if(row_count == 5){
+                        bt_box.innerHTML = 'BINGO'
+                }
+             }
+            }
+            
+        }
+        row_count = 0;
+
+        for(var i = 1; i <= 25; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(i % 5 == 3){
+                if(color.style.background == "yellow"){
+                    row_count++;
+                    if(row_count == 5){
+                        bt_box.innerHTML = 'BINGO'
+                }
+             }
+            }
+            
+        }
+        row_count = 0;
+
+        for(var i = 1; i <= 25; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(i % 5 == 4){
+                if(color.style.background == "yellow"){
+                    row_count++;
+                    if(row_count == 5){
+                        bt_box.innerHTML = 'BINGO'
+                }
+             }
+            }
+            
+        }
+        row_count = 0;
+
+        for(var i = 1; i <= 25; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(i % 5 == 0){
+                if(color.style.background == "yellow"){
+                    row_count++;
+                    if(row_count == 5){
+                        bt_box.innerHTML = 'BINGO'
+                }
+             }
+            }
+        }
+        row_count = 0;
+
+        // 세로줄 끝
+
+        // 대각선줄 시작
+
+        for(var i = 1; i <= 25; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(i % 6 == 1){
+                if(color.style.background == "yellow"){
+                    cross++;
+                    if(cross == 5){
+                        bt_box.innerHTML = 'BINGO'
+                }
+             }
+            }
+        }
+        cross = 0;
+
+        for(var i = 1; i <= 25; i++){ 
+            color = document.getElementById("bingo"+i);
+            if(i % 4 == 1){
+                if(color.style.background == "yellow"){
+                    cross1++;
+                    if(i==1){
+                        cross1--    ;
+                    }
+                    if(i==25){
+                        cross1--    ;
+                    }
+                    
+                    if(cross1 == 5){
+                        bt_box.innerHTML = 'BINGO'
+                }
+             }
+            }
+        }
+        cross1 = 0;
+        
     }
 
-    // 다른 가로줄도 빙고입니까 되게 하기
 
 </script>
 </html>
