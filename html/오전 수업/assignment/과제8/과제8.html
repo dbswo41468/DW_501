@@ -68,32 +68,32 @@
     //    if(!isNum){} 알아보기!!
     var isNum = false;
     function clicks(){ // 시작
-        for(var i=1; i<=25; i++){ // 누르면 배경색 초기화
-            var bingo =  document.getElementById("bingo"+i);
-            bingo.style.color="black";
-            bingo.style.background="chocolate";
-        }
+        // for(var i=1; i<=25; i++){ // 누르면 배경색 초기화
+        //     var bingo =  document.getElementById("bingo"+i);
+        //     bingo.style.color="black";
+        //     bingo.style.background="chocolate";
+        // }
         
-        for(var i=1; i<=25; i++){
-            isNum = false;
-           var bingo =  document.getElementById("bingo"+i);
-           // bing id 값 1~25까지 증강하는 법 , i 값을 id랑도 같이 사용 할 수 있다
-           var bing_random = Math.floor(Math.random()*25)+1;
-           // 랜덤 값을 bing_random 에 대입
-           for(var j = 1; j<i; j++){ // 중복제거 수식
-            var bingoNum = document.getElementById("bingo"+j); // bing id 값 1~25까지 j 로 증강하고
-            if(bingoNum.innerHTML == bing_random){ // bing id 값 과 랜덤 값이 같으면
-                i--; // i를 빼주고 다시 처음으로 돌아가서 이전에 나왔던 랜덤수(들)와 비교를 반복해준다
-                isNum = true;
-                break; // 같은 수가 나오지 않으면 멈추고 다음 식으로 넘어간다
-            }
-           }
-           if(!isNum){
-                bingo.innerHTML = bing_random;
-                array[i-1] = bing_random;   // 배열에 내 랜덤 값은 저장한다
-           }
-        }
-
+        // for(var i=1; i<=25; i++){
+        //     isNum = false;
+        //    var bingo =  document.getElementById("bingo"+i);
+        //    // bing id 값 1~25까지 증강하는 법 , i 값을 id랑도 같이 사용 할 수 있다
+        //    var bing_random = Math.floor(Math.random()*25)+1;
+        //    // 랜덤 값을 bing_random 에 대입
+        //    for(var j = 1; j<i; j++){ // 중복제거 수식
+        //     var bingoNum = document.getElementById("bingo"+j); // bing id 값 1~25까지 j 로 증강하고
+        //     if(bingoNum.innerHTML == bing_random){ // bing id 값 과 랜덤 값이 같으면
+        //         i--; // i를 빼주고 다시 처음으로 돌아가서 이전에 나왔던 랜덤수(들)와 비교를 반복해준다
+        //         isNum = true;
+        //         break; // 같은 수가 나오지 않으면 멈추고 다음 식으로 넘어간다
+        //     }
+        //    }
+        //    if(!isNum){
+        //         bingo.innerHTML = bing_random;
+        //         array[i-1] = bing_random;   // 배열에 내 랜덤 값은 저장한다
+        //    }
+        // }
+            alert("dds");
         
         
     } // 끝

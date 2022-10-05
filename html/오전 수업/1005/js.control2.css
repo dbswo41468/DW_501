@@ -1,0 +1,7 @@
+#result div{
+    display: flex;
+}
+
+#result div h3{
+    width: 33%;
+}

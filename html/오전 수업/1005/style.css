@@ -1,0 +1,41 @@
+@charset "utf-8";
+
+#wrap{
+    position:relative;
+    width:800px;
+    margin: 0 auto;
+    margin-top: 50px;
+    align-items: center;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+#add{
+    float:right;
+}
+
+#score_wrap input{
+    height: 40px;
+    font-size: 17px;
+    border: 0;
+    border-bottom: 2px solid #44d1c6;
+}
+
+#kor, #mat, #eng{
+    width: 100px;
+    margin-left: 10px;
+}
+
+#score_wrap input:focus{
+    outline: none;
+}
+
+/* 출력 가로 나열 */
+
+.score{
+    display: flex;
+}
+
+.score h3{
+    width: 25%;
+}
