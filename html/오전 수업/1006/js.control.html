@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="func.js"></script>
+
+    <style>
+        
+        table tr td{
+            border: 1px solid black;
+            width: 100px;
+            height: 100px;
+            font-size: 35px;
+            text-align: center;
+        }
+
+        .op{
+            background: #cecece;
+        }
+    </style>
+</head>
+<body>
+    <div id="result">
+
+    </div>
+    <div id="box">
+    
+        <table>
+            <tr>
+                <td class="num" data-value="7">7</td>
+                <td class="num" data-value="8">8</td>
+                <td class="num" data-value="9">9</td>
+                <td class="op" data-value="/">/</td>
+            </tr>
+            <tr>
+                <td class="num" data-value="4">4</td>
+                <td class="num" data-value="5">5</td>
+                <td class="num" data-value="6">6</td>
+                <td class="op" data-value="*">*</td>
+            </tr>
+            <tr>
+                <td class="num" data-value="1">1</td>
+                <td class="num" data-value="2">2</td>
+                <td class="num" data-value="3">3</td>
+                <td class="op" data-value="-">-</td>
+            </tr>
+            <tr>
+                <td class="num" colspan="2" data-value="0">0</td>
+                <td class="op" data-value="=">=</td>
+                <td class="op" data-value="+">+</td>
+            </tr>
+        </table>
+        
+
+    </div>
+</body>
+</html>
