@@ -1,0 +1,26 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#input_wrap{
+    width: 600px;
+    margin: 0 auto;
+    margin-top: 50px;
+}
+
+#input_wrap input{
+    width: 80px;
+    height: 30px;
+    font-size: 15px;
+}
+
+#input_wrap button{
+    width: 100px;
+    height: 30px;
+    border-radius: 10px;
+    background: #48d1cc;
+    border: 0;
+    cursor: pointer;
+}
