@@ -1,0 +1,50 @@
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#box{
+    width: 1000px;
+    height: 1000px;
+    background: forestgreen;
+    margin: 0 auto;
+}
+
+#ipbox{
+    width: 450px;
+    height: 50px;
+    margin: 0 auto;
+}
+
+/* .input{
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+} */
+#input1{
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+#input2{
+    width: 150px;
+    height: 35px;
+    border-radius: 10px;
+}
+
+#bt{
+    width: 80px;
+    height: 35px;
+    background: black;
+    color: white;
+    font-size: 15px;
+}
+
+#output{
+    width: 300px;
+    height: 100px;
+    background: greenyellow;
+    margin: 0 auto;
+}
