@@ -1,0 +1,58 @@
+#form{
+    width: 100px;
+    margin: 0 auto;
+    margin-top: 50px;
+    position: relative;
+}
+
+.input_line{
+    width: 90%;
+    margin: 0 5%;
+    height: 50px;
+    position: relative;
+}
+
+.input_line .movie{
+    width: 100%;
+    height: 25px;
+    border: 0;
+    border-bottom: 2px solid blue;
+    font-size: 17px;
+}   
+
+.input_line label{
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    font-size: 17px;
+}  
+
+.active ~ label{
+    top: -15px;
+    font-size: 10px;
+}
+
+.movie{
+    width: 195px;
+    border: none;
+    border-bottom: 1px solid blue;
+}
+
+.movie:hover{
+    cursor: pointer;
+}
+
+.bt{
+    width: 95%;
+    height: 30px;
+    margin: 10px 5%;
+    border:1px solid mediumspringgreen;
+    border-radius: 10px;
+    background-color: white;
+    cursor: pointer;
+}
+
+.bt a{
+
+}
+
