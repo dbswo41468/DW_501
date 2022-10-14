@@ -1,1 +1,1 @@
-python pag.py
+python server.py
