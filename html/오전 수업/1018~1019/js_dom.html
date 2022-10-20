@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- <script>
+        function move() {
+            location.href = "https://www.google.com";
+            // location = 주소 객체
+        };
+    </script> -->
+    <script>
+        function new_window() { //""이렇게 비워주면 새 창을 열어줌 _self (현재 페이지에서 지정한 페이지로 바꿔줌)
+            // alert(screen.width)
+            var Mwidth = screen.width;
+            var Mheight = screen.height;
+
+            var width = 500, height = 700;
+            var left = Mwidth / 2 - width / 2;
+            var top = Mheight / 2 - height / 2;
+            var url = "child.html";
+            var win_name = " ";
+            var option = "width=" + width + ",height=" + height + ",left=" + left + ",top=" + top;
+
+            var child = window.open(url, win_name, option)
+            // child 변수에 새윈도우의 핸들값 저장 
+
+            var name = document.getElementById("name").value;
+
+            child.document.getElementById("name_view").innerHTML = name;
+        };
+    </script>
+
+</head>
+
+<body>
+
+    <!-- <a href="https://www.naver.com">네이버</a> <br>
+    <hr>
+    <button onclick="move()">구글</button><br>
+    <hr> -->
+    <!-- <button onclick="location_object()">location 객체 보기</button>
+    <script>
+        function location_object(){
+            // alert( window.outerHeight);
+            window.moveTo(10,20);
+        } 
+    </script>
+    -->
+
+    <h1>첫번째 윈도우</h1>
+
+    <input type="text" name="name" id="name" placeholder="이름">
+
+    <button onclick="new_window()"> 전송 </button>
+
+    <input type="text" id="age">
+
+    <!-- <a href="child.html" target="_blank">
+        이동
+    </a> -->
+
+    <!--
+
+    window 객체
+        location 객체 (주소)
+        document 객체 (출력 화면)
+        history 객체 (방문 내역)
+        screen 객체 (브라우저와 브라우저가 표시되는 모니터 화면 전체)
+        navigator 객체 (브라우저 정보)
+
+    -->
+</body>
+
+</html>

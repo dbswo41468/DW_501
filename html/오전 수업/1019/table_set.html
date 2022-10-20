@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>table_set.html</title>
+    <style>
+        .input_wrap {
+            display: flex;
+        }
+        input{
+            width: 70px;
+        }
+        #add{
+            margin-top: 15px;
+        }
+    </style>
+    <script>
+        function send() {
+            // 테이블 생성
+            var col = document.getElementById("col").value;
+            var row = document.getElementById("row").value;
+            var width = document.getElementById("width").value;
+            var height = document.getElementById("height").value;
+
+            var out = "<table border = 1>";
+            for (var i = 1; i <= col; i++) {
+                out += "<tr>";
+                for (var k = 1; k <= row; k++) {
+                    out += "<td width = " + width + " height = " + height + "></td>";
+                }
+
+                out += "</tr>";
+            }
+
+            out += "</table>";
+            // 생성 끝
+
+            // 부모 윈도우 안에 draw라는 태그로 out(테이블을) 보낸다.
+            opener.document.getElementById("draw").innerHTML = out;
+
+
+        };
+    </script>
+</head>
+
+<body>
+    <div class="input_warp">
+        <!-- readonly = input 동작 x -->
+        <input type="number" name="col" id="col" class="T_put" placeholder="행">
+        <input type="number" name="row" id="row" class="T_put" placeholder="열"> <br>
+        <input type="number" name="width" id="width" class="T_put" placeholder="너비">
+        <input type="number" name="height" id="height" class="T_put" placeholder="높이"><hr>
+    </div>
+    <div class="add_bt_wrap">
+        <button id="add" onclick="send()">테이블 생성</button>
+
+    </div>
+</body>
+
+</html>

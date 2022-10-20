@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="number" name="bg" id="bg">
+    <input type="number" name="fontSize" id="fontSize">
+    <button onclick="btbt()">쿠키 저장</button>
+</body>
+</html>
+<script>
+
+//    function btbt(){
+//     var bt = document.getElementById("bg").value;
+//     var fontSize = document.getElementById("fontSize").value;
+//     setCookie(bt,fontSize);
+
+//    }
+
+   
+function cook_save(){
+    var bg = document.getElementById("bg").value;
+    var size = document.getElementById("fontSize").value;
+    setCookie("bg",bg,3);
+    setCookie("fontSize",size,3);
+    location.href = "index.html";
+
+}
+
+
+
+</script>

@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+</head>
+<body>
+
+<form name="fm" method="get" action="save.html">
+    <input type="text" name="id" id="id" value="admin">
+    <input type="password" name="pw" id="pw">
+    <input type="date" name="day" id="day">
+    <input type="checkbox" name="fav" id="fav">
+    <a href="javascript:view()">보기</a>
+
+    <a href="cook_test.html">이동</a>
+    <a href="html_set.html">테스트</a>
+</form>
+
+</body>
+</html>
+<script>
+
+// form
+ //     document.getElementById("day").value
+ //     document.fm.id.value
+document.write("길이 : " + document.forms.length + "<br>"); // 폼 양식이 현재 몇개가 있는지 찾기
+document.write("첫번째 form name : " + document.forms[0].name + "<br>"); // 첫번째 form name 이름 찾기
+document.write(document.forms.fm.name + "<br>")  // 폼에대한 name값 출력
+document.write(document.all.fm.name + "<br>");  // 폼에대한 name값 출력
+document.write(document.forms["fm"].name + "<br>");  // 폼에대한 name값 출력
+document.write(document.forms[0].elements[0].value + "<br>"); // 폼에대한 name값 출력
+
+
+// document 객체
+document.write ("title : " + document.title + "<br>"); // 타이틀 이름 찾기
+document.write ("마지막 수정 : " + document.lastModified + "<br>"); // 마지막 수정 시간
+document.bgColor = "pink"; // 배경색 설정
+document.write ("배경색 : " + document.bgColor + "<br>"); // 배경색 출력
+document.write ("링크색 : " + document.linkColor + "<br>");
+document.write ("링크색 : " + document.alinkColor + "<br>");
+document.write ("링크색 : " + document.vlinkColor + "<br>");
+
+function view(){
+    var forms = document.forms; // 현재 문서의 form을 배열로 받기
+    for(var i in forms){
+        var tags = forms[i].elements; // 해당 form의 tag를 배열로 받기
+        for(var k in tags){
+            alert(tags[k].value);
+        }
+    }
+}
+
+
+    // 쿠키 - 사용자가 브라우저 사용중에 입력하거나 검색한 정보를 저장
+    // 특징
+    /*
+    
+            최대 300개 까지 사용가능
+            하나의 쿠키 크기는 4kb로 제한
+            (영어기준 문자 하나의 크기 - 1 byte == 8 bit )
+            쿠키의 정보는 HTTP헤더를 통해 클라이언트 브라우저와 서버가 공유한다
+            사용자에 의해 휍페이지가 요청되면 set-Cookie 필드에 의해 쿠키가 브라우저에 저장됨
+            set-Cookie : 유효기간, 보안정보 등을 포함
+            사용자가 다시 같은 페이지를 요청 했을 때 저장 되었있던 쿠키가 발견되면 브라우저는
+            웹 페이지를 요청 하는 헤더에 쿠키 필드를 포함하여 전송한다
+            쿠키의 내용은 암호화 되지않는다.
+    
+            set - Cookie 구조
+            - name : 생성될 쿠키의 이름
+            - 값 : 쿠키에 저장될 데이터
+            - expires : 유효기간 지정
+            - path : 저장된 쿠키와 일치하는 url의 path와 도메인 값이 일치하는 url에 페이지를
+                    요청하게 되면 해당 쿠키가 서버로 전달
+            - domain : url의 도메인 부분을 정의한것
+            - secure : 데이터 전송시 보안을 위한 프로토콜을 지정할 때 사용
+    */
+    setCookie("name","kim",1); 
+    function setCookie(쿠키이름,데이터,유효기간){
+        const day = new Date();
+        day.setTime(day.getTime() + (유효기간*24*60*60*1000) ); // 유효기간 설정
+        let expires = "expires = " + day.toUTCString();
+        document.cookie = 쿠키이름 + "="+데이터+";"+expires+";path=/"
+    }
+    
+    function getCookie(){
+        let decode_cook = decodeURIComponent(document.cookie);
+        let temp = decode_cook.split(';');
+        for(let i=0; i<temp.length; i++){
+            let c = temp[i];
+            while(c.charAt(0) == ' '){ // 배열에 ' '공백이 있다면 아래 substring을 실행 시켜라
+                c=c.substring(1); // 인덱스 1번부터 추출하는 함수, 
+                // substring(1,3) : 1부터 3이전까지 추출 == 1~2 까지 추출
+            }
+            if(c.indexOf("name=") ==0 ){
+                alert(c.substring("name=".length,c.length));
+            }
+        }
+    }
+    getCookie();
+    
+    /*   
+    
+    // screen - 화면 정보 제공
+    screen.width : 화면 전체 너비 (해상도 너비)
+    screen.height : 화면 전체 높이 (해상도 높이)
+    screen.acailWidth : 실제 사용 가능한 화면 너비
+    screen.availHeigth : 실제 사용 가능한 화면 높이
+    screen.colorDepth : 사용 가능한 색상수
+    screen.pixelDepth : 한 픽셀당 비트 수
+    */
+    
+    
+        </script>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        // function open_win(){
+        //     window.open("child2.html","_blank","width=500","height=500");
+        // }
+        window.onload = function () {
+            var name = opener.document.getElementById("name").value;
+            document.getElementById("name_view").innerHTML = name;
+        };
+        function send(){
+            var parent = opener.document.getElementById("age");
+            var age = document.getElementById("age").value;
+
+            parent.value = age;
+        };
+    </script>
+</head>
+
+<body>
+    <h1>자식 윈도우</h1>
+
+    <div id="name_view"></div>
+    <input type="text" id="age">
+    <button onclick="send()"> 부모에 전달 </button>
+
+
+    <!-- <button onclick="open_win()"> 새창 열기 </button> -->
+    <!-- <a href="child2.html" target="_blank">
+        이동
+    </a> -->
+    <!-- <iframe src="child2.html"> </iframe> -->
+</body>
+
+</html>

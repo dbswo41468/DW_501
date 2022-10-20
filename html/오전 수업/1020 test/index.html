@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <p id="font">테스트</p>
+</body>
+</html>
+<script>
+    function getCookie(){
+        let decode_cook = decodeURIComponent(document.cookie);
+        let temp = decode_cook.split(";");
+        for(let i =0; i<temp.length; i++){
+            let c = temp[i];
+            while(c.charAt(0) == ' '){
+                c = c.substring(1);
+            }
+        }
+        document.bgColor = temp[1].split("=")[1];
+        document.getElementById("font").setAttribute("style","font-size:"+temp[2].split("=")[1]+"px");
+    }
+    getCookie();
+</script>

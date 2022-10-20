@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function setCookie(쿠키이름, 데이터, 유효기간){
+            const day = new Date();
+            day.setTime(day.getTime() + (유효기간*24*60*60*1000));
+            let expires = "expires = " + day.toUTCString();
+            document.cookie = 쿠키이름 + "=" +데이터+";"+expires+";path=/";
+        }
+
+        function getCookie(){
+            let decode_cook = decodeURIComponent(document.cookie);
+            let temp = decode_cook.split(";");
+            for(let i =0; i<temp.length; i++){
+                let c = temp[i];
+                while(c.charAt(0) == ' '){
+                    c = c.substring(1);
+                }
+            }
+        }
+        getCookie();
+        window.onload = function(){
+            document.getElementById("send").addEventListener("click", cookieSend);
+        }
+
+        function cookieSend(){
+            var bg = document.getElementById("bg").value;
+            var font = document.getElementById("font").value;
+            setCookie("bgColor",bg,1);
+            setCookie("fontSize",font,1);
+            location.href = "index.html";
+        }
+    </script>
+</head>
+<body>
+    <input type="text" id="bg">
+    <input type="text" id="font">
+    <button id="send">쿠키 저장</button>
+    <a href="index.html">이동</a>
+</body>
+</html>

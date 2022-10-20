@@ -2,6 +2,7 @@ from socket import *
 import threading
 import time
 from tkinter import *
+import pyautogui as pag
 
 root = Tk()
 root.title('대화방')
@@ -26,6 +27,9 @@ def receive(sock):
         recvData = sock.recv(1024)
         list.insert(END, '상대방 : '+recvData.decode('utf-8'))
         list.see(END)
+        if recvData.decode('utf-8') == "1":
+            pag.screenshot('C:/Users/dw-019/Desktop/공유/screen.png')
+            
             
             
             
