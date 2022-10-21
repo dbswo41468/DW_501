@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*
+        if(미로그인 상태 ){
+            alert("로그인후 이용해주세요");
+            locatiom.href='login.html';
+
+            //history.back();
+        }
+        if( 로그인시 아이디 비번 틀렸다면){
+            var move = confirm("아이디 또는 비밀번호가 올바르지 않습니다. 회원가입 하시겠습니까?");
+            if ( move ){
+                location.href = "join.html";
+            }
+            else{
+                history.back();
+            }
+            // alert("아이디 또는 비밀번호가 올바르지 않습니다");
+            // history.back();
+            */
+           /*
+            document.write('appName : ' + navigator.appName + '<br>');
+            document.write('appCodeName : ' + navigator.appCodeName + '<br>');
+            document.write('appVersion : ' + navigator.appVersion + '<br>');
+            document.write('platform : ' + navigator.platform + '<br>');
+            document.write('userAgent : ' + navigator.userAgent + '<br>');
+
+            var os = navigator.userAgent;
+            if(os.toLowerCase().indexOf("windows")!=-1){ // toLowerCase : 모든 문자를 소문자로 표시해라
+            alert("현재 접속 기기는 Pc 입니다");
+            }else if(os.toLowerCase().indexOf("android")!=-1){
+            alert("현재 접속 기기는 모바일(안드로이드)입니다");
+            }else if(os.toLowerCase().indexOf("iphone")!=-1){ // ipad, ipot
+            alert("현재 접속 기기는 아이폰입니다")
+            }
+            */
+            /*
+            var orient = window.orientation;
+            if(orient != undefined){
+                if(orient == 0){
+                    alert("세로방향");
+                }else if ( orient == -90 || orient == 90){
+                    alert("가로방향");
+                }
+            }
+            */
+
+            // cavas, chart 
+
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body>
+
+    <div>
+        <canvas id="chart"></canvas>
+    </div>
+    
+</body>
+</html>
+<script>
+    const label =[ // 배열 구조
+        '2018','2019','2020','2021','2022'
+    ];
+    const data = { // 객체 형태
+        labels : label,
+        datasets : [{ // 배열에다가 객체 형태로
+            label : '아무차트',
+            backgroundColor :'rgb(200,50,100)',
+            borderColor : 'rgb(255,100,200)',
+            data : [88,77,99,55,66],
+        }]
+    };
+    const config = {
+        type:'bar', data : data,
+        }
+    const chat = new Chart(document.getElementById("chart"),config);
+</script>
