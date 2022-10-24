@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <canvas id="draw" width="1000" height="300" style="border:1px solid black">
+    </div>
+    <button id="start">녹화시작</button>
+    <button id="stop">녹화종료</button>
+    
+    <div>
+        <video id="recorded" controls style="border : 1px solid balck"></video>
+    </div>
+</body>
+</html>
+<script>
+    var canvas = document.getElementById("draw");
+    var start = document.getElementById("start");
+    var stop = document.getElementById("stop");
+    var video = document.getElementById("recorded");
+
+    var mediarecrder = null;
+    var videData = [];
+
+    start.addEventListener("click",function(){
+        move();
+        // 캔버스 영역 화면을 스트림으로 취득
+        var mediaStream = canvas.captureStream();
+
+        // 녹화 객체 생성
+        mediarecorder = new Mediarecorder(mediaStream);
+        madiarecorder.ondataavailable = handledata;
+        // stop 이벤트 처리
+        mediarecorder.onstop = function(){
+            const bl = new Blob(videoData);
+        // 캔버스 화면 데이터를 가르키는 임시 주소 생성
+        const blurl = window.URL.createObjectURL(bl);
+        // 재생구현
+        video.setAttribute("src",blurl)
+        video.play();
+        // 다운로드
+        const anc = document.createElement("a");
+        document.body.appandChild(anc);
+        anc.sryle.display = "none"
+        anc.href=blurl;
+        anc.download = "1024-3.webm";
+        anc.click();
+        videoData.splice(0)
+        };
+
+        mediarecorder.start();
+        
+    });
+    function handledata(event){
+        videData.push(event.data);
+    }
+
+    stop.addEventListener("click",function(){
+        mediarecorder.stop();
+    });
+    
+    var ctx = canvas.getContext('2d');
+    var ball = {x:100, y:50, x_step:1, y_step:1};
+
+
+</script>
+

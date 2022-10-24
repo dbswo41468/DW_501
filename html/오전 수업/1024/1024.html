@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <script>
+
+    if(window.HTMLCanvasElement)
+
+    </script>
+</head>
+<body>
+    
+    <canvas id="canvas" width="1000" height="900">
+
+    </canvas>
+
+</body>
+</html>
+
+<script>
+
+    var canvas = document.getElementById("canvas");
+    var ctx = canvas.getContext('2d');
+    
+    ctx.fillStyle = "rgb(153,56,0)"; // 굴뚝 색
+    ctx.fillRect(200,200,60,100);
+    
+    ctx.fillStyle = "rgb(71,200,62)";
+    ctx.fillRect(100,300,600,300); // 집
+
+
+
+    ctx.fillStyle = "rgb(255,228,0)"; // 지붕
+    ctx.moveTo(100,300); // 지붕 왼쪽 꼭지점
+    ctx.lineTo(700,300); //  지붕 우 하단 꼭지점
+    ctx.lineTo(390,150); // 지붕 좌 선 , 하단 꼭지점
+    ctx.closePath();// 지붕
+    ctx.stroke();// 지붕
+    ctx.fill();// 지붕 이런걸 넣어줘야 이 도형이 끝난다
+
+    // 원1
+    ctx.beginPath();
+    ctx.arc(220,150,30,0,2*Math.PI,true);
+    ctx.closePath();
+    ctx.fillStyle="pink";
+    ctx.fill();
+    ctx.stroke();
+
+    // 원2
+    ctx.beginPath();
+    ctx.arc(150,100,20,0,2*Math.PI,true);
+    ctx.closePath();
+    ctx.fillStyle="pink";
+    ctx.fill();
+    ctx.stroke();
+
+    // 원3
+    ctx.beginPath();
+    ctx.arc(100,50,10,0,2*Math.PI,true);
+    ctx.closePath();
+    ctx.fillStyle="pink";
+    ctx.fill();
+    ctx.stroke();
+    
+    // 선생님 도형
+
+    /*
+    //굴뚤
+    ctx.fillStyle = 'rgb(153,56,0)';
+    ctx.fillRect(130,130,30,70);
+
+    //지붕
+    ctx.beginPath();
+    ctx.moveTo(100,200);
+    ctx.lineTo(250,100);
+    ctx.lineTo(400,200);
+    ctx.fillStyle = 'yellow';
+    ctx.fill();
+    ctx.closePath();
+
+    //집
+    ctx.fillStyle = 'green';
+    ctx.fillRect(100,200,300,150) // 시작점,높이?,너비,높이?
+    
+    //연기
+    ctx.moveTo(108,60);
+    ctx.arc(145,100,15,0,2*Math.PI,true);
+    ctx.arc(120,80,11,0,2*Math.PI,true);
+    ctx.fillStyle = 'rgb(61,183,204)';
+    ctx.fill();
+    ctx.moveTo(108,60);
+    ctx.arc(100,60,8,0,2*Math.PI,true);
+    ctx.closePath();
+    ctx.fillStyle = 'rgb(61,183,204)';
+    ctx.fill();
+    */
+    
+
+    
+</script>

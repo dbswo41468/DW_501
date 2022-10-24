@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #ball{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <canvas id="ball" width="500" height="400">
+    </div>
+</body>
+</html>
+<script>
+    var canvas = document.getElementById("ball");
+    var ctx = canvas.getContext('2d');
+    var ball = {x:100, y:50, x_step:1, y_step:1};
+    var size = r=10;
+    var color = {r:100, g:100, b:100};
+    // setInterval(move, 5);
+    setInterval(size_change,800);
+    setInterval(move,5); // 지정한 시간 마다 함수 실행
+    function move(){
+
+        ctx.clearRect(0,0,500,400);
+
+        ctx.beginPath();
+        ctx.arc(ball.x, ball.y, 10, 0,2* Math.PI, true);
+        ctx.closePath();
+        ctx.fillStyle='rgb(';
+        ctx.fill();
+        ctx.stroke();
+
+        if(ball.x + ball.x_step > (500-r) || ball.x + ball.x_step <(0+r)){
+            ball.x_step = ball.x_step* (-1);
+        }
+        if(ball.y + ball.y_step > (400-r) || ball.y + ball.y_step <(0+r)){
+            ball.y_step = ball.y_step*(-1);
+        }
+
+        ball.x += ball.x_step;
+        ball.y += ball.y_step;
+
+        requestAnimationFrame(move); // 자연스러운 이미지 효과
+
+    };
+    move();
+    function color_change(){
+        let r=Math.floor(Math.random()*256);
+        let g=Math.floor(Math.random()*256);
+        let b=Math.floor(Math.random()*256);
+    }
+
+    function size_change(){
+        r=Math.floor
+    }
+</script>

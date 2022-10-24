@@ -31,7 +31,7 @@
     ctx.moveTo(50,50); // 선 끝
     ctx.lineTo(200,200);
 
-    ctx.strokeStyle = 'rgb(0,0,100)'
+    ctx.strokeStyle = 'rgb(110,100,100)'
     ctx.moveTo(100,100);
     ctx.lineTo(500,200);
 
@@ -42,6 +42,15 @@
 
     ctx.closePath();
     ctx.stroke();
+
+    //원
+    ctx.beginPath();
+    ctx.arc(500,500,50,0,2*Math.PI,true);
+    ctx.closePath();
+    ctx.fillStyle="pink";
+    ctx.fill();
+    ctx.stroke();
+
 </script>
 
 
