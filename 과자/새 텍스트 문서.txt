@@ -1,0 +1,69 @@
+요리 레시피 
+
+https://themealdb.com/api.php
+(해외)
+
+https://www.edamam.com/
+(해외)
+
+http://www.foodsafetykorea.go.kr/api/openApiInfo.do?menu_grp=MENU_GRP31&menu_no=661&show_cnt=10&start_idx=1&svc_no=COOKRCP01
+(조리식품 db kor)
+
+
+-- 쿠팡 조리도구,재료,음식,밀키트, 등등 상품화 된것들 연결해서 광고하는것 처럼 보이기
+
+https://developers.coupangcorp.com/hc/ko
+
+-- 네이버도 위와 같은 이유로 사용가능한지 확인 해야함
+
+https://developers.naver.com/docs/common/openapiguide/apilist.md#%EB%A1%9C%EA%B7%B8%EC%9D%B8-%EB%B0%A9%EC%8B%9D-%EC%98%A4%ED%94%88-api
+
+-- 알라딘에 요리 책 있는지 검색
+
+https://www.apistore.co.kr/generalApi/generalApiView.do?general_service_seq=72
+
+-- 유튜브에 국내외 유튜버들의 자취,일반 음식 조리,레시피 설명 영상 첨부
+
+------- css
+
+글꼴
+
+-구글
+https://fonts.google.com/?subset=korean
+
+-상업용 무료 가능
+https://highd.tistory.com/118
+
+
+------------ 만들어야 하는것
+
+회원가입 버튼,가입탭
+
+레시피 관련 탭을 눌렀을 시 정보들이 나열될 탭
+
+레시피 직접 추가할 탭(회원가입 필수)
+음식 사진 넣을 탭,재료 입력탭,조리순서 적을 탭
+
+커뮤니티 탭(회원가입 필수, 데이터 생성 필요)
+
+요리 유튜버 영상 넣고 클릭시 해당 채널 영상으로 넘어가는 기능
+
+요리 유튜버 하단에 다음 페이지로 넘어가는 버튼 추가
+(부드럽게 넘어갈것)
+
+알라딘,쿠팡,네이버 쇼핑 중 소스 가져와서 랜덤으로 광고성 슬라이드 만들기
+
+반응형으로 만들기위해 검사할것
+
+각 탭으로 이동시 상단에 홈,다른 탭으로 갈 수 있는 작은 탭 만들기
+
+각 탭으로 이동시 배경 두루마리 크기 조절하기
+
+미니게임 넣기
+
+오전시간에 배웠던 각종 기능들 정리후 과제에 적합한 기능들 추가하기
+
+
+
+
+
