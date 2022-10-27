@@ -1,0 +1,79 @@
+
+#wrap{
+    width:100%;
+    display:flex;
+    flex-direction: column;
+}
+
+#main-section{
+    order:1;
+        /* order: 번호가 적을수록 먼저 실행된다 */
+    width:100%;
+    background:#183786;
+}
+.page-title{
+    display:flex;
+    flex-direction: column;
+    position:relative;
+    width:calc( 100% - 100px );
+    /* calc : 쓸 때는 띄어쓰기 필수 */
+    padding:5% 5%;
+    max-width:1000px;
+    margin:0 auto;
+}
+
+#image-section{
+    width: 100%;
+    align-items: center;
+    justify-items: center;
+    display: flex;
+}
+
+.image-box{
+height: 350px;
+}
+
+.imgb1{
+    width: 36%;
+    background: pink;
+    font-size: 5vmin;
+}
+
+.imgb2{
+    width: 64%;
+    background: #478899;
+    font-size: 3vmax;
+}
+
+.image_wrap{
+    max-width: 1000px;
+    width: 100%;
+    margin: 0 auto;
+    display: flex;
+}
+
+#multi-section{
+    width: 100%;
+}
+
+#multi-section > div{
+    width: 70%;
+    display: inline-block;
+    margin: 0 15% ;
+}
+
+#multi-section img, #multe-section video{
+    width: 100%;
+    max-width: 100%;
+}
+
+
+/*  태블릿 */
+@media all and (min-width:780px){
+    html{ font-size:20px;}
+}
+/* PC */
+@media all and (min-width:960px){
+    html{font-size:24px;}
+}
+

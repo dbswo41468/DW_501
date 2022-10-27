@@ -23,18 +23,18 @@ def send(sock):
         sendData = input('>>>')
         sock.send(sendData.encode('utf-8'))
         if sendData != "":            
-            list.insert(END, '나 : '+sendData)
+            list.insert(END, '윤재영 인턴 : '+sendData)
             list.see(END)
 
 
 def receive(sock):
     while True:
         recvData = sock.recv(1024)
-        list.insert(END, '상대방 : '+recvData.decode('utf-8'))
+        list.insert(END, '사장님 : '+recvData.decode('utf-8'))
         list.see(END)
-        if recvData.decode('utf-8') == "1":
+        if recvData.decode('utf-8') == "뭐하냐":
             pag.screenshot('C:/Users/dw-019/Desktop/공유/screen.png')
-        elif recvData.decode('utf-8') == "2":
+        elif recvData.decode('utf-8') == "톡봐라":
             Msgbox()
             
             

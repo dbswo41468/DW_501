@@ -1,0 +1,20 @@
+
+.h1-txt{
+    font-size:2.1rem;
+    margin:0.8rem 0.6rem;
+}
+.h2-txt{
+    font-size:1.6rem;
+    margin:0.6rem 0.3rem;
+}
+.h3-txt{
+    font-size:1.2rem;
+    margin:0.5rem 0;
+}
+.txt-white{
+    color:white;
+}
+.txt-pink{
+    color:pink;
+    font-weight:800;
+}

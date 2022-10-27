@@ -1,0 +1,42 @@
+#wrap{
+    max-width: 1000px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.box{
+    display: inline-block;
+    height: 100px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+}
+
+.box1{
+    background:rgb(134,229,127) ;
+}
+.box2{
+    background:rgb(116,211,109);
+}
+.box3{
+    background:rgb(98,193,91) ;
+}
+.box4{
+    background:rgb(80,175,73) ;
+}
+.box5{
+    background:rgb(62,157,55) ;
+}
+
+
+
+/* media : 작은것부터 만들고 큰 크기를 만들어야한다,
+            띄어 쓰기 필수!!!!! */
+@media all and (min-width:768px){
+    .box{width: 50%;}
+    .box5{width: 100%;}
+}
+@media all and (min-width : 1024px){ 
+    /* 최소 1024px 이상 일때 작동한다 */
+    .box{width: 20%;}
+}

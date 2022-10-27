@@ -1,0 +1,52 @@
+@charset "uft-8";
+
+/* html element css 초기화 */
+
+html, body, div, span, h1,h2,h3,h4,h5,h6, img,ul form,
+label, footer, section, header, p, pre, address, nav,
+menu, dl, ol, li, dd, dt, article{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+
+article, footer, header, hgroup, menu, nav, section{
+    display: block;
+}
+
+nav ul, li{
+    list-style: none;
+}
+
+a{
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    text-decoration: none;
+    vertical-align: baseline;
+    color: #ffffff;
+}
+
+img{
+    vertical-align: top;
+}
+
+inpput{
+    margin: 0;
+    padding: 0;
+    box-sizing: content-box;
+    vertical-align: top;
+    appearance: none;
+    border: 1px solid rgb(53,182,44);
+}
+
+input::moz-input-placeholder{
+    color: tomato;
+}
+
+input::webkit-input-placeholder{
+    color: tomato;
+}

@@ -1,0 +1,44 @@
+.flex{
+    display: flex;
+    width: 90%;
+    height:50px;
+    margin:30px auto;
+}
+
+
+.flex div{
+    width: 20%;
+    height: 50px;
+}
+
+.flex div:nth-child(1){
+    background: rgb(53,182,44);
+}
+
+.flex div:nth-child(2){
+    background: rgb(35,164,26)
+}
+
+.flex div:nth-child(3){
+    background: rgb(17,146,8);
+}
+
+#flex1{
+    justify-content: flex-start;
+}
+#flex2{
+    justify-content:flex-end;
+}
+#flex3{
+    justify-content:center;
+}
+
+#flex4{
+    justify-content:space-between;
+}
+
+#flex5{
+    justify-content:space-around;
+}
+
+

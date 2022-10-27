@@ -1,0 +1,49 @@
+.flex{
+    display: flex;
+    width: 90%;
+    height:100px;
+    margin:30px auto;
+    border: 1px solid black;
+}
+
+.flex div{
+    width: 33.3%;
+}
+
+.flex div:nth-child(1){
+    background: rgb(53,182,44);
+    height: 80px;
+}
+
+.flex div:nth-child(2){
+    background: rgb(35,164,26);
+    height: 30px;
+    align-self: flex-end;
+}
+
+.flex div:nth-child(3){
+    background: rgb(17,146,8);
+    height: 60px;
+}
+
+#flex1{
+    align-items: stretch;
+}
+
+#flex2{
+    align-items: flex-start;
+}
+
+#flex3{
+    align-items: flex-end;
+}
+
+#flex4{
+    align-items: center;
+}
+
+#flex5{
+    align-items: baseline;
+}
+
+
