@@ -1,0 +1,206 @@
+body{
+    margin: 0;
+    padding: 0;
+    /* background-image: url(../과자/back.png); */
+    background-size: 100%;
+}
+
+#top{
+    margin: 0 auto;
+    padding: 0;
+    width: 1935px;
+    position: relative;
+    background: #BD9424;
+}
+
+/*  배경 이미지  */
+
+#img_box{
+    margin: 0 auto;
+    padding: 0;
+    width: 2000px;
+}
+
+#back_img{
+    margin: 0 auto;
+    padding: 0;
+    width: 2000px;
+}
+
+#back_img img{
+    margin: 0 auto;
+    padding: 0;
+    width: 1950px;
+    vertical-align: middle;
+    position:relative
+}
+
+/* 제목 */
+
+/* 전설의 , 자취 , 레시피 따로 나눠야하고
+자취는 큰 크기,붓글씨 글꼴,빨간색으로 줘야한다*/
+
+
+#title_box{
+    position:absolute;
+    left: 50px;
+    width: 50%;
+    top: 500px;
+    left: 500px;
+    display: flex;
+    background: chartreuse;
+}
+
+#title_box h1{
+    width: 100%;
+    text-align: center;
+}
+
+
+/* 검색창 */
+/* 검색창 끝에 돋보기 모양 넣기,
+    크기 조정해서 전체적인 사이즈 맞춰보기 */
+
+#search{
+    position:absolute;
+    left: 50px;
+    width: 50%;
+    height: 55px;
+    top: 800px;
+    left: 500px;
+    margin: 0 auto;
+    padding: 0;
+    background: violet;
+    
+}
+
+#search input{
+    margin: 0 auto;
+    padding: 0;
+    margin-left: 250px;
+    width: 500px;
+    height: 50px;
+    border-radius: 25px;
+}
+
+
+/* 추천 레시피 */
+/* 레시피 api에서 랜덤으로 레시피 음식 사진을
+가져온다 클릭시 해당 음식 레시피 화면으로 전환 */
+
+#rm_recipe{
+    position:absolute;
+    left: 50px;
+    width: 75%;
+    height: 450px;
+    top: 1000px;
+    left: 234px;
+    background: red;
+}
+
+#rm_recipe_title h2{
+    color: white;
+    margin: 0 auto;
+    padding: 0;
+    text-align: center;
+}
+
+#rm_recipe_title{
+    background: rebeccapurple;
+}
+
+#rm_recipe_list_box{
+    display: flex;
+}
+
+.rm_recipe_list{
+    margin: 0 auto;
+    width: 500px;
+    height: 400px;
+    margin: 5px;
+    background: rgb(79, 189, 75);
+}
+
+/* 재료,레시피,조합 랜덤 */
+
+#random_rip_box{
+    position:absolute;
+    left: 50px;
+    width: 75%;
+    height: 450px;
+    top: 1500px;
+    left: 234px;
+    background: rgb(32, 148, 148);
+}
+
+
+/* 비건 */
+
+#vegan_box{
+    position:absolute;
+    left: 50px;
+    width: 75%;
+    height: 450px;
+    top: 2000px;
+    left: 234px;
+    background: rgb(32, 148, 148);
+}
+
+/* 우리들의 레시피 */
+
+#our_recipe_box{
+    position:absolute;
+    left: 50px;
+    width: 75%;
+    height: 450px;
+    top: 2500px;
+    left: 234px;
+    background: rgb(32, 148, 148);
+}
+/* 커뮤니티 */
+
+#community_box{
+    position:absolute;
+    left: 50px;
+    width: 75%;
+    height: 450px;
+    top: 3000px;
+    left: 234px;
+    background: rgb(32, 148, 148);
+}
+
+/* 요리 유튜버 */
+
+#cooking_YT_box{
+    position:absolute;
+    left: 50px;
+    width: 75%;
+    height: 450px;
+    top: 3500px;
+    left: 234px;
+    background: rgb(32, 148, 148);
+}
+
+/* 요리책 광고(알라딘) */
+
+/* #cookbook_box{
+    position:absolute;
+    left: 50px;
+    width: 75%;
+    height: 450px;
+    top: 4000px;
+    left: 234px;
+    background: rgb(32, 148, 148);
+} */
+
+/* 조리 도구,음식 재료,밀키트,광고 쿠팡,네이버 쇼핑) */
+
+/* #marketing_box{
+    position:absolute;
+    left: 50px;
+    width: 75%;
+    height: 450px;
+    top: 4500px;
+    left: 234px;
+    background: rgb(32, 148, 148);
+} */
