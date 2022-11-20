@@ -1,5 +1,5 @@
 package inheritance_task03;
 
-public class boomerang {
+public class boomerang extends gucci_lce{
 
 }

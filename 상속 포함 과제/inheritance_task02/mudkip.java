@@ -1,5 +1,5 @@
 package inheritance_task02;
 
-public class mudkip {
+public class mudkip extends pokemon {
 
 }

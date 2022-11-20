@@ -1,5 +1,5 @@
 package inheritance_task02;
 
-public class treecko {
+public class treecko extends pokemon {
 
 }
