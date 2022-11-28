@@ -1,0 +1,34 @@
+plugins {
+	id 'java'
+	id 'org.springframework.boot' version '2.6.14-SNAPSHOT'
+	id 'io.spring.dependency-management' version '1.0.15.RELEASE'
+}
+
+group = 'com.example'
+version = '0.0.1-SNAPSHOT'
+sourceCompatibility = '11'
+
+repositories {
+	mavenCentral()
+	maven { url 'https://repo.spring.io/milestone' }
+	maven { url 'https://repo.spring.io/snapshot' }
+}
+
+dependencies {
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	testImplementation 'org.springframework.boot:spring-boot-starter-test'
+	implementation 'org.springframework.boot:spring-boot-starter-thymeleaf'
+	//실시간으로 화면 수정
+	developmentOnly 'org.springframework.boot:spring-boot-devtools'
+	annotationProcessor 'org.projectlombok:lombok'
+	compileOnly 'org.projectlombok:lombok'
+	// My SQL
+	runtimeOnly 'mysql:mysql-connector-java'
+	// ORM ( 내가 작성한 SQL 결과를 JAVA로 변환 *** 면접때 나옴)
+	// ORM 종류 : Mybatis , JPA
+	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.2'
+}
+
+tasks.named('test') {
+	useJUnitPlatform()
+}
