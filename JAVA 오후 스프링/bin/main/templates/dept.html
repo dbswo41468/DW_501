@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style>
+table {
+  font-family: arial, sans-serif;
+  border-collapse: collapse;
+  width: 100%;
+}
+
+td, th {
+  border: 1px solid #dddddd;
+  text-align: left;
+  padding: 8px;
+}
+
+tr:nth-child(even) {
+  background-color: #dddddd;
+}
+</style>
+</head>
+<body>
+
+
+	<table id="dept">
+	  <tr>
+	  	<th>부서번호</th>
+	    <th>부서이름</th>
+	    <th>부서위치</th>
+	  </tr>
+	</table>
+	
+	
+</body>
+<script
+	src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"
+></script>
+	<script type="text/javascript">
+	
+	callMyAPI(); // 함수 호출
+	
+	function callMyAPI(){ 
+		
+		// ajax : 백엔드와 프론트가 통신하는 기능!
+		// type : GET == Controller에 GetMapping
+		// dataType : return 데이터를 json으로 받음
+		var s = [];
+		      $.ajax({ 
+	    	  url: '/api/v1/dept',
+	    	  type : 'GET', 
+	    	  dataType : 'json',
+	    	  success : function (response){
+	    		  console.log(response);
+	    		  for(var i in response){
+	    			  
+	    			  // tr, td 만들고 td안에 데이터 넣기
+	    			var tr = '<tr><td>'+response[i].deptno+'</td><td>'
+	    			+response[i].dname+'</td><td>'+response[i].loc+'</td></tr>';
+	    			
+	    			// 제이쿼리 식 append
+	    			$("#dept").append(tr);
+	    	  	  }	
+	    	  }
+	      });
+	}
+
+
+</script>
+</html>

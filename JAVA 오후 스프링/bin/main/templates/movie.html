@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<style type="text/css">
+ #movie_div{
+ 	width: 1000px;
+ 	margin: 100px auto;
+ 	display: flex;
+ 	justify-content:space-around; 
+ }
+#title{
+width: 900px;
+margin : 0 auto;
+}
+h2{
+text-align:center;
+}
+ #movie_div div{
+ 	text-align: center;
+ }
+</style>
+</head>
+<body>
+	<div id="title">
+	<h2>ㅎㅇ 여기는 영화채널임!</h2>
+	</div>
+	<div id="movie_div">
+		<div>
+			<div id="data-img-0"></div>
+			<p id="data-title-0"></p>
+			<p id="data-year-0"></p>
+			<p id="data-runtime-0"></p>
+			<p id="data-genre-0"></p>
+		</div>
+		<div>
+			<div id="data-img-1"></div>
+			<p id="data-title-1"></p>
+			<p id="data-year-1"></p>
+			<p id="data-runtime-1"></p>
+			<p id="data-genre-1"></p>
+		</div>
+		<div>
+			<div id="data-img-2"></div>
+			<p id="data-title-2"></p>
+			<p id="data-year-2"></p>
+			<p id="data-runtime-2"></p>
+			<p id="data-genre-2"></p>
+		</div>
+		<div>
+			<div id="data-img-3"></div>
+			<p id="data-title-3"></p>
+			<p id="data-year-3"></p>
+			<p id="data-runtime-3"></p>
+			<p id="data-genre-3"></p>
+		</div>
+		<div>
+			<div id="data-img-4"></div>
+			<p id="data-title-4"></p>
+			<p id="data-year-4"></p>
+			<p id="data-runtime-4"></p>
+			<p id="data-genre-4"></p>
+		</div>
+	</div>
+</body>
+<script
+	src="https://code.jquery.com/jquery-3.6.1.js"
+    integrity="sha256-3zlB5s2uwoUzrXK3BT7AX3FyvojsraNFxCc2vC/7pNI="
+    crossorigin="anonymous"
+></script>
+
+
+<script type="text/javascript">
+	
+	const APIKEY = "764ed67";
+	callMyAPI(); // 함수 호출
+	
+	function callMyAPI(){ 
+		
+		// ajax : 백엔드와 프론트가 통신하는 기능!
+		// type : GET == Controller에 GetMapping
+		// dataType : return 데이터를 json으로 받음
+		var s = [];
+		      $.ajax({ 
+	    	  url: '/api/v1/movies',
+	    	  type : 'GET', 
+	    	  dataType : 'json',
+	    	  success : function (response){
+	    		  console.log(response);
+	    		  for(var i in response){
+	    		  $('#data-title-'+i).append(response[i].title);
+	    		  $('#data-year-'+i).append(response[i].year);
+	    		  $('#data-runtime-'+i).append(response[i].runtime);
+	    		  $('#data-genre-'+i).append(response[i].genre);
+	    		  s.push(response[i].title);
+	    	  	  }	
+	    	  }
+	      });
+	    
+		
+	      var search = "friends";
+	      var type = "movie";
+	      $.ajax({
+	        url:
+	          "http://www.omdbapi.com/?apiKey=" +
+	          APIKEY +
+	          "&s=" +
+	          search +
+	          "&type=" +
+	          type +
+	          "",
+	        type: "GET",
+	        dataType: "json",
+	        success: function (response) {
+	          for (var i = 0; i < 5; i++) {
+	        	  var posterUrl = response.Search[i].Poster;
+	              //img 태그 생성 포스터 이미지 경로 src에 넣어주기
+	              var html = '<img src="' + posterUrl + '">';
+	           $("#data-img-"+i).append(html);
+	          }
+	        },
+	      });
+	
+	}
+
+
+</script>
+</html>
